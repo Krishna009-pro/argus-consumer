@@ -1,0 +1,24 @@
+{
+  "company": "HUL",
+  "discovery": "No reliable finding: verified compatible financial observations are unavailable.",
+  "why_it_matters": [
+    "The analysis abstains rather than filling missing periods or metrics."
+  ],
+  "evidence": [],
+  "timeline": [],
+  "numbers": {},
+  "counterargument": "No company-specific finding was tested.",
+  "falsification_condition": "Import and verify public observations from compatible filings, then rerun.",
+  "evidence_score": 0.0,
+  "evidence_label": "Weak",
+  "not_tested": [
+    "No verified, compatible observations were available for this company."
+  ],
+  "hypotheses": [],
+  "red_team_log": [],
+  "score_components": {},
+  "validation": {
+    "verified_ledger_entries": 0,
+    "elapsed_seconds": 0.0003
+  }
+}

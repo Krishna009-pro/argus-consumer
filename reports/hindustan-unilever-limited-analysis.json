@@ -1,0 +1,1316 @@
+{
+  "company": "Hindustan Unilever Limited",
+  "panels": [
+    {
+      "panel": {
+        "company": "Hindustan Unilever Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "standalone",
+        "reporting_scope": "continuing_operations",
+        "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives",
+        "periods": [
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2025-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "continuing_operations",
+            "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+          },
+          {
+            "period": "FY2026",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2026-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "continuing_operations",
+            "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+          }
+        ],
+        "metrics": {
+          "revenue": [
+            59676.0,
+            61975.0
+          ]
+        },
+        "ledger_ids": {
+          "revenue": [
+            [
+              "L0002"
+            ],
+            [
+              "L0001"
+            ]
+          ]
+        },
+        "units": {
+          "revenue": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [
+              "L0002",
+              "L0001"
+            ]
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0002"
+            ],
+            [
+              "L0001"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0002"
+            ],
+            [
+              "L0001"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": [
+        "ITC Limited"
+      ]
+    },
+    {
+      "panel": {
+        "company": "Hindustan Unilever Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "consolidated",
+        "reporting_scope": "continuing_operations",
+        "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives",
+        "periods": [
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2025-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "continuing_operations",
+            "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+          },
+          {
+            "period": "FY2026",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2026-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "continuing_operations",
+            "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+          }
+        ],
+        "metrics": {
+          "revenue": [
+            61328.0,
+            64468.0
+          ]
+        },
+        "ledger_ids": {
+          "revenue": [
+            [
+              "L0004"
+            ],
+            [
+              "L0003"
+            ]
+          ]
+        },
+        "units": {
+          "revenue": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [
+              "L0004",
+              "L0003"
+            ]
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0004"
+            ],
+            [
+              "L0003"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0004"
+            ],
+            [
+              "L0003"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025",
+            "FY2026"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": [
+        "ITC Limited"
+      ]
+    },
+    {
+      "panel": {
+        "company": "Hindustan Unilever Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "standalone",
+        "reporting_scope": "total_balance_sheet",
+        "comparability_cohort": "post_demerger_fy2026",
+        "periods": [
+          {
+            "period": "FY2026",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2026-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_balance_sheet",
+            "comparability_cohort": "post_demerger_fy2026"
+          }
+        ],
+        "metrics": {
+          "trade_receivables": [
+            3037.0
+          ],
+          "inventory": [
+            4383.0
+          ]
+        },
+        "ledger_ids": {
+          "trade_receivables": [
+            [
+              "L0006"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0005"
+            ]
+          ]
+        },
+        "units": {
+          "inventory": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0006"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0005"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": []
+    },
+    {
+      "panel": {
+        "company": "Hindustan Unilever Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "standalone",
+        "reporting_scope": "total_balance_sheet",
+        "comparability_cohort": "pre_demerger_fy2025",
+        "periods": [
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2025-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_balance_sheet",
+            "comparability_cohort": "pre_demerger_fy2025"
+          }
+        ],
+        "metrics": {
+          "trade_receivables": [
+            3450.0
+          ],
+          "inventory": [
+            4161.0
+          ]
+        },
+        "ledger_ids": {
+          "trade_receivables": [
+            [
+              "L0008"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0007"
+            ]
+          ]
+        },
+        "units": {
+          "inventory": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0008"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0007"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": []
+    },
+    {
+      "panel": {
+        "company": "Hindustan Unilever Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "consolidated",
+        "reporting_scope": "total_balance_sheet",
+        "comparability_cohort": "post_demerger_fy2026",
+        "periods": [
+          {
+            "period": "FY2026",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2026-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "total_balance_sheet",
+            "comparability_cohort": "post_demerger_fy2026"
+          }
+        ],
+        "metrics": {
+          "trade_receivables": [
+            3379.0
+          ],
+          "inventory": [
+            4789.0
+          ]
+        },
+        "ledger_ids": {
+          "trade_receivables": [
+            [
+              "L0010"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0009"
+            ]
+          ]
+        },
+        "units": {
+          "inventory": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0010"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0009"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2026"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": []
+    },
+    {
+      "panel": {
+        "company": "Hindustan Unilever Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "consolidated",
+        "reporting_scope": "total_balance_sheet",
+        "comparability_cohort": "pre_demerger_fy2025",
+        "periods": [
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": "2025-03-31",
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "total_balance_sheet",
+            "comparability_cohort": "pre_demerger_fy2025"
+          }
+        ],
+        "metrics": {
+          "trade_receivables": [
+            3819.0
+          ],
+          "inventory": [
+            4415.0
+          ]
+        },
+        "ledger_ids": {
+          "trade_receivables": [
+            [
+              "L0012"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0011"
+            ]
+          ]
+        },
+        "units": {
+          "inventory": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0012"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0011"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": []
+    },
+    {
+      "panel": {
+        "company": "Hindustan Unilever Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "standalone",
+        "reporting_scope": "total_operations_pre_demerger",
+        "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
+        "periods": [
+          {
+            "period": "FY2020",
+            "period_type": "annual",
+            "period_start": "2019-04-01",
+            "period_end": "2020-03-31",
+            "days": 366,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2021",
+            "period_type": "annual",
+            "period_start": "2020-04-01",
+            "period_end": "2021-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2022",
+            "period_type": "annual",
+            "period_start": "2021-04-01",
+            "period_end": "2022-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2023",
+            "period_type": "annual",
+            "period_start": "2022-04-01",
+            "period_end": "2023-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2024",
+            "period_type": "annual",
+            "period_start": "2023-04-01",
+            "period_end": "2024-03-31",
+            "days": 366,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": "2024-04-01",
+            "period_end": "2025-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+          }
+        ],
+        "metrics": {
+          "revenue": [
+            38785.0,
+            45996.0,
+            51193.0,
+            59144.0,
+            60469.0,
+            61469.0
+          ],
+          "trade_receivables": [
+            1046.0,
+            1648.0,
+            1932.0,
+            2735.0,
+            2690.0,
+            3450.0
+          ],
+          "inventory": [
+            2636.0,
+            3383.0,
+            3890.0,
+            4031.0,
+            3812.0,
+            4161.0
+          ]
+        },
+        "ledger_ids": {
+          "revenue": [
+            [
+              "L0013"
+            ],
+            [
+              "L0016"
+            ],
+            [
+              "L0019"
+            ],
+            [
+              "L0022"
+            ],
+            [
+              "L0025"
+            ],
+            [
+              "L0028"
+            ]
+          ],
+          "trade_receivables": [
+            [
+              "L0015"
+            ],
+            [
+              "L0018"
+            ],
+            [
+              "L0021"
+            ],
+            [
+              "L0024"
+            ],
+            [
+              "L0027"
+            ],
+            [
+              "L0030"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0014"
+            ],
+            [
+              "L0017"
+            ],
+            [
+              "L0020"
+            ],
+            [
+              "L0023"
+            ],
+            [
+              "L0026"
+            ],
+            [
+              "L0029"
+            ]
+          ]
+        },
+        "units": {
+          "revenue": "INR_crore",
+          "inventory": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [
+              "L0013",
+              "L0016"
+            ],
+            [
+              "L0016",
+              "L0019"
+            ],
+            [
+              "L0019",
+              "L0022"
+            ],
+            [
+              "L0022",
+              "L0025"
+            ],
+            [
+              "L0025",
+              "L0028"
+            ]
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "tested",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            9.870723217738817,
+            13.077658926863206,
+            13.774930166233665,
+            16.87871973488435,
+            16.281731134961717,
+            20.485936000260292
+          ],
+          "expected_low": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            7.790841792576289
+          ],
+          "expected_high": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            19.06174730052058
+          ],
+          "expected_spread": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            2.817726376986073
+          ],
+          "gap_flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0015",
+              "L0013"
+            ],
+            [
+              "L0018",
+              "L0016"
+            ],
+            [
+              "L0021",
+              "L0019"
+            ],
+            [
+              "L0024",
+              "L0022"
+            ],
+            [
+              "L0027",
+              "L0025"
+            ],
+            [
+              "L0030",
+              "L0028"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "tested",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            24.874977439731854,
+            26.84570397425863,
+            27.735237239466333,
+            24.876826051670502,
+            23.072847244042404,
+            24.707820202053064
+          ],
+          "expected_low": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            22.93946585287517
+          ],
+          "expected_high": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            28.783064173053962
+          ],
+          "expected_spread": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            1.4608995800446987
+          ],
+          "gap_flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0014",
+              "L0013"
+            ],
+            [
+              "L0017",
+              "L0016"
+            ],
+            [
+              "L0020",
+              "L0019"
+            ],
+            [
+              "L0023",
+              "L0022"
+            ],
+            [
+              "L0026",
+              "L0025"
+            ],
+            [
+              "L0029",
+              "L0028"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 2,
+      "peer_companies": [
+        "ITC Limited"
+      ]
+    }
+  ],
+  "rejected": [],
+  "status": "analyzed",
+  "reason": null
+}

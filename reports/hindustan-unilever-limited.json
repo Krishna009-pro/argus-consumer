@@ -1,0 +1,574 @@
+{
+  "company": "Hindustan Unilever Limited",
+  "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+  "why_it_matters": [
+    "Reported values are compared with the company’s own historical range.",
+    "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
+  ],
+  "evidence": [
+    "L0001",
+    "L0002",
+    "L0003",
+    "L0004",
+    "L0005",
+    "L0006",
+    "L0007",
+    "L0008",
+    "L0009",
+    "L0010",
+    "L0011",
+    "L0012",
+    "L0013",
+    "L0014",
+    "L0015",
+    "L0016",
+    "L0017",
+    "L0018",
+    "L0019",
+    "L0020",
+    "L0021",
+    "L0022",
+    "L0023",
+    "L0024",
+    "L0025",
+    "L0026",
+    "L0027",
+    "L0028",
+    "L0029",
+    "L0030"
+  ],
+  "timeline": [
+    {
+      "period": "FY2026",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0002",
+        "L0001"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0001"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0001"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0004",
+        "L0003"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0003"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0003"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "continuing_operations",
+      "comparability_cohort": "FY2025-26_report_continuing_operations_comparatives"
+    },
+    {
+      "period": "FY2026",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0006"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0005"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2025",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0008"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0007"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2026",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0010"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0009"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2026",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "post_demerger_fy2026"
+    },
+    {
+      "period": "FY2025",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0012"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0011"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "total_balance_sheet",
+      "comparability_cohort": "pre_demerger_fy2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0025",
+        "L0028"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_operations_pre_demerger",
+      "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "receivable_days",
+      "reported": 20.485936000260292,
+      "expected_low": 7.790841792576289,
+      "expected_high": 19.06174730052058,
+      "ledger_ids": [
+        "L0030",
+        "L0028"
+      ],
+      "status": "tested",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_operations_pre_demerger",
+      "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "inventory_days",
+      "reported": 24.707820202053064,
+      "expected_low": 22.93946585287517,
+      "expected_high": 28.783064173053962,
+      "ledger_ids": [
+        "L0029",
+        "L0028"
+      ],
+      "status": "tested",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_operations_pre_demerger",
+      "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_operations_pre_demerger",
+      "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "total_operations_pre_demerger",
+      "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
+    }
+  ],
+  "numbers": {
+    "receivable_days FY2020 [L0015] [L0013]": 9.870723217738817,
+    "receivable_days FY2021 [L0018] [L0016]": 13.077658926863206,
+    "receivable_days FY2022 [L0021] [L0019]": 13.774930166233665,
+    "receivable_days FY2023 [L0024] [L0022]": 16.87871973488435,
+    "receivable_days FY2024 [L0027] [L0025]": 16.281731134961717,
+    "receivable_days FY2025 [L0030] [L0028]": 20.485936000260292,
+    "inventory_days FY2020 [L0014] [L0013]": 24.874977439731854,
+    "inventory_days FY2021 [L0017] [L0016]": 26.84570397425863,
+    "inventory_days FY2022 [L0020] [L0019]": 27.735237239466333,
+    "inventory_days FY2023 [L0023] [L0022]": 24.876826051670502,
+    "inventory_days FY2024 [L0026] [L0025]": 23.072847244042404,
+    "inventory_days FY2025 [L0029] [L0028]": 24.707820202053064
+  },
+  "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
+  "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
+  "evidence_score": 0.0,
+  "evidence_label": "Weak",
+  "not_tested": [
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Fewer than six usable disclosed periods.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — receivable_days: Fewer than six usable disclosed periods.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — cash_conversion: Fewer than six usable disclosed periods.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — margin_vs_input_cost: Fewer than six usable disclosed periods.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Fewer than six usable disclosed periods.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — receivable_days: Fewer than six usable disclosed periods.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — cash_conversion: Fewer than six usable disclosed periods.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — margin_vs_input_cost: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — price_volume: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — receivable_days: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — cash_conversion: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — price_volume: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — receivable_days: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — cash_conversion: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — price_volume: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — receivable_days: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — cash_conversion: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — price_volume: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — receivable_days: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — cash_conversion: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
+    "standalone, total_operations_pre_demerger, pre_demerger_standalone_FY2020_FY2025 — price_volume: Fewer than six usable disclosed periods.",
+    "standalone, total_operations_pre_demerger, pre_demerger_standalone_FY2020_FY2025 — cash_conversion: Fewer than six usable disclosed periods.",
+    "standalone, total_operations_pre_demerger, pre_demerger_standalone_FY2020_FY2025 — margin_vs_input_cost: Fewer than six usable disclosed periods."
+  ],
+  "hypotheses": [],
+  "red_team_log": [],
+  "score_components": {},
+  "validation": {
+    "state": "no_reliable_finding",
+    "candidates": [],
+    "rejected_findings": [],
+    "tested_patterns": 2,
+    "panel_count": 7,
+    "generated_candidates": [],
+    "peer_companies": [
+      "ITC Limited"
+    ],
+    "period_type": "annual",
+    "consolidation_basis": "standalone",
+    "reporting_scope": "total_operations_pre_demerger",
+    "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
+    "verified_ledger_entries": 30,
+    "elapsed_seconds": 26.3574
+  }
+}

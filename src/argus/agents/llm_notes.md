@@ -1,0 +1,1 @@
+LLM research is optional. The adapter refuses to claim research when configuration or retrieved evidence is missing. Query planning and the skeptic budget work offline. No generated text is allowed to add numerical claims to the dossier.

@@ -1,0 +1,27 @@
+# Local credentials and provider settings
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Downloaded source PDFs and user-provided inputs
+data/cache/*
+!data/cache/.gitkeep
+data/incoming/
+
+# Temporary review/render artifacts and logs
+tmp/
+logs/
+
+# Generated evaluation results and dossier PDFs
+eval/results/*.json
+eval/results/scoreboard.md
+reports/*.pdf

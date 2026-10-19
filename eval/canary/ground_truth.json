@@ -1,0 +1,242 @@
+[
+  {
+    "company": "SYN-001",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-002",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-003",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-004",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-005",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-006",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-007",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-008",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-009",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-010",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-011",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-012",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-013",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-014",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-015",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-016",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-017",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-018",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-019",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-020",
+    "type": null,
+    "start_period_index": null,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-021",
+    "type": "price_led_growth",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-022",
+    "type": "receivable_stretch",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-023",
+    "type": "inventory_build",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-024",
+    "type": "combined",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-025",
+    "type": "price_led_growth",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-026",
+    "type": "receivable_stretch",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-027",
+    "type": "inventory_build",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-028",
+    "type": "combined",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-029",
+    "type": "price_led_growth",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-030",
+    "type": "receivable_stretch",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-031",
+    "type": "inventory_build",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-032",
+    "type": "combined",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-033",
+    "type": "price_led_growth",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-034",
+    "type": "receivable_stretch",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-035",
+    "type": "inventory_build",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-036",
+    "type": "combined",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-037",
+    "type": "price_led_growth",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-038",
+    "type": "receivable_stretch",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-039",
+    "type": "inventory_build",
+    "start_period_index": 5,
+    "synthetic": true
+  },
+  {
+    "company": "SYN-040",
+    "type": "combined",
+    "start_period_index": 5,
+    "synthetic": true
+  }
+]

@@ -1,0 +1,15 @@
+# Public-source directory only. Business facts are never inferred from these names.
+# A failed URL fetch leaves data absent; use import-local for a report obtained manually.
+companies:
+  - name: ITC Limited
+    sources:
+      - label: Official report and accounts FY2025-26
+        url: https://itcportal.com/investors/itc-reports-and-accounts/itc-report-and-accounts-2026.html
+        source_type: filing
+        document_type: annual_report_page
+  - name: Hindustan Unilever Limited
+    sources:
+      - label: Official integrated annual report FY2025-26
+        url: https://www.hul.co.in/files/annual-report-2025-26.pdf
+        source_type: filing
+        document_type: annual_report_pdf
