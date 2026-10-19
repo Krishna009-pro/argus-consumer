@@ -33,14 +33,15 @@ Revenue-based inventory days are 24.8750, 26.8457, 27.7352, 24.8768, 23.0728, an
 - Six short panels abstain on all five angles. For `price_volume`, `receivable_days`, `cash_conversion`, and `margin_vs_input_cost`, the exact reason is `Fewer than six usable disclosed periods.` For `inventory_days`, it is `Inventory, a same-unit positive denominator, and exact period day count are required.`
 - In the six-year historical panel, `price_volume`, `cash_conversion`, and `margin_vs_input_cost` each abstain with `Fewer than six usable disclosed periods.` No verified volume-growth series, matched operating-cash-flow/EBITDA pair, or gross-margin/input-cost-index pair is available.
 - Historical `receivable_days` and `inventory_days` are tested. Receivables have one flagged period but no candidate. Inventory has no flagged period.
-- There is no eligible peer panel. Red-team alternatives are recorded as not tested because independently retrieved, cached evidence was not available.
-- The peer-adjusted deviation function requires three peer-gap observations and counts each peer company once; a single ITC panel cannot meet that gate. Comparable scope and basis must also be established before peer rows are eligible.
-- No six-period volume-growth series with scope compatible with the full standalone revenue panel is present, so `price_volume` abstains.
+- ITC is structurally eligible as a peer in compatible HUL panels. Its peer angle has fewer than six usable periods, so it supplies no tested peer-gap observation. The peer-adjusted deviation gate requires at least three peer-gap observations; eligibility alone does not satisfy it.
+- Red-team alternatives are recorded as not tested because independently retrieved, cached evidence was not available.
+- No verified six-period volume-growth series is available with a definition and reporting perimeter shown to match the full standalone revenue panel, so `price_volume` abstains. Underlying growth measures are not paired with reported revenue without comparability review.
 - No missing observation is filled with zero. The six-year historical panel is standalone only; comparable six-year consolidated observations and peer observations are absent.
 
 ## Verification and artifacts
 
-- Test suite: 27 passed, 0 failed.
+- Test suite: 31 passed, 0 failed (`python scripts/run_tests.py`).
+- Streamlit app runner completed with zero exceptions after the `eval` import-path fix; local health endpoint returned HTTP 200 `ok`.
 - Synthetic evaluation: measured separately from real-company quality. The HUL result remains an abstention/no-reliable-finding.
 - Dashboard health: `http://127.0.0.1:8765/_stcore/health` returned HTTP 200 `ok`.
 - Current dossier: `reports/hindustan-unilever-limited.md`; machine-readable panel analysis: `reports/hindustan-unilever-limited-analysis.json`; exported PDF: `reports/hindustan-unilever-limited.pdf`.
