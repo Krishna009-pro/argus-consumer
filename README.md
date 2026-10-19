@@ -142,7 +142,7 @@ Install the optional dashboard extra, run at least one company command, then sta
 streamlit run app/streamlit_app.py
 ```
 
-The dashboard shows generated dossiers, verified panels, exact abstention reasons, the existing ratio-screen comparison, and source evidence. It does not upload or approve PDFs. No placeholder companies or fabricated company metrics are bundled. Evaluation scoreboard entries distinguish measured synthetic results from unavailable human or real-world measurements. PDF export is available in the dashboard or through `export-pdf`.
+The dashboard shows generated dossiers, verified panels, exact abstention reasons, the existing ratio-screen comparison, and source evidence. Its **Live company intake** panel searches public sources through Serper, lets the reviewer choose a report, and can inspect an HTML report landing page to offer its direct PDF links. After a reviewer selects a PDF, ARGUS fetches and SHA-256 caches it, then displays extracted claims as unverified candidates. The dashboard does not auto-approve financial values: review candidates against their cited pages, approve only supported observations, and then run `python scripts/argus.py run --company "Company Name"`. This keeps online source discovery separate from deterministic analysis over verified ledger entries. No placeholder companies or fabricated company metrics are bundled. Evaluation scoreboard entries distinguish measured synthetic results from unavailable human or real-world measurements. PDF export is available in the dashboard or through `export-pdf`.
 
 ## Evaluation and limitations
 

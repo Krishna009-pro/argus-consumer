@@ -110,10 +110,35 @@ def import_remote_pdf(url: str, *, company: str, source_type: str = "filing",
                       cache_dir: str | Path = "data/cache",
                       candidate_dir: str | Path = "data/candidates") -> tuple[Path, str, Path, list[ObservationCandidate], bool]:
     """Reuse an exact cached source or fetch a public PDF and emit unverified candidates."""
+    from ..search import discover_pdf_links, is_pdf_url
+    if not is_pdf_url(url):
+        linked_pdfs = discover_pdf_links(url)
+        if len(linked_pdfs) == 1:
+            url = linked_pdfs[0]["url"]
+        elif linked_pdfs:
+            urls = "\n".join(f"- {item['title']}: {item['url']}" for item in linked_pdfs)
+            raise ValueError(f"The selected page links to multiple PDFs; choose one direct PDF URL:\n{urls}")
+        else:
+            raise ValueError("Selected source is a web page and no direct PDF report link was found; no file was cached.")
     candidate_root = Path(candidate_dir)
     cached_source = _find_source_cache(url, cache_dir)
     if cached_source:
         cache_path, digest = cached_source
+        # Reuse the matching review manifest before paying the cost of reparsing
+        # a long annual report on a dashboard rerun.
+        if candidate_root.is_dir():
+            for manifest in candidate_root.glob("candidates-*.json"):
+                try:
+                    prior_rows = json.loads(manifest.read_text(encoding="utf-8"))
+                    matching = [row for row in prior_rows if row.get("source_url") == url
+                                and (row.get("company") or "").casefold() == company.casefold()
+                                and row.get("source_sha256") == digest
+                                and Path(row.get("cache_path", "")) == cache_path]
+                    if matching and len(matching) == len(prior_rows):
+                        persisted = [ObservationCandidate.model_validate(row) for row in prior_rows]
+                        return cache_path, digest, manifest, persisted, True
+                except (OSError, ValueError, TypeError):
+                    continue
         imported_path, candidates = import_pdf(cache_path, company=company, source_url=url,
             source_type=source_type, cache_dir=cache_dir)
         candidate_path = save_candidates(candidates, candidate_root)

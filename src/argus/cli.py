@@ -76,6 +76,7 @@ def main(argv: list[str] | None = None) -> int:
     prepare.add_argument("--limit", type=int, default=10)
     pdf = sub.add_parser("export-pdf", help="Export a generated company dossier to PDF")
     pdf.add_argument("--company", required=True)
+    pdf.add_argument("--output", type=Path, help="Optional destination path for the readable PDF")
     args = parser.parse_args(argv)
     if args.command == "run":
         print(json.dumps(run_company(args.company), indent=2)); return 0
@@ -179,8 +180,12 @@ def main(argv: list[str] | None = None) -> int:
         dossier_path = Path("reports") / f"{slug(args.company)}.json"
         if not dossier_path.is_file(): raise SystemExit(f"Run analysis first; dossier not found: {dossier_path}")
         dossier = Dossier.model_validate_json(dossier_path.read_text(encoding="utf-8"))
-        output = Path("reports") / f"{slug(args.company)}.pdf"
-        output.write_bytes(build_pdf(dossier))
+        ledger_entries = EvidenceLedger().verified_entries()
+        analysis_path = Path("reports") / f"{slug(args.company)}-analysis.json"
+        analysis = json.loads(analysis_path.read_text(encoding="utf-8")) if analysis_path.is_file() else None
+        output = args.output or (Path("reports") / f"{slug(args.company)}.pdf")
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_bytes(build_pdf(dossier, ledger_entries=ledger_entries, analysis=analysis))
         print(json.dumps({"pdf": str(output), "bytes": output.stat().st_size}, indent=2)); return 0
     if args.command == "eval":
         from eval.canary.missing_data import evaluate as missing

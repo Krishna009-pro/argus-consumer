@@ -23,22 +23,22 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            17931.9
-          ],
           "trade_receivables": [
             2925.6
+          ],
+          "inventory": [
+            17931.9
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0031"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0033"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0031"
             ]
           ]
         },
@@ -280,22 +280,22 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            18622.96
-          ],
           "trade_receivables": [
             3922.86
+          ],
+          "inventory": [
+            18622.96
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0035"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0037"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0035"
             ]
           ]
         },
@@ -414,22 +414,22 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            15637.56
-          ],
           "trade_receivables": [
             4719.67
+          ],
+          "inventory": [
+            15637.56
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0036"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0038"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0036"
             ]
           ]
         },
@@ -1073,6 +1073,28 @@
         "comparability_cohort": "ITC_standalone_pre_demerger",
         "periods": [
           {
+            "period": "FY2018",
+            "period_type": "annual",
+            "period_start": "2017-04-01",
+            "period_end": "2018-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "ITC_standalone_pre_demerger"
+          },
+          {
+            "period": "FY2019",
+            "period_type": "annual",
+            "period_start": "2018-04-01",
+            "period_end": "2019-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "ITC_standalone_pre_demerger"
+          },
+          {
             "period": "FY2020",
             "period_type": "annual",
             "period_start": "2020-04-01",
@@ -1115,44 +1137,56 @@
             "consolidation_basis": "standalone",
             "reporting_scope": "total_operations_pre_demerger",
             "comparability_cohort": "ITC_standalone_pre_demerger"
+          },
+          {
+            "period": "FY2024",
+            "period_type": "annual",
+            "period_start": "2023-04-01",
+            "period_end": "2024-03-31",
+            "days": 366,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "total_operations_pre_demerger",
+            "comparability_cohort": "ITC_standalone_pre_demerger"
           }
         ],
         "metrics": {
-          "inventory": [
-            8038.07,
-            9470.87,
-            9997.77,
-            10593.9
-          ],
           "trade_receivables": [
+            2357.01,
+            3646.22,
             2092.0,
             2090.35,
             1952.5,
-            2321.33
+            2321.33,
+            3311.45
+          ],
+          "inventory": [
+            7237.15,
+            7587.24,
+            8038.07,
+            9470.87,
+            9997.77,
+            10593.9,
+            12631.51
           ],
           "revenue": [
+            44329.77,
+            45784.39,
             46807.34,
             48524.54,
             59745.56,
-            70251.28
+            70251.28,
+            70105.29
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0046"
-            ],
-            [
-              "L0045"
-            ],
-            [
-              "L0050"
-            ],
-            [
-              "L0049"
-            ]
-          ],
           "trade_receivables": [
+            [
+              "L0070"
+            ],
+            [
+              "L0067"
+            ],
             [
               "L0048"
             ],
@@ -1164,9 +1198,41 @@
             ],
             [
               "L0051"
+            ],
+            [
+              "L0064"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0069"
+            ],
+            [
+              "L0066"
+            ],
+            [
+              "L0046"
+            ],
+            [
+              "L0045"
+            ],
+            [
+              "L0050"
+            ],
+            [
+              "L0049"
+            ],
+            [
+              "L0063"
             ]
           ],
           "revenue": [
+            [
+              "L0068"
+            ],
+            [
+              "L0065"
+            ],
             [
               "L0054"
             ],
@@ -1178,6 +1244,9 @@
             ],
             [
               "L0055"
+            ],
+            [
+              "L0062"
             ]
           ]
         },
@@ -1194,12 +1263,18 @@
           "status": "abstained",
           "abstain_reason": "Fewer than six usable disclosed periods.",
           "periods": [
+            "FY2018",
+            "FY2019",
             "FY2020",
             "FY2021",
             "FY2022",
-            "FY2023"
+            "FY2023",
+            "FY2024"
           ],
           "reported": [
+            null,
+            null,
+            null,
             null,
             null,
             null,
@@ -1207,6 +1282,14 @@
           ],
           "ledger_ids_by_period": [
             [],
+            [
+              "L0068",
+              "L0065"
+            ],
+            [
+              "L0065",
+              "L0054"
+            ],
             [
               "L0054",
               "L0053"
@@ -1218,27 +1301,80 @@
             [
               "L0056",
               "L0055"
+            ],
+            [
+              "L0055",
+              "L0062"
             ]
           ],
           "metadata": {}
         },
         "receivable_days": {
           "angle": "receivable_days",
-          "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "status": "tested",
           "periods": [
+            "FY2018",
+            "FY2019",
             "FY2020",
             "FY2021",
             "FY2022",
-            "FY2023"
+            "FY2023",
+            "FY2024"
           ],
           "reported": [
+            19.407018127998413,
+            29.068210802852235,
             16.313253434183615,
             15.723544210826107,
             11.92829224464546,
-            12.093826333128735
+            12.093826333128735,
+            17.288149011294298
+          ],
+          "expected_low": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            12.399017351491354,
+            7.139622364083976
+          ],
+          "expected_high": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            23.321254210690675,
+            25.486884504283253
+          ],
+          "expected_spread": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            2.73055921479983,
+            4.586815535049819
+          ],
+          "gap_flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
           ],
           "ledger_ids_by_period": [
+            [
+              "L0070",
+              "L0068"
+            ],
+            [
+              "L0067",
+              "L0065"
+            ],
             [
               "L0048",
               "L0054"
@@ -1254,27 +1390,80 @@
             [
               "L0051",
               "L0055"
+            ],
+            [
+              "L0064",
+              "L0062"
             ]
           ],
           "metadata": {}
         },
         "inventory_days": {
           "angle": "inventory_days",
-          "status": "abstained",
-          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "status": "tested",
           "periods": [
+            "FY2018",
+            "FY2019",
             "FY2020",
             "FY2021",
             "FY2022",
-            "FY2023"
+            "FY2023",
+            "FY2024"
           ],
           "reported": [
+            59.58884402062091,
+            60.486611266416354,
             62.68024523504219,
             71.23957383212701,
             61.07878225595341,
-            55.19283634404953
+            55.19283634404953,
+            65.94556074156459
+          ],
+          "expected_low": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            57.00011681022828,
+            56.660817400545476
+          ],
+          "expected_high": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            66.16673969123026,
+            65.49674711136134
+          ],
+          "expected_spread": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            2.291655720250496,
+            2.208982427703968
+          ],
+          "gap_flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
           ],
           "ledger_ids_by_period": [
+            [
+              "L0069",
+              "L0068"
+            ],
+            [
+              "L0066",
+              "L0065"
+            ],
             [
               "L0046",
               "L0054"
@@ -1290,6 +1479,10 @@
             [
               "L0049",
               "L0055"
+            ],
+            [
+              "L0063",
+              "L0062"
             ]
           ],
           "metadata": {
@@ -1301,18 +1494,27 @@
           "status": "abstained",
           "abstain_reason": "Fewer than six usable disclosed periods.",
           "periods": [
+            "FY2018",
+            "FY2019",
             "FY2020",
             "FY2021",
             "FY2022",
-            "FY2023"
+            "FY2023",
+            "FY2024"
           ],
           "reported": [
+            null,
+            null,
+            null,
             null,
             null,
             null,
             null
           ],
           "ledger_ids_by_period": [
+            [],
+            [],
+            [],
             [],
             [],
             [],
@@ -1325,12 +1527,18 @@
           "status": "abstained",
           "abstain_reason": "Fewer than six usable disclosed periods.",
           "periods": [
+            "FY2018",
+            "FY2019",
             "FY2020",
             "FY2021",
             "FY2022",
-            "FY2023"
+            "FY2023",
+            "FY2024"
           ],
           "reported": [
+            null,
+            null,
+            null,
             null,
             null,
             null,
@@ -1340,13 +1548,16 @@
             [],
             [],
             [],
+            [],
+            [],
+            [],
             []
           ],
           "metadata": {}
         }
       },
       "candidates": [],
-      "tested_patterns": 0,
+      "tested_patterns": 4,
       "peer_companies": [
         "Hindustan Unilever Limited"
       ]
@@ -1373,22 +1584,22 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            12631.51
-          ],
           "trade_receivables": [
             3311.45
+          ],
+          "inventory": [
+            12631.51
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0057"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0058"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0057"
             ]
           ]
         },

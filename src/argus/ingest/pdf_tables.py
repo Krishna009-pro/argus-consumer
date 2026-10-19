@@ -22,9 +22,24 @@ YEAR = re.compile(r"\b(?:19|20)\d{2}\b")
 
 
 def _dated_statement_header(lines: list[str]) -> tuple[str, list[str]] | None:
-    # Reports commonly split the statement title, date and column headings
-    # across several extracted text lines.
-    # Search short adjacent windows and retain the two dated value columns.
+    # Prefer the actual table column headings. Annual-report titles and the
+    # statement date can mention years in a different order than the value
+    # columns (for example, "Annual Report 2025-26" before "31 March 2026 / 31
+    # March 2025"). Starting at Particulars avoids assigning those title years
+    # to the financial values.
+    for start, line in enumerate(lines):
+        if not re.search(r"\bparticulars\b", line, re.I):
+            continue
+        for end in range(start + 1, min(len(lines), start + 6) + 1):
+            window = lines[start:end]
+            normalized = re.sub(r"(?i)\by\s+ear\b", "year", " ".join(window))
+            years = list(dict.fromkeys(YEAR.findall(normalized)))
+            if len(years) >= 2 and re.search(r"\bnote\b", normalized, re.I):
+                return " | ".join(part.strip() for part in window), years[:2]
+
+    # Fallback for reports whose statements omit a "Particulars / Note" row.
+    # Keep scanning short adjacent windows, but only after trying the dated
+    # value-column labels above.
     for start in range(len(lines)):
         for end in range(start + 1, min(len(lines), start + 6) + 1):
             window = lines[start:end]

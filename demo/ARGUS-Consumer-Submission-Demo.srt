@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:11,595
+Meet ARGUS Consumer, a public-data financial research prototype. It searches public sources, traces approved values, and abstains when the evidence is not ready.
+
+2
+00:00:11,915 --> 00:00:25,930
+Search a company, choose a public report, and cache its SHA-256 fingerprint. ARGUS extracts review candidates; a recent Dabur report yielded six, none auto-approved.
+
+3
+00:00:26,251 --> 00:00:36,882
+Review every claim against its page, unit, period, statement basis, and reporting scope. Ambiguous and missing values stay unresolved.
+
+4
+00:00:37,201 --> 00:00:55,354
+HUL ledger examples: about three thousand five hundred crore of FY2025 trade receivables on page 145, and revenue around sixty-one thousand five hundred crore on page 146. Each retains its source and review trail.
+
+5
+00:00:55,674 --> 00:01:07,484
+Python owns the financial calculations. An optional LLM adapter can produce qualitative hypotheses, never numbers. It was not called in this saved HUL run.
+
+6
+00:01:07,804 --> 00:01:22,374
+HUL has thirty verified observations across seven panels. Receivable days reached about twenty in FY2025, above the expected range of roughly eight to nineteen. Only one period was flagged.
+
+7
+00:01:22,694 --> 00:01:35,383
+ARGUS found no reliable finding. Persistence needs three consecutive periods; peer coverage is insufficient, volume is not comparable, and red-team explanations remain untested.
+
+8
+00:01:35,703 --> 00:01:50,834
+On synthetic tests, recall was one hundred percent across twenty planted cases, false positives five percent across twenty clean cases, and missing-data abstention four of four. Real-world validation is unavailable.
+
+9
+00:01:51,154 --> 00:02:02,728
+ARGUS makes no investment recommendation. Online intake works; broader peer histories and real-world validation remain next. Trace the evidence. Respect the gaps.

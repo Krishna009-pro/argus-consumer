@@ -16,6 +16,8 @@ __pycache__/
 data/cache/*
 !data/cache/.gitkeep
 data/incoming/
+data/candidates/*
+!data/candidates/.gitkeep
 
 # Temporary review/render artifacts and logs
 tmp/
@@ -25,3 +27,8 @@ logs/
 eval/results/*.json
 eval/results/scoreboard.md
 reports/*.pdf
+
+# Generated demo assets; commit only the final submission video and subtitles
+demo/submission-assets/
+demo/submission-audio/
+output/

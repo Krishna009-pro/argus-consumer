@@ -12,7 +12,7 @@ Dates: Round 1 report due Mon 19 Oct 2026, 11:59 PM IST. Results Fri 23 Oct. Fin
 2. Never change a number in `config/metrics.yaml` to make a test pass. Fix the code.
 3. Run `make test` after every task and `make eval` at the end of each day.
 4. If a task is blocked by missing public data, implement the abstain path (Section 3, rule R4) and move on. Do not invent data.
-5. Prefer small plain Python over frameworks. If a framework (LangGraph or similar) is not saving time by day 2, use a sequential pipeline.
+5. Use LangGraph to coordinate the planned multi-agent workflow once its state and node contracts are defined. Keep calculations and validation as ordinary Python. A sequential, deterministic execution path must remain available when the network, LLM provider, or graph runtime is unavailable.
 
 Task prompt template for the agent:
 
@@ -29,7 +29,7 @@ Do not touch config/metrics.yaml. Report which metric IDs the task moves.
 
 An autonomous agent that takes any listed Track C company, profiles its business model, computes what its numbers SHOULD look like (a range, not a point), finds gaps that are persistent and company-specific, then tries to explain them and to disprove its own explanation. It publishes a finding only if it survives a validation gate, and every number links to a source. If evidence is thin it says "no reliable finding".
 
-Design principle: **ordinary code computes every number. LLMs plan searches, read documents and argue. LLMs never produce or edit a number.**
+Design principle: **ordinary code computes every number. LLM agents discover sources, interpret text, plan searches, and challenge explanations. They never create or edit financial values, thresholds, calculations, or verdicts.** ARGUS is online-first for source discovery and qualitative research, with an explicit offline/degraded path backed by locally cached public sources and the verified ledger.
 
 ---
 
@@ -63,6 +63,10 @@ Honesty rules for results:
 - R6. Public data only. No paid or proprietary datasets.
 - R7. No investment recommendation. A gap is never described as an accusation about the company.
 - R8. Cache every fetched source file with its hash so results are reproducible offline.
+- R9. Online-first must fail soft: when search, browser retrieval, or an LLM provider is unavailable, switch to eligible local cache/ledger evidence and label the run `offline_fallback` or `degraded`. Never imply cached data is current or that an online step succeeded when it did not.
+- R10. Agent outputs are proposals with typed schemas and provenance references. They cannot write to the verified ledger; only reviewer approval through existing verification rules can promote a financial observation.
+- R11. Agent handoffs and retrieval must preserve source URL, cached-file SHA-256, page or other locator, retrieval time, and review status. Vector similarity is a way to find passages, not proof that a claim is true.
+- R12. Use Playwright only where a public source requires browser-rendered pages. Web search remains a search-provider function; browser automation is not itself a search index.
 
 ---
 
@@ -115,6 +119,30 @@ class Dossier(BaseModel):
     evidence_label: Literal["Strong", "Moderate", "Weak"]
     not_tested: list[str]
 ```
+
+### 4.1 Online-first multi-agent workflow and offline fallback
+
+This is the target runtime design. The current system is not yet a live multi-agent implementation: the analysis engine currently invokes its research function in offline mode. Treat the roles below as planned capabilities until their call traces and acceptance checks are implemented.
+
+**LangGraph coordinates the workflow and its review pauses; it does not make financial decisions.** Define a typed, checkpointable graph state containing company input, run mode, source candidates, cached-file metadata, extraction candidates, approved ledger IDs, deterministic analysis, agent proposals, errors, and unresolved questions. Persist enough state to resume after a reviewer action. Each node returns structured output and provenance; node errors/timeouts are recorded and route to a safe fallback or abstention.
+
+Planned roles (each can be a bounded LLM-backed node; they are not independent authorities):
+
+1. **Source-discovery agent:** proposes public company reports and source URLs from web search. Publisher, company, report period, and document type remain reviewable; search rank is not verification.
+2. **Document-understanding agent:** uses Docling or the currently supported PDF parsers to identify relevant tables and narrative passages and propose claims with page/table locations. Parser output and LLM interpretation remain unverified candidates.
+3. **Company-profile agent:** summarizes business model and reporting scope from cited public evidence so generic metric applicability can be selected. Unknown profile attributes remain unknown.
+4. **Hypothesis/research agent:** receives deterministic anomaly candidates, plans supporting and disconfirming public-source queries, and proposes qualitative explanations with citations. It does not calculate metrics or fetch arbitrary numbers into the ledger.
+5. **Red-team agent:** actively searches for benign alternatives such as seasonality, base effects, one-off events, accounting changes, acquisitions/demergers, pricing lags, and sector-wide movement. Missing evidence is `not_tested`, never a pass.
+6. **Evidence/claim checker:** deterministic code validates hashes, cached snippets, page references, entity, period, unit, basis, scope, and ledger status. Human approval remains required for observation verification.
+7. **Narrative/report agent:** may explain approved deterministic outputs in plain language. Numeric fields and verdict text are populated or constrained by deterministic templates and the existing validation gate.
+
+**Online-first mode:** attempt configured public web search; inspect the selected source; fetch public PDFs/HTML as allowed; cache source bytes content-addressably; then run extraction and candidate review. Use Playwright only for pages that need JavaScript rendering, and retain the final original public document as the evidence artifact whenever available. An LLM provider is a separate optional online dependency: provider failure must not stop deterministic analysis.
+
+**Offline/degraded fallback:** on missing network, search key, provider key, timeout, or service error, report the failed capability and reason, then use (a) hash-verified cached sources and existing extraction candidates, and (b) verified ledger entries for analysis. Show source retrieval timestamps and explicitly label old cache data as cached. If there is no sufficient verified local evidence, abstain and list missing inputs. Never silently substitute an older report, use unverified candidates as verified data, or turn missing values into zero.
+
+**Retrieval and document tools:** evaluate Docling against the existing pdfplumber/pypdf pipeline on a fixed, manually checked set of difficult public reports before adopting it; require page/table provenance and preserve unresolved extraction ambiguity. Qdrant is optional for retrieving relevant narrative chunks from many cached reports. Store document ID, hash, URL, page/section, and review status as metadata; filter to the relevant company/period/scope; return snippets for verification. Do not use vector similarity as a numeric financial input or as a substitute for exact ledger queries. Browser Use or Playwright may navigate JavaScript-heavy public report pages when needed; neither is the general search provider. Jev or Instructor/Pydantic may be evaluated to constrain qualitative red-team classifications to typed schemas; they are structured-output helpers, not agents or numeric decision-makers.
+
+**Human-in-the-loop boundary:** graph pauses before approving candidate financial observations and before publishing a real discovery. Existing verification and validation gates remain authoritative. LLMs may structure textual evidence and suggest queries; only deterministic code calculates, applies configured thresholds, and decides whether gates pass.
 
 ---
 
@@ -426,11 +454,24 @@ If time runs short, cut in this order: T24, T23, T22, T19, T18. Never cut T03, T
 
 No new features. Morning: run `make test`, run one cold smoke test, confirm cached data. Demo on the company the judges pick. If the agent abstains, say so and show the not-tested list: that is a feature.
 
+### 7.1 Current implementation sequence: online-first multi-agent runtime
+
+This sequence is the current product priority and supersedes the dated schedule above wherever they conflict. It describes work to implement; it is not a claim that these capabilities already exist. Preserve all existing metric thresholds and company-generic logic.
+
+1. **Define run modes and runtime status.** Add explicit `online`, `offline_fallback`, and `offline_only` states to run results and dashboard. Distinguish unavailable network, missing search credentials, provider failure, no source found, cached source reuse, and no local coverage. Acceptance: each mode is testable without live credentials and never misreports a completed online action.
+2. **Finish online-first company intake with safe fallback.** Search public sources when online, let the reviewer select a source, fetch and hash-cache it, and offer JavaScript-rendered public pages to Playwright (or Browser Use backed by Playwright) only when ordinary HTTP inspection cannot reach the report links. On any online failure, check local hash-verified cache, candidate manifests, and verified ledger data; disclose cache age/source and continue only with valid evidence. If coverage is insufficient, produce a clear abstention. Acceptance: online success, search/API failure, timeout, offline with cached report, offline with ledger-only evidence, and offline with no evidence are all covered by tests.
+3. **Benchmark document extraction before changing parsers.** Compare Docling with the existing PDF extractors on a fixed set of visually reviewed statements and difficult table layouts. Preserve PDF page, table/row/column context, exact snippet, and unresolved status. Acceptance: report candidate-level extraction/reconciliation counts and known failure modes; do not silently promote candidates or replace the current parser without evidence of improvement.
+4. **Integrate live LLM-backed specialist agents through LangGraph.** Implement typed inputs/outputs, tool permissions, token/time limits, retries, provider-usage logging, and graph checkpoints. At minimum, wire distinct document-understanding, company-profile, hypothesis/research, and red-team specialist roles to configured LLM calls in online mode. Each agent must have a purpose-specific prompt and return structured, cited proposals. The deterministic claim checker and numeric engine remain ordinary code, not LLM agents. Acceptance: an online trace proves which specialist actually ran, its provider/model, status, cited source IDs, and usage when reported; missing keys or provider outages route to the documented offline/degraded path.
+5. **Add evidence retrieval and the human review pause.** Give agents only selected public sources and locally cached, provenance-bearing excerpts. Evaluate Qdrant for narrative passage retrieval when the corpus warrants it; store/filter by company, period, reporting scope, source hash, page, and review state. Exact financial observations continue to come from the verified ledger. Acceptance: every returned passage links to its original cached source and page; unverified passages cannot become approved observations; the graph can pause and resume after reviewer approval or rejection.
+6. **Connect candidates to deterministic analysis and reporting.** Run analysis only on verified ledger entries; feed generated candidate metadata to hypothesis and red-team research; require existing validation gates for a discovery. LLM narrative is constrained to explaining deterministic results and may not invent numeric tokens. Acceptance: an end-to-end run on multiple companies requires no company-specific code, preserves abstentions, and renders exact sources, agent trace, failed steps, and remaining data gaps.
+7. **Evaluate both online and fallback behavior.** Add tests for network/provider failure, stale or tampered cache, empty cache, empty extraction, citation mismatch, conflicting periods/bases, and resumed human review. Run the existing evaluation without changing `config/metrics.yaml`; report sample counts, online/offline run status, model/provider usage and cost only when telemetry is returned, and keep synthetic metrics separate from real-company validation.
+8. **Adopt optional infrastructure only when it improves measured outcomes.** Docling and Qdrant require the benchmark/retrieval evidence above. Playwright is limited to public pages requiring browser rendering. LangGraph is the requested orchestrator for the multi-agent flow, while deterministic analysis must still run if graph/LLM services are unavailable.
+
 ---
 
 ## 8. Solo or small-team fallback
 
-- If fewer than 3 people: use the sequential pipeline, skip T22 to T24, and do T18 with only the ratio screen plus the plain LLM on 3 companies.
+- If fewer than 3 people: keep the LangGraph workflow small and linear, postpone T22 to T24, and do T18 with only the ratio screen plus the plain LLM on 3 companies. Preserve the deterministic offline fallback regardless of team size.
 - Minimum credible demo: price versus volume plus receivable days with source links, the red-team log, the evidence score, an abstain case, and canary lab numbers.
 
 ---
@@ -453,5 +494,8 @@ Claim only what `make eval` actually measured.
 - All gate metrics (M03, M04, M14) satisfied.
 - Every non-optional metric at FLOOR or better; as many as possible at TARGET; any at BEYOND is a bonus.
 - Cold run works offline from cache on at least 6 companies.
+- Online mode demonstrably invokes the configured specialist agents; offline mode and all network/provider failures fall back explicitly to verified local evidence or abstain.
+- LangGraph traces show agent/node status and provenance; reviewer approval is required before extracted financial claims enter the verified ledger.
+- No agent-authored financial values, calculations, threshold decisions, or unsupported claims; existing detection and validation thresholds remain unchanged.
 - Dashboard shows all eight required output items with clickable evidence.
 - Scoreboard file generated by `make eval` is what we quote on stage.

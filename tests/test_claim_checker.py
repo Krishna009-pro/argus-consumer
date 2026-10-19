@@ -43,8 +43,11 @@ class ClaimCheckerTests(unittest.TestCase):
                     "Narrative revenue increased 99 percent",
                 ])
         profit_and_loss = "\n".join([
+            "Dabur India Limited Integrated Annual Report 2025-26",
             "Standalone Statement of Profit and Loss",
-            "Particulars Note For the year ended 31st March, 2026 For the year ended 31st March, 2025",
+            "For the year ended 31st March, 2026",
+            "All amounts in INR crores, unless otherwise stated",
+            "Particulars Note 31 March 2026 31 March 2025",
             "Revenue from operations 25 61,975 59,676",
         ])
         fake_pypdf = SimpleNamespace(PdfReader=lambda _: SimpleNamespace(pages=[Page(balance_sheet), Page(profit_and_loss)]))
@@ -56,6 +59,8 @@ class ClaimCheckerTests(unittest.TestCase):
         self.assertNotIn(11.0, [c["value"] for c in candidates])
         self.assertNotIn(12.0, [c["value"] for c in candidates])
         self.assertTrue(all("Particulars Note" in c["column_header"] for c in candidates))
+        self.assertEqual([c["period_header"] for c in candidates],
+                         ["2026", "2025", "2026", "2025", "2026", "2025"])
 
     def test_source_snippet_and_hash_are_both_verified(self):
         with tempfile.TemporaryDirectory() as tmp:
