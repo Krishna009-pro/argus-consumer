@@ -120,6 +120,14 @@ python scripts/argus.py verify-candidate ".\data\candidates\candidates-<hash>.js
 
 Use the report's actual values for these fields. Choose `standalone`, `consolidated`, or `unknown` for `--basis`. If the period, unit, or figure is unclear or conflicts with another source, do not approve it. An unknown basis will not be used in peer comparisons.
 
+If you have already manually recorded and verified the same observation, link the extracted candidate to that ledger row instead of adding a duplicate:
+
+```powershell
+python scripts/argus.py link-candidate ".\data\candidates\candidates-<hash>.json" "<candidate-id>" --ledger-entry "L0001"
+```
+
+The command requires the candidate and existing verified ledger row to match on company, metric, value, source URL, PDF page and cached-file hash; it also checks both snippets against the cached source. It marks the candidate as verified and records its ledger ID without creating a second observation.
+
 After reviewing the candidates you need, run the company analysis again:
 
 ```powershell

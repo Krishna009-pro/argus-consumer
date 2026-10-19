@@ -1,0 +1,143 @@
+{
+  "company": "Britannia Industries Limited",
+  "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+  "why_it_matters": [
+    "Reported values are compared with the company’s own historical range.",
+    "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
+  ],
+  "evidence": [
+    "L0071",
+    "L0072",
+    "L0073",
+    "L0074",
+    "L0075",
+    "L0076",
+    "L0077",
+    "L0078",
+    "L0079",
+    "L0080",
+    "L0081",
+    "L0082",
+    "L0083",
+    "L0084",
+    "L0085",
+    "L0086",
+    "L0087",
+    "L0088"
+  ],
+  "timeline": [
+    {
+      "period": "FY2025",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "L0072",
+        "L0071"
+      ],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "company_total_operations",
+      "comparability_cohort": "Britannia_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "receivable_days",
+      "reported": 8.011424081517491,
+      "expected_low": 5.116080853689748,
+      "expected_high": 8.319796837779858,
+      "ledger_ids": [
+        "L0075",
+        "L0071"
+      ],
+      "status": "tested",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "company_total_operations",
+      "comparability_cohort": "Britannia_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "inventory_days",
+      "reported": 23.82345084852382,
+      "expected_low": 15.126738066320675,
+      "expected_high": 39.215668412669864,
+      "ledger_ids": [
+        "L0073",
+        "L0071"
+      ],
+      "status": "tested",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "company_total_operations",
+      "comparability_cohort": "Britannia_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "company_total_operations",
+      "comparability_cohort": "Britannia_standalone_FY2020_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "standalone",
+      "reporting_scope": "company_total_operations",
+      "comparability_cohort": "Britannia_standalone_FY2020_FY2025"
+    }
+  ],
+  "numbers": {
+    "receivable_days FY2020 [L0088] [L0084]": 8.06942406623293,
+    "receivable_days FY2021 [L0087] [L0083]": 5.848808005279982,
+    "receivable_days FY2022 [L0082] [L0078]": 6.929246418908105,
+    "receivable_days FY2023 [L0081] [L0077]": 6.506631272561502,
+    "receivable_days FY2024 [L0076] [L0072]": 7.847502298271108,
+    "receivable_days FY2025 [L0075] [L0071]": 8.011424081517491,
+    "inventory_days FY2020 [L0086] [L0084]": 21.10482693588964,
+    "inventory_days FY2021 [L0085] [L0083]": 29.228707398033574,
+    "inventory_days FY2022 [L0080] [L0078]": 34.16553865575001,
+    "inventory_days FY2023 [L0079] [L0077]": 25.11369908095697,
+    "inventory_days FY2024 [L0074] [L0072]": 24.317873135434894,
+    "inventory_days FY2025 [L0073] [L0071]": 23.82345084852382
+  },
+  "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
+  "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
+  "evidence_score": 0.0,
+  "evidence_label": "Weak",
+  "not_tested": [
+    "standalone, company_total_operations, Britannia_standalone_FY2020_FY2025 — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "standalone, company_total_operations, Britannia_standalone_FY2020_FY2025 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "standalone, company_total_operations, Britannia_standalone_FY2020_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
+  ],
+  "hypotheses": [],
+  "red_team_log": [],
+  "score_components": {},
+  "validation": {
+    "state": "no_reliable_finding",
+    "candidates": [],
+    "rejected_findings": [],
+    "tested_patterns": 2,
+    "panel_count": 1,
+    "generated_candidates": [],
+    "peer_companies": [
+      "Hindustan Unilever Limited",
+      "ITC Limited"
+    ],
+    "period_type": "annual",
+    "consolidation_basis": "standalone",
+    "reporting_scope": "company_total_operations",
+    "comparability_cohort": "Britannia_standalone_FY2020_FY2025",
+    "verified_ledger_entries": 18,
+    "elapsed_seconds": 27.1335
+  }
+}

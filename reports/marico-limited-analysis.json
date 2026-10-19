@@ -1,0 +1,200 @@
+{
+  "company": "Marico Limited",
+  "panels": [
+    {
+      "panel": {
+        "company": "Marico Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "consolidated",
+        "reporting_scope": "company_total_operations",
+        "comparability_cohort": "Marico_consolidated_FY2024_FY2025",
+        "periods": [
+          {
+            "period": "FY2024",
+            "period_type": "annual",
+            "period_start": "2023-04-01",
+            "period_end": "2024-03-31",
+            "days": 366,
+            "currency": "INR",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Marico_consolidated_FY2024_FY2025"
+          },
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": "2024-04-01",
+            "period_end": "2025-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Marico_consolidated_FY2024_FY2025"
+          }
+        ],
+        "metrics": {
+          "revenue": [
+            9653.0,
+            10831.0
+          ],
+          "trade_receivables": [
+            1069.0,
+            1271.0
+          ],
+          "inventory": [
+            1336.0,
+            1235.0
+          ]
+        },
+        "ledger_ids": {
+          "revenue": [
+            [
+              "L0090"
+            ],
+            [
+              "L0089"
+            ]
+          ],
+          "trade_receivables": [
+            [
+              "L0094"
+            ],
+            [
+              "L0093"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0092"
+            ],
+            [
+              "L0091"
+            ]
+          ]
+        },
+        "units": {
+          "revenue": "INR_crore",
+          "inventory": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+          "periods": [
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [
+              "L0090",
+              "L0089"
+            ]
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods (2 of 2).",
+          "periods": [
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            40.53185538174661,
+            42.83214846274582
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0094",
+              "L0090"
+            ],
+            [
+              "L0093",
+              "L0089"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Fewer than six usable disclosed periods (2 of 2).",
+          "periods": [
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            50.65534030871232,
+            41.61896408457206
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0092",
+              "L0090"
+            ],
+            [
+              "L0091",
+              "L0089"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+          "periods": [
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+          "periods": [
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": []
+    }
+  ],
+  "rejected": [],
+  "status": "analyzed",
+  "reason": null
+}

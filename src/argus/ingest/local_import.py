@@ -259,3 +259,65 @@ def verify_candidate(candidate_file: str | Path, candidate_id: str, *, verified_
             break
     Path(candidate_file).write_text(json.dumps(rows, indent=2), encoding="utf-8")
     return entry
+
+def link_candidate(candidate_file: str | Path, candidate_id: str, ledger_entry_id: str, *,
+                   ledger_path: str | Path = "data/ledger.jsonl") -> ObservationCandidate:
+    """Link an extracted proposal to an already-reviewed ledger row without duplicating it."""
+    path = Path(candidate_file)
+    rows = json.loads(path.read_text(encoding="utf-8"))
+    match = next((row for row in rows if row.get("id") == candidate_id), None)
+    if match is None:
+        raise KeyError(f"Candidate not found: {candidate_id}")
+    candidate = ObservationCandidate.model_validate(match)
+    if candidate.status != "unverified" or candidate.value is None:
+        raise ValueError("Only unverified candidates with an extracted value may be linked.")
+
+    ledger = EvidenceLedger(ledger_path)
+    entry = ledger.get(ledger_entry_id)
+    if entry is None or not entry.verified or not entry.verified_by or not entry.verified_at:
+        raise ValueError("The target ledger row is absent or not manually verified.")
+    if not ledger.verify(entry):
+        raise ValueError("The target ledger row's cached-source hash no longer matches.")
+
+    exact_fields = {
+        "company": (candidate.company.casefold(), (entry.company or "").casefold()),
+        "metric": (candidate.metric, entry.metric),
+        "value": (candidate.value, entry.value),
+        "source_url": (candidate.source_url, entry.source_url),
+        "source_type": (candidate.source_type, entry.source_type),
+        "doc_page": (candidate.doc_page, entry.doc_page),
+        "source_sha256": (candidate.source_sha256, entry.source_sha256),
+    }
+    mismatched = [name for name, (left, right) in exact_fields.items() if left != right]
+    if mismatched:
+        raise ValueError("Candidate does not exactly match the verified ledger evidence fields: " + ", ".join(mismatched))
+
+    from .source_text import snippet_contains_value, snippet_is_cached
+    if not (snippet_is_cached(candidate.cache_path, candidate.snippet, candidate.doc_page)
+            and snippet_contains_value(candidate.snippet, candidate.value)
+            and snippet_is_cached(entry.cache_path, entry.snippet, entry.doc_page)
+            and snippet_contains_value(entry.snippet, entry.value)):
+        raise ValueError("Candidate or ledger evidence snippet is not source-backed on the cited page.")
+
+    cached = Path(candidate.cache_path)
+    if not cached.is_file() or EvidenceLedger.sha256(cached) != candidate.source_sha256:
+        raise ValueError("Candidate cached source is absent or its SHA-256 no longer matches.")
+
+    linked = candidate.model_copy(update={
+        "unit": entry.unit,
+        "period": entry.period,
+        "period_type": entry.period_type,
+        "period_start": entry.period_start,
+        "period_end": entry.period_end,
+        "currency": entry.currency,
+        "consolidation_basis": entry.consolidation_basis,
+        "status": "verified",
+        "ledger_entry_id": entry.id,
+        "notes": [*candidate.notes, f"Linked to manually verified ledger entry {entry.id}; no duplicate observation was written."],
+    })
+    for index, row in enumerate(rows):
+        if row.get("id") == candidate_id:
+            rows[index] = linked.model_dump(mode="json")
+            break
+    path.write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    return linked

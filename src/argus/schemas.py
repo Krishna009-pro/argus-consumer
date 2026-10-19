@@ -51,6 +51,7 @@ class ObservationCandidate(BaseModel):
     company: str
     status: Literal["unverified", "ambiguous", "missing", "verified", "rejected"] = "unverified"
     notes: list[str] = Field(default_factory=list)
+    ledger_entry_id: str | None = None
 
 class AngleResult(BaseModel):
     angle: str

@@ -58,7 +58,7 @@
         "price_volume": {
           "angle": "price_volume",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -79,7 +79,7 @@
         "receivable_days": {
           "angle": "receivable_days",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -125,7 +125,7 @@
         "cash_conversion": {
           "angle": "cash_conversion",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -143,7 +143,7 @@
         "margin_vs_input_cost": {
           "angle": "margin_vs_input_cost",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -222,7 +222,7 @@
         "price_volume": {
           "angle": "price_volume",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -243,7 +243,7 @@
         "receivable_days": {
           "angle": "receivable_days",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -289,7 +289,7 @@
         "cash_conversion": {
           "angle": "cash_conversion",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -307,7 +307,7 @@
         "margin_vs_input_cost": {
           "angle": "margin_vs_input_cost",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
           "periods": [
             "FY2025",
             "FY2026"
@@ -380,7 +380,7 @@
         "price_volume": {
           "angle": "price_volume",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
           "periods": [
             "FY2026"
           ],
@@ -395,7 +395,7 @@
         "receivable_days": {
           "angle": "receivable_days",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
           "periods": [
             "FY2026"
           ],
@@ -431,7 +431,7 @@
         "cash_conversion": {
           "angle": "cash_conversion",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
           "periods": [
             "FY2026"
           ],
@@ -446,7 +446,7 @@
         "margin_vs_input_cost": {
           "angle": "margin_vs_input_cost",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
           "periods": [
             "FY2026"
           ],
@@ -514,7 +514,7 @@
         "price_volume": {
           "angle": "price_volume",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
           "periods": [
             "FY2025"
           ],
@@ -529,7 +529,7 @@
         "receivable_days": {
           "angle": "receivable_days",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
           "periods": [
             "FY2025"
           ],
@@ -565,7 +565,7 @@
         "cash_conversion": {
           "angle": "cash_conversion",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
           "periods": [
             "FY2025"
           ],
@@ -580,7 +580,7 @@
         "margin_vs_input_cost": {
           "angle": "margin_vs_input_cost",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
           "periods": [
             "FY2025"
           ],
@@ -648,7 +648,7 @@
         "price_volume": {
           "angle": "price_volume",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
           "periods": [
             "FY2026"
           ],
@@ -663,7 +663,7 @@
         "receivable_days": {
           "angle": "receivable_days",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
           "periods": [
             "FY2026"
           ],
@@ -699,7 +699,7 @@
         "cash_conversion": {
           "angle": "cash_conversion",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
           "periods": [
             "FY2026"
           ],
@@ -714,7 +714,7 @@
         "margin_vs_input_cost": {
           "angle": "margin_vs_input_cost",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
           "periods": [
             "FY2026"
           ],
@@ -782,7 +782,7 @@
         "price_volume": {
           "angle": "price_volume",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
           "periods": [
             "FY2025"
           ],
@@ -797,7 +797,7 @@
         "receivable_days": {
           "angle": "receivable_days",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
           "periods": [
             "FY2025"
           ],
@@ -833,7 +833,7 @@
         "cash_conversion": {
           "angle": "cash_conversion",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
           "periods": [
             "FY2025"
           ],
@@ -848,7 +848,7 @@
         "margin_vs_input_cost": {
           "angle": "margin_vs_input_cost",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
           "periods": [
             "FY2025"
           ],
@@ -871,7 +871,7 @@
         "period_type": "annual",
         "currency": "INR",
         "consolidation_basis": "standalone",
-        "reporting_scope": "total_operations_pre_demerger",
+        "reporting_scope": "company_total_operations",
         "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
         "periods": [
           {
@@ -882,7 +882,7 @@
             "days": 366,
             "currency": "INR",
             "consolidation_basis": "standalone",
-            "reporting_scope": "total_operations_pre_demerger",
+            "reporting_scope": "company_total_operations",
             "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
           },
           {
@@ -893,7 +893,7 @@
             "days": 365,
             "currency": "INR",
             "consolidation_basis": "standalone",
-            "reporting_scope": "total_operations_pre_demerger",
+            "reporting_scope": "company_total_operations",
             "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
           },
           {
@@ -904,7 +904,7 @@
             "days": 365,
             "currency": "INR",
             "consolidation_basis": "standalone",
-            "reporting_scope": "total_operations_pre_demerger",
+            "reporting_scope": "company_total_operations",
             "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
           },
           {
@@ -915,7 +915,7 @@
             "days": 365,
             "currency": "INR",
             "consolidation_basis": "standalone",
-            "reporting_scope": "total_operations_pre_demerger",
+            "reporting_scope": "company_total_operations",
             "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
           },
           {
@@ -926,7 +926,7 @@
             "days": 366,
             "currency": "INR",
             "consolidation_basis": "standalone",
-            "reporting_scope": "total_operations_pre_demerger",
+            "reporting_scope": "company_total_operations",
             "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
           },
           {
@@ -937,19 +937,11 @@
             "days": 365,
             "currency": "INR",
             "consolidation_basis": "standalone",
-            "reporting_scope": "total_operations_pre_demerger",
+            "reporting_scope": "company_total_operations",
             "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
           }
         ],
         "metrics": {
-          "revenue": [
-            38785.0,
-            45996.0,
-            51193.0,
-            59144.0,
-            60469.0,
-            61469.0
-          ],
           "trade_receivables": [
             1046.0,
             1648.0,
@@ -957,6 +949,14 @@
             2735.0,
             2690.0,
             3450.0
+          ],
+          "revenue": [
+            38785.0,
+            45996.0,
+            51193.0,
+            59144.0,
+            60469.0,
+            61469.0
           ],
           "inventory": [
             2636.0,
@@ -968,26 +968,6 @@
           ]
         },
         "ledger_ids": {
-          "revenue": [
-            [
-              "L0013"
-            ],
-            [
-              "L0016"
-            ],
-            [
-              "L0019"
-            ],
-            [
-              "L0022"
-            ],
-            [
-              "L0025"
-            ],
-            [
-              "L0028"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0015"
@@ -1006,6 +986,26 @@
             ],
             [
               "L0030"
+            ]
+          ],
+          "revenue": [
+            [
+              "L0013"
+            ],
+            [
+              "L0016"
+            ],
+            [
+              "L0019"
+            ],
+            [
+              "L0022"
+            ],
+            [
+              "L0025"
+            ],
+            [
+              "L0028"
             ]
           ],
           "inventory": [
@@ -1040,7 +1040,7 @@
         "price_volume": {
           "angle": "price_volume",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
           "periods": [
             "FY2020",
             "FY2021",
@@ -1245,7 +1245,7 @@
         "cash_conversion": {
           "angle": "cash_conversion",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
           "periods": [
             "FY2020",
             "FY2021",
@@ -1275,7 +1275,7 @@
         "margin_vs_input_cost": {
           "angle": "margin_vs_input_cost",
           "status": "abstained",
-          "abstain_reason": "Fewer than six usable disclosed periods.",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
           "periods": [
             "FY2020",
             "FY2021",
@@ -1306,7 +1306,8 @@
       "candidates": [],
       "tested_patterns": 2,
       "peer_companies": [
-        "ITC Limited"
+        "ITC Limited",
+        "Britannia Industries Limited"
       ]
     }
   ],

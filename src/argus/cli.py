@@ -64,6 +64,8 @@ def main(argv: list[str] | None = None) -> int:
     review.add_argument("--currency", required=True); review.add_argument("--basis", required=True, choices=["consolidated", "standalone", "unknown"])
     review.add_argument("--period-start"); review.add_argument("--period-end"); review.add_argument("--denominator")
     review.add_argument("--reporting-scope"); review.add_argument("--comparability-cohort"); review.add_argument("--comparability-note")
+    link = sub.add_parser("link-candidate", help="Link a reviewed extraction candidate to an existing ledger row without duplicating it")
+    link.add_argument("candidate_file"); link.add_argument("candidate_id"); link.add_argument("--ledger-entry", required=True)
     extract = sub.add_parser("extract", help="Print conservative value candidates from a cached PDF")
     extract.add_argument("cache_path")
     search = sub.add_parser("search-web", help="Discover public source URLs using the optional Serper API")
@@ -118,6 +120,10 @@ def main(argv: list[str] | None = None) -> int:
           period_start=args.period_start, period_end=args.period_end, denominator=args.denominator,
           reporting_scope=args.reporting_scope, comparability_cohort=args.comparability_cohort, comparability_note=args.comparability_note)
         print(entry.model_dump_json(indent=2)); return 0
+    if args.command == "link-candidate":
+        from .ingest.local_import import link_candidate
+        candidate = link_candidate(args.candidate_file, args.candidate_id, args.ledger_entry)
+        print(candidate.model_dump_json(indent=2)); return 0
     if args.command == "extract":
         from .ingest.pdf_tables import extract as extract_pdf
         print(json.dumps(extract_pdf(args.cache_path), indent=2)); return 0

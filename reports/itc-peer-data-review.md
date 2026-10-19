@@ -1,6 +1,6 @@
-# ITC peer data review — FY2024 addition
+# ITC peer data review — FY2024 addition and date alignment
 
-Review date: 2026-10-19. This review adds source-checked FY2024 observations to the general evidence ledger; it does not alter engine logic or configured thresholds.
+Review date: 2026-10-19. This review covers source-checked FY2024 observations and correction of fiscal-date metadata for the earlier ITC standalone series. It does not alter engine logic or configured thresholds.
 
 ## Source and verification
 
@@ -22,9 +22,9 @@ The entries are marked verified with reviewer `Codex visual review` and retain t
 
 ## Panel coverage and comparability
 
-The current engine output contains one five-label pre-demerger standalone series (FY2020–FY2024 as labeled in the ledger) with revenue, inventory, and trade receivables. The existing six-period minimum is not met. The detector therefore has no tested ITC angle or candidate from this five-period panel. In the latest generated ITC dossier the company-level result is `no_reliable_finding`, with 0 generated candidates and 0 rejected candidates.
+The verified pre-demerger standalone panel now contains seven consecutive periods, FY2018–FY2024, with revenue, inventory, and trade receivables. Source statements confirm the annual periods: ITC Report and Accounts 2021 PDF pp.178–179 explicitly label values as at/for the years ended 31 March 2021 and 31 March 2020; the 2023 report PDF pp.184–185 labels 31 March 2023 and 31 March 2022. Ledger date metadata on L0045–L0056 was corrected to those source periods. This correction changed dates only; it did not change any financial value, unit, scope, basis, source URL, or hash. `tests/test_historical_period_metadata.py` locks the reviewed period mapping.
 
-There is a data-contract issue that prevents treating the history as fully comparable to HUL yet: the existing ITC ledger rows L0045–L0056 have financial-year labels and `period_start`/`period_end` metadata that do not consistently agree. In particular, encoded annual date spans overlap FY2023 and FY2024. These rows were already present before this review. They have not been silently rewritten; the five-period count is the current engine's label-based panel, not confirmation that all dates are correctly aligned. Resolve the historical date metadata against each source report before using ITC as a period-aligned peer. This does not affect the manually verified values and source locations above, but it limits the peer claim.
+The seven-period series is sufficient for the engine to test receivables-days and inventory-days. In the current regenerated analysis, each angle has one outside-range period (FY2023); neither reaches the unchanged three-consecutive-period persistence rule. The engine reports `no_reliable_finding`, with zero generated candidates and zero rejected candidates. HUL and Britannia are compatible peer panels. Britannia now has six verified periods and both derived angles are tested, but it has no flagged periods; there are still only two distinct compatible peers for ITC and the configured three-peer baseline is unmet. See [britannia-peer-review.md](britannia-peer-review.md) for the full manually reviewed batch.
 
 ITC's FY2025 annual report separates Hotels discontinued operations from continuing operations, and the Hotels series shown there covers only nine months through 31 December 2024. Post-demerger balance sheets also have a changed perimeter. These rows remain isolated in their existing scopes/cohorts; they are not appended to the full-operations pre-demerger history. Do not combine them unless the issuer publishes an explicitly comparable series and the ledger records that scope.
 
@@ -32,8 +32,9 @@ ITC's FY2025 annual report separates Hotels discontinued operations from continu
 
 Latest command: `python scripts/argus.py run --company "ITC Limited"`.
 
-- Generated result: `no_reliable_finding`; 32 verified entries reported by the CLI; 13 panels; 0 generated candidates; 0 rejected candidates.
-- Main five-period panel: `price_volume`, `receivable_days`, `cash_conversion`, and `margin_vs_input_cost` abstain with `Fewer than six usable disclosed periods.`
-- `inventory_days` abstains with `Inventory, a same-unit positive denominator, and exact period day count are required.` The displayed ratio series is exploratory output within an abstained angle and is not a tested finding.
-- Other ITC panels are single-period or two-period scope/basis cohorts and abstain rather than being merged.
-- No real discovery is claimed. Peer history is still insufficient and its historical period metadata needs review.
+- Generated result: `no_reliable_finding`; 38 evidence entries used in the dossier; 12 panels; 0 generated candidates; 0 rejected candidates.
+- Main seven-period panel: `receivable_days` and `inventory_days` are tested. Each has a gap flag only for FY2023; neither is persistent for three consecutive periods. Supporting inputs are L0045–L0056 and L0062–L0070.
+- Main-panel `price_volume` abstains because matched revenue and disclosed volume growth are required; `cash_conversion` needs matched operating cash flow and EBITDA; `margin_vs_input_cost` needs matched gross-margin and input-cost-index disclosures. These input series are absent; the seven annual revenue/inventory/receivable observations do not substitute for them.
+- The FY2024-only balance-sheet cohort abstains on `inventory_days` with `Inventory, a same-unit positive denominator, and exact period day count are required.` It remains isolated and is not merged with the historical cohort.
+- Compatible peer panels: Hindustan Unilever Limited and Britannia Industries Limited. Britannia's six-period standalone receivables-days and inventory-days angles are tested with no flagged periods. ITC still has only two distinct compatible peer companies; the three-peer adjusted check cannot run. Other ITC cohorts remain isolated when their basis or reporting scope differs, including post-Hotels-demerger continuing operations.
+- No real discovery is claimed. Period alignment is corrected; peer breadth and multiple other data inputs remain insufficient.

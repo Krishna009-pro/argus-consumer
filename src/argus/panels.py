@@ -105,13 +105,15 @@ def derive_angle_series(panel: dict) -> dict[str, dict]:
         volume = [None if v is None else v / 100 for v in volume]
     price_mix = [price_mix_growth(rg, vg) for rg, vg in zip(revenue_growth, volume)]
     price_ids = _combine_ids(_growth_ids(source_ids.get("revenue", [[]] * len(periods))), source_ids.get("volume_growth", [[]] * len(periods)))
-    out["price_volume"] = _angle("price_volume", period_labels, price_mix, price_ids)
+    out["price_volume"] = _angle("price_volume", period_labels, price_mix, price_ids,
+      abstain_reason="Matched revenue and disclosed volume-growth inputs are required.")
 
     receivables = raw.get("trade_receivables", [None] * len(periods))
     compatible_rec_units = units.get("trade_receivables") == units.get("revenue") and units.get("revenue") is not None
     receivable_series = [receivable_days(v, rev, p.get("days") or 0) for v, rev, p in zip(receivables, revenue, periods)] if compatible_rec_units else [None] * len(periods)
     rec_ids = _combine_ids(source_ids.get("trade_receivables", [[]] * len(periods)), source_ids.get("revenue", [[]] * len(periods)))
-    out["receivable_days"] = _angle("receivable_days", period_labels, receivable_series, rec_ids)
+    out["receivable_days"] = _angle("receivable_days", period_labels, receivable_series, rec_ids,
+      abstain_reason="Trade receivables, matching revenue, consistent units, and exact period dates are required.")
 
     inventory = raw.get("inventory", [None] * len(periods))
     cogs = raw.get("cost_of_goods_sold", [None] * len(periods))
@@ -129,7 +131,8 @@ def derive_angle_series(panel: dict) -> dict[str, dict]:
     compatible_cash_units = units.get("operating_cash_flow") == units.get("ebitda") and units.get("ebitda") is not None
     cash_series = [cash_conversion(a, b) for a, b in zip(ocf, ebitda)] if compatible_cash_units else [None] * len(periods)
     cash_ids = _combine_ids(source_ids.get("operating_cash_flow", [[]] * len(periods)), source_ids.get("ebitda", [[]] * len(periods)))
-    out["cash_conversion"] = _angle("cash_conversion", period_labels, cash_series, cash_ids)
+    out["cash_conversion"] = _angle("cash_conversion", period_labels, cash_series, cash_ids,
+      abstain_reason="Matched operating-cash-flow and EBITDA inputs are required.")
 
     gross = raw.get("gross_margin", [None] * len(periods))
     gross_change = [None] + [(cur - prev) if cur is not None and prev is not None else None for prev, cur in zip(gross, gross[1:])]
@@ -137,7 +140,8 @@ def derive_angle_series(panel: dict) -> dict[str, dict]:
     index_change = _growth(index)
     margin_series = [margin_vs_input_cost(a, b * 100 if b is not None else None) for a, b in zip(gross_change, index_change)]
     margin_ids = _combine_ids(source_ids.get("gross_margin", [[]] * len(periods)), source_ids.get("input_cost_index", [[]] * len(periods)))
-    out["margin_vs_input_cost"] = _angle("margin_vs_input_cost", period_labels, margin_series, margin_ids)
+    out["margin_vs_input_cost"] = _angle("margin_vs_input_cost", period_labels, margin_series, margin_ids,
+      abstain_reason="Matched gross-margin and input-cost-index disclosures are required.")
     for angle, result in out.items():
         if result["status"] == "abstained" and result["abstain_reason"] is None:
             result["abstain_reason"] = "Fewer than six usable disclosed periods for this angle."
@@ -146,7 +150,8 @@ def derive_angle_series(panel: dict) -> dict[str, dict]:
 def _angle(angle: str, periods: list[str], values: list[float | None], ids: list[list[str]], abstain_reason: str | None = None, metadata: dict | None = None) -> dict:
     available = sum(v is not None for v in values)
     if available < 6:
-        return {"angle": angle, "status": "abstained", "abstain_reason": abstain_reason or "Fewer than six usable disclosed periods.",
+        reason = abstain_reason if available == 0 and abstain_reason else f"Fewer than six usable disclosed periods ({available} of {len(periods)})."
+        return {"angle": angle, "status": "abstained", "abstain_reason": reason,
                 "periods": periods, "reported": values, "ledger_ids_by_period": ids, "metadata": metadata or {}}
     flags = [False] * len(values); lows = [None] * len(values); highs = [None] * len(values); spreads = [None] * len(values)
     for i in range(5, len(values)):

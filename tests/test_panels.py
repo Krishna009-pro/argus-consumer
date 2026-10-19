@@ -84,6 +84,39 @@ class PanelTests(unittest.TestCase):
             self.assertIsNone(panel["metrics"]["revenue"][0])
             self.assertIn("revenue:FY26", panel["unavailable"])
 
+    def test_partial_inventory_history_reports_period_count_not_missing_input(self):
+        panel = {
+            "periods": [
+                {"period": "FY2024", "days": 366},
+                {"period": "FY2025", "days": 365},
+            ],
+            "metrics": {"revenue": [100.0, 110.0], "inventory": [20.0, 22.0]},
+            "ledger_ids": {"revenue": [["L1"], ["L2"]], "inventory": [["L3"], ["L4"]]},
+            "units": {"revenue": "INR_crore", "inventory": "INR_crore"},
+        }
+
+        result = derive_angle_series(panel)["inventory_days"]
+
+        self.assertEqual(result["status"], "abstained")
+        self.assertEqual(result["abstain_reason"], "Fewer than six usable disclosed periods (2 of 2).")
+
+    def test_missing_required_inputs_are_named_in_abstentions(self):
+        panel = {
+            "periods": [{"period": f"FY{year}", "days": 365} for year in range(2020, 2026)],
+            "metrics": {"revenue": [100.0, 101.0, 102.0, 103.0, 104.0, 105.0]},
+            "ledger_ids": {"revenue": [[f"L{i}"] for i in range(6)]},
+            "units": {"revenue": "INR_crore"},
+        }
+
+        angles = derive_angle_series(panel)
+
+        self.assertEqual(angles["price_volume"]["abstain_reason"],
+                         "Matched revenue and disclosed volume-growth inputs are required.")
+        self.assertEqual(angles["cash_conversion"]["abstain_reason"],
+                         "Matched operating-cash-flow and EBITDA inputs are required.")
+        self.assertEqual(angles["margin_vs_input_cost"]["abstain_reason"],
+                         "Matched gross-margin and input-cost-index disclosures are required.")
+
     def test_local_csv_import_stays_unverified_until_human_review(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

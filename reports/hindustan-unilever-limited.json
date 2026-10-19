@@ -440,7 +440,7 @@
       ],
       "status": "abstained",
       "consolidation_basis": "standalone",
-      "reporting_scope": "total_operations_pre_demerger",
+      "reporting_scope": "company_total_operations",
       "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
     },
     {
@@ -455,7 +455,7 @@
       ],
       "status": "tested",
       "consolidation_basis": "standalone",
-      "reporting_scope": "total_operations_pre_demerger",
+      "reporting_scope": "company_total_operations",
       "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
     },
     {
@@ -470,7 +470,7 @@
       ],
       "status": "tested",
       "consolidation_basis": "standalone",
-      "reporting_scope": "total_operations_pre_demerger",
+      "reporting_scope": "company_total_operations",
       "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
     },
     {
@@ -482,7 +482,7 @@
       "ledger_ids": [],
       "status": "abstained",
       "consolidation_basis": "standalone",
-      "reporting_scope": "total_operations_pre_demerger",
+      "reporting_scope": "company_total_operations",
       "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
     },
     {
@@ -494,7 +494,7 @@
       "ledger_ids": [],
       "status": "abstained",
       "consolidation_basis": "standalone",
-      "reporting_scope": "total_operations_pre_demerger",
+      "reporting_scope": "company_total_operations",
       "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025"
     }
   ],
@@ -517,39 +517,39 @@
   "evidence_score": 0.0,
   "evidence_label": "Weak",
   "not_tested": [
-    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Fewer than six usable disclosed periods.",
-    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — receivable_days: Fewer than six usable disclosed periods.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
     "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
-    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — cash_conversion: Fewer than six usable disclosed periods.",
-    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — margin_vs_input_cost: Fewer than six usable disclosed periods.",
-    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Fewer than six usable disclosed periods.",
-    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — receivable_days: Fewer than six usable disclosed periods.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
     "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
-    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — cash_conversion: Fewer than six usable disclosed periods.",
-    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — margin_vs_input_cost: Fewer than six usable disclosed periods.",
-    "standalone, total_balance_sheet, post_demerger_fy2026 — price_volume: Fewer than six usable disclosed periods.",
-    "standalone, total_balance_sheet, post_demerger_fy2026 — receivable_days: Fewer than six usable disclosed periods.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "consolidated, continuing_operations, FY2025-26_report_continuing_operations_comparatives — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
     "standalone, total_balance_sheet, post_demerger_fy2026 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
-    "standalone, total_balance_sheet, post_demerger_fy2026 — cash_conversion: Fewer than six usable disclosed periods.",
-    "standalone, total_balance_sheet, post_demerger_fy2026 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
-    "standalone, total_balance_sheet, pre_demerger_fy2025 — price_volume: Fewer than six usable disclosed periods.",
-    "standalone, total_balance_sheet, pre_demerger_fy2025 — receivable_days: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "standalone, total_balance_sheet, post_demerger_fy2026 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
     "standalone, total_balance_sheet, pre_demerger_fy2025 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
-    "standalone, total_balance_sheet, pre_demerger_fy2025 — cash_conversion: Fewer than six usable disclosed periods.",
-    "standalone, total_balance_sheet, pre_demerger_fy2025 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
-    "consolidated, total_balance_sheet, post_demerger_fy2026 — price_volume: Fewer than six usable disclosed periods.",
-    "consolidated, total_balance_sheet, post_demerger_fy2026 — receivable_days: Fewer than six usable disclosed periods.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "standalone, total_balance_sheet, pre_demerger_fy2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
     "consolidated, total_balance_sheet, post_demerger_fy2026 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
-    "consolidated, total_balance_sheet, post_demerger_fy2026 — cash_conversion: Fewer than six usable disclosed periods.",
-    "consolidated, total_balance_sheet, post_demerger_fy2026 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
-    "consolidated, total_balance_sheet, pre_demerger_fy2025 — price_volume: Fewer than six usable disclosed periods.",
-    "consolidated, total_balance_sheet, pre_demerger_fy2025 — receivable_days: Fewer than six usable disclosed periods.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "consolidated, total_balance_sheet, post_demerger_fy2026 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
     "consolidated, total_balance_sheet, pre_demerger_fy2025 — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
-    "consolidated, total_balance_sheet, pre_demerger_fy2025 — cash_conversion: Fewer than six usable disclosed periods.",
-    "consolidated, total_balance_sheet, pre_demerger_fy2025 — margin_vs_input_cost: Fewer than six usable disclosed periods.",
-    "standalone, total_operations_pre_demerger, pre_demerger_standalone_FY2020_FY2025 — price_volume: Fewer than six usable disclosed periods.",
-    "standalone, total_operations_pre_demerger, pre_demerger_standalone_FY2020_FY2025 — cash_conversion: Fewer than six usable disclosed periods.",
-    "standalone, total_operations_pre_demerger, pre_demerger_standalone_FY2020_FY2025 — margin_vs_input_cost: Fewer than six usable disclosed periods."
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "consolidated, total_balance_sheet, pre_demerger_fy2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "standalone, company_total_operations, pre_demerger_standalone_FY2020_FY2025 — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "standalone, company_total_operations, pre_demerger_standalone_FY2020_FY2025 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "standalone, company_total_operations, pre_demerger_standalone_FY2020_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
   ],
   "hypotheses": [],
   "red_team_log": [],
@@ -562,13 +562,14 @@
     "panel_count": 7,
     "generated_candidates": [],
     "peer_companies": [
-      "ITC Limited"
+      "ITC Limited",
+      "Britannia Industries Limited"
     ],
     "period_type": "annual",
     "consolidation_basis": "standalone",
-    "reporting_scope": "total_operations_pre_demerger",
+    "reporting_scope": "company_total_operations",
     "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
     "verified_ledger_entries": 30,
-    "elapsed_seconds": 36.2863
+    "elapsed_seconds": 27.0265
   }
 }
