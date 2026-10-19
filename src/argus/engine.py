@@ -9,6 +9,7 @@ from .peers import eligible_peer_panels, period_key
 from .verify.score import calculate as calculate_score
 from .ledger import EvidenceLedger
 from .agents.hypothesis import research
+from .agents.redteam import challenge as challenge_red_team
 
 ANGLE_SOURCE_METRICS = {
   "price_volume": {"revenue", "volume_growth"},
@@ -97,9 +98,9 @@ def run_engine(entries: list[LedgerEntry], company: str) -> dict:
                 # represent a planned query as a completed research or red-team test.
                 research_result = research(cand.model_dump(mode="json"), offline=True)
                 angle["research"] = {"status": research_result["status"], "queries": research_result["queries"]}
-                angle["red_team_tests"] = [
-                  {"test": test, "outcome": "not_tested", "reason": "No independently retrieved, cached evidence was available."}
-                  for test in ("seasonality", "base_effect", "one_off_event", "accounting_change", "acquisition", "pricing_lag", "sector_trend")]
+                # Without reviewed source evidence every alternative remains
+                # not_tested; the red-team validator will not trust LLM claims.
+                angle["red_team_tests"] = challenge_red_team(cand.model_dump(mode="json"))
                 if not gate["passed"]:
                     rejected.append({"candidate_id": cand.id, "state": gate["state"], "gate": gate,
                                      "reason": "One or more evidence gates were not met; missing peer or red-team evidence is not treated as a pass."})
