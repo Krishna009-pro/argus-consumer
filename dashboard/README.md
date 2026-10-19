@@ -1,16 +1,16 @@
-# React + Vite
+# ARGUS dashboard preview
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This folder contains the React version of the ARGUS dashboard. It is useful for previewing the interface and walking through the product flow.
 
-Currently, two official plugins are available:
+The page reads bundled report snapshots, and its company-intake steps use sample responses. It does not connect to the Python analysis engine, search the web, or fetch reports. Use the Streamlit app in the project root when you need live intake or current saved dossiers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run it locally
 
-## React Compiler
+Install Node.js, open a terminal in this folder, and run:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```powershell
+npm ci
+npm run dev
+```
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Vite prints a local address in the terminal. Open that address in your browser. To create a production build, run `npm run build`; generated build files are kept out of Git.

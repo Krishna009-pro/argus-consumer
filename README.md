@@ -1,151 +1,177 @@
 # ARGUS-Consumer
 
-ARGUS is a public-data financial discovery prototype. Ordinary Python computes metrics; an optional language model can help plan qualitative research, but it cannot supply or edit numerical results. Every recorded source observation is tied to a cached file, SHA-256, URL, period and exact snippet. Missing evidence produces an abstention.
+ARGUS helps a reviewer look for unusual patterns in a consumer company's public financial reports. It collects source documents, proposes figures for review, and compares only the observations a person has checked against the original report.
 
-## Setup
+The regular analysis command uses Python for its calculations; it does not call an LLM. The project also has a separate, optional hypothesis agent for qualitative research. It cannot create or change financial numbers, and it was not used in the saved HUL analysis. When data is missing, unclear, or not comparable, ARGUS leaves the question unanswered. That is why an analysis can finish with **No Reliable Finding**.
 
-Use Python 3.11 or newer.
+ARGUS is a research prototype. It does not make investment recommendations or establish misconduct.
+
+## How it works
+
+1. Search for a company's public report or provide an official report URL.
+2. Cache the report and record its SHA-256 fingerprint, so later checks use the same file.
+3. Extract possible financial claims. These are **candidates**, not verified facts.
+4. A reviewer checks each candidate against the cited PDF page, including its value, period, unit, statement basis, and reporting scope.
+5. Only approved observations enter the evidence ledger and can be used in the analysis.
+6. The deterministic engine compares compatible periods and applies the project's existing validation gates. It reports a candidate only when the evidence passes those gates; otherwise it explains why it abstained.
+
+Missing values stay missing. ARGUS does not fill gaps with zeroes or estimates.
+
+## Current project status
+
+The latest recorded company runs are for Hindustan Unilever Limited (HUL) and ITC Limited. Both currently return `no_reliable_finding`. HUL has 30 verified observations across 7 panels; ITC has 32 across 13 panels. Those counts do not mean that either company has a validated discovery. The peer history, comparable volume data, and real-world validation are still incomplete.
+
+For the evidence behind those results, current evaluation measurements, and remaining work, see [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md). Synthetic test results are not measurements of real-world accuracy.
+
+## Set up on Windows
+
+You need Python 3.11 or newer. From the project folder, open PowerShell and run:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -e .
-python -m pip install -e ".[dashboard,ingest]"
+python -m pip install --upgrade pip
+python -m pip install -e ".[dashboard,ingest,dev]"
 ```
 
-`dashboard` and `ingest` are optional extras. Core calculations and synthetic evaluation work without them. The PDF extractor requires `ingest`; the PDF dossier export requires `dashboard`.
+This installs the command-line tools, PDF import and export support, dashboard, and test dependencies. If you only need the deterministic engine, install the base package with `python -m pip install -e .` instead.
 
-## Commands
+## Try the command line
 
-With GNU Make installed:
-
-```text
-make test
-make eval
-make run COMPANY="Company name"
-```
-
-On Windows without GNU Make, use `make.bat test`, `make.bat eval`, or:
+Run the existing tests and synthetic evaluation with:
 
 ```powershell
-$env:COMPANY = "Company name"
-make.bat run
+python scripts/run_tests.py
+python scripts/argus.py eval
 ```
 
-Or invoke the CLI directly with `python scripts/argus.py eval`, `python scripts/argus.py run --company "Company name"`, and `python scripts/argus.py export-pdf --company "Company name"`.
-
-## Public sources and offline cache
-
-Fetch an official public source (exchange/company investor page) with:
-
-```text
-python scripts/argus.py cache https://public.example/annual-report.pdf
-```
-
-The command stores the response content-addressed under `data/cache/` and prints its SHA-256. Add a disclosed value only after checking the page, period, units and exact snippet:
-
-```text
-python scripts/argus.py record --company "Company name" --metric revenue --value 1250 --unit INR_cr --period FY26 --period-type annual --currency INR --basis consolidated --verified-by "Reviewer name" --source-url https://public.example/report.pdf --source-type filing --snippet "Revenue from operations 1,250" --cache-path data/cache/<sha>.pdf --page 42
-```
-
-The record command requires reviewer metadata and the same period/currency/basis fields, and rejects snippets that are not present on the specified cached PDF page. Optional `--reporting-scope`, `--comparability-cohort`, and `--comparability-note` fields preserve scope breaks. PDF verification uses `pypdf`. The PDF candidate extractor only proposes supported line items on pages with dated financial-statement headers and selects the rightmost dated value columns, avoiding numeric Note references; it still requires a person to verify the row, column, unit and reporting basis. Candidate IDs are content-based so reordered extraction does not overwrite prior review history. Copy `data/cache/` and `data/ledger.jsonl` to reproduce ledger checks offline. Do not enter estimates, unpublished inputs or values whose table alignment is uncertain. Machine-extracted PDF candidates are deliberately flagged for review.
-
-Verified observations are assembled into panels by company, period type, currency, and consolidation basis. Formula outputs retain their ledger IDs and abstain when inputs, units, period duration, or compatible peers are missing. A finding also requires passing persistence, peer, source-integrity, alternative-explanation, multiple-testing, and independent-source gates. A single reviewed value is insufficient.
-
-### Import locally obtained public filings
-
-If the official host blocks automated download, save its public PDF under `data/incoming/` and register it as unverified candidates. For the HUL FY 2025–26 report, create the input directory in PowerShell and use the browser's Save As dialog to save the supplied official link as `data/incoming/hul-annual-report-2025-26.pdf`:
+Run a company analysis with:
 
 ```powershell
-New-Item -ItemType Directory -Force .\data\incoming | Out-Null
-python scripts/argus.py import-local .\data\incoming\hul-annual-report-2025-26.pdf --company "Hindustan Unilever Limited" --source-url https://www.hul.co.in/files/annual-report-2025-26.pdf
-$candidateFile = Get-ChildItem .\data\candidates\candidates-*.json | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-$candidates = Get-Content $candidateFile.FullName -Raw | ConvertFrom-Json
-$candidates | Format-Table id,metric,value,unit,period,doc_page,status,snippet -Wrap
+python scripts/argus.py run --company "Hindustan Unilever Limited"
 ```
 
-For each proposed row, open the same PDF, locate the printed table and page, and confirm the figure, row/column heading, unit, financial period and statement basis (consolidated or standalone). The importer labels proposals `unverified`; it does not decide those fields. Approve only a value that matches the source. Substitute the candidate ID and the reviewed metadata below with what the report actually says:
+The command reads the verified observations already in the ledger. It does not invent missing history. To export the saved dossier as a PDF:
 
 ```powershell
-$candidateId = Read-Host "Candidate ID from the table above"
-$reviewer = Read-Host "Reviewer name"
-$period = Read-Host "Exact period label checked in the report"
-$unit = Read-Host "Unit checked in the report"
-$currency = Read-Host "Currency code, or N/A for a non-currency metric"
-$basis = Read-Host "Statement basis: consolidated, standalone, or unknown"
-python scripts/argus.py verify-candidate $candidateFile.FullName $candidateId --verified-by $reviewer --period $period --unit $unit --period-type annual --currency $currency --basis $basis
+python scripts/argus.py export-pdf --company "Hindustan Unilever Limited"
 ```
 
-Repeat for each approved observation. Leave missing, ambiguous, or conflicting rows unapproved. Add `--period-start YYYY-MM-DD --period-end YYYY-MM-DD` only when those exact dates are established from the report. The `verify-candidate` command retains the cached file hash, source URL, extractor page/snippet, and reviewer/time in the ledger. If the extracted number itself is wrong but you can verify the correct number from a literal source snippet, use the documented `record` command with that corrected value and the PDF page. Streamlit currently displays dossiers and evidence; it does not import PDFs or approve candidates.
+The PDF is written under `reports/` by default. You can choose another destination with `--output`.
 
-For a structured observation CSV, include `metric,value,unit,period,snippet`; optional columns are `period_type,period_start,period_end,currency,consolidation_basis,page`. The source snippet must occur literally in the CSV. The source document remains the authoritative basis of review. Neither importer writes verified observations.
+## Bring in a public report
 
-Review a candidate against the original official source, then approve it into the append-only ledger:
+### Search online
 
-```powershell
-python scripts/argus.py verify-candidate data/candidates/candidates-<hash>.json <candidate-id> --verified-by "Reviewer name" --period FY26 --unit INR_cr --period-type annual --currency INR --basis consolidated --period-start 2025-04-01 --period-end 2026-03-31
-```
-
-Enter the source's actual period labels, units, currency, statement basis and page. Use `unknown` when basis cannot be confirmed; such data will not enter peer comparisons. `record` is also available for manually transcribed values. `config/companies.yaml` is a source directory, not proof that a report was retrieved or analyzed.
-
-### Discover and prepare a public report online
-
-You do not need to save a report manually first. With `SERPER_API_KEY` configured, run:
-
-```powershell
-python scripts/argus.py prepare-company --company "Company Name"
-```
-
-ARGUS searches public web results, selects the highest-ranked result whose title says “annual report” and whose URL ends in `.pdf`, downloads it into the content-addressed cache, and writes page-linked extraction candidates. This source selection is still unverified. If the result list is ambiguous, the command returns choices without downloading; choose a result explicitly or pass the official URL:
-
-```powershell
-python scripts/argus.py prepare-company --company "Company Name" --result 2
-python scripts/argus.py prepare-company --company "Company Name" --url "https://official.example/annual-report.pdf"
-```
-
-The command never approves observations. Inspect each selected PDF page and candidate context, then use `verify-candidate` only for a matching value with confirmed period, unit, basis and scope. Search results, automatic source selection and extracted values remain unverified; deterministic analysis reads only reviewed ledger entries with intact source hashes.
-
-## Optional model configuration
-
-No credentials are required for deterministic analysis. To enable the optional model adapter, add provider credentials and select a provider in the project-root `.env`:
-
-```text
-OPENROUTER_API_KEY=your_openrouter_key
-GROQ_API_KEY=your_groq_key
-ARGUS_LLM_PROVIDER=openrouter
-ARGUS_LLM_MODEL=<model id supported by the selected provider>
-```
-
-Set `ARGUS_LLM_PROVIDER` to `openrouter` or `groq` and put that provider's key in the corresponding variable. Only one provider is active per request. For another OpenAI-compatible provider, set `ARGUS_LLM_BASE_URL` and `ARGUS_LLM_API_KEY` instead. The local `.env` is ignored by Git and is loaded at runtime; process environment values take precedence. The adapter logs token/cost fields only when returned by the provider; it never logs keys. Providers that do not expose a cost field report cost as unavailable.
-
-## Optional web source discovery
-
-ARGUS can use Serper to suggest public source URLs. These results are discovery leads only: they are not downloaded, treated as observations, or approved into the evidence ledger. Put the key in a project-root `.env` file (already ignored by Git):
+Online search uses Serper. Create a `.env` file in the project root and add your key:
 
 ```text
 SERPER_API_KEY=your_key_here
 ```
 
-ARGUS loads this file for source discovery, without overriding a key already set in the process environment. Then run:
+Then search for a company's annual report:
 
 ```powershell
-python scripts/argus.py search-web --query "Hindustan Unilever annual report FY 2025-26" --limit 10
+python scripts/argus.py prepare-company --company "Company Name"
 ```
 
-The key is read only from the process environment and must never be committed to source control. Serper is optional; local PDF import and deterministic analysis remain available without it.
+Search results are leads, not trusted sources. Check that the selected report comes from the company or a recognized exchange. If ARGUS asks you to choose a result, rerun the command with the result number it displayed:
 
-## Dashboard
+```powershell
+python scripts/argus.py prepare-company --company "Company Name" --result 2
+```
 
-Install the optional dashboard extra, run at least one company command, then start:
+If you already have the official PDF URL, you can pass it directly. This skips web search:
 
-```text
+```powershell
+python scripts/argus.py prepare-company --company "Company Name" --url "https://official.example/annual-report.pdf"
+```
+
+ARGUS caches the selected file and prints its SHA-256 hash and candidate-file path. The extracted values remain unverified. Online search and fetching need an internet connection; without one, use a report you already saved and the local import steps below. Analysis can still use evidence already in the local ledger.
+
+### Use a PDF already on your computer
+
+If a company site blocks automated downloads, save its public PDF in the project's `data/incoming/` folder. Create the folder if needed, then use your browser's **Save As** option to put the report there. The exact filename is up to you; pass that filename to the importer:
+
+```powershell
+New-Item -ItemType Directory -Force .\data\incoming | Out-Null
+python scripts/argus.py import-local .\data\incoming\company-report.pdf `
+  --company "Company Name" `
+  --source-url "https://official.example/annual-report.pdf"
+```
+
+Use the official report URL as `--source-url`, even when you saved the PDF manually. The importer stores a cached copy and prints the candidate-file path. It does not approve any figures.
+
+## Review and approve observations
+
+Open the candidate file named in the import output and inspect the listed PDF page in the original report. Confirm the exact number and the row and column headings, as well as the financial period, unit, standalone or consolidated basis, and reporting scope. A printed page number and a PDF viewer's page number can differ, so check the cited page in context.
+
+To approve one candidate, substitute its actual ID and the details you confirmed:
+
+```powershell
+python scripts/argus.py verify-candidate ".\data\candidates\candidates-<hash>.json" "<candidate-id>" `
+  --verified-by "Your name" `
+  --period "FY2025" `
+  --unit "INR_crore" `
+  --period-type annual `
+  --currency INR `
+  --basis consolidated
+```
+
+Use the report's actual values for these fields. Choose `standalone`, `consolidated`, or `unknown` for `--basis`. If the period, unit, or figure is unclear or conflicts with another source, do not approve it. An unknown basis will not be used in peer comparisons.
+
+After reviewing the candidates you need, run the company analysis again:
+
+```powershell
+python scripts/argus.py run --company "Company Name"
+```
+
+For a value you transcribed yourself, `record` is available. It still requires the cached source, page, a literal snippet from that page, and reviewer details. See `python scripts/argus.py record --help` for the required fields.
+
+## Open a dashboard
+
+### Python-backed dashboard
+
+This is the dashboard to use for actual online intake and saved company reports. Start it from the project folder:
+
+```powershell
 streamlit run app/streamlit_app.py
 ```
 
-The dashboard shows generated dossiers, verified panels, exact abstention reasons, the existing ratio-screen comparison, and source evidence. Its **Live company intake** panel searches public sources through Serper, lets the reviewer choose a report, and can inspect an HTML report landing page to offer its direct PDF links. After a reviewer selects a PDF, ARGUS fetches and SHA-256 caches it, then displays extracted claims as unverified candidates. The dashboard does not auto-approve financial values: review candidates against their cited pages, approve only supported observations, and then run `python scripts/argus.py run --company "Company Name"`. This keeps online source discovery separate from deterministic analysis over verified ledger entries. No placeholder companies or fabricated company metrics are bundled. Evaluation scoreboard entries distinguish measured synthetic results from unavailable human or real-world measurements. PDF export is available in the dashboard or through `export-pdf`.
+In **Live company intake**, search for a company, choose a public report, then fetch the PDF. ARGUS shows the extracted candidates with their pages and snippets. Review and approve them with the CLI command above; the dashboard does not approve figures for you.
 
-## Evaluation and limitations
+### React dashboard preview
 
-`make eval` runs seeded synthetic canaries, missing-input abstention checks, deterministic reruns and stability checks, then writes `eval/results/summary.json` and `eval/results/scoreboard.md`. Canary metrics are explicitly synthetic. Published-figure reconciliation, real-company breadth, blind baseline scores and live API cost remain unavailable until suitable verified source panels, reviewer scores and configured model telemetry exist. Scoreboard bounds are goals, never measured outcomes.
+There is also a separate visual preview under `dashboard/`. It uses bundled report snapshots and sample intake responses; its intake buttons do not search the web or fetch a live report. Use the Python-backed dashboard or CLI when you need actual source intake.
 
-No investment recommendation or misconduct inference is produced. This prototype does not yet meet the plan's definition of done: it lacks a real multi-company financial input corpus and a fully automated filing-to-panel reconciliation pipeline. An abstention is expected until those source gaps are filled.
+To run the preview:
+
+```powershell
+cd dashboard
+npm ci
+npm run dev
+```
+
+## Optional language model
+
+You do not need an LLM key to import reports or run the deterministic analysis. The optional adapter can help with qualitative research; it must not supply, calculate, or edit financial values.
+
+To enable it, add the key for your chosen provider and its model name to the project-root `.env` file:
+
+```text
+ARGUS_LLM_PROVIDER=openrouter
+ARGUS_LLM_MODEL=your-provider-model-id
+OPENROUTER_API_KEY=your_openrouter_key
+```
+
+Set `ARGUS_LLM_PROVIDER` to `openrouter` or `groq`, and use the matching key (`OPENROUTER_API_KEY` or `GROQ_API_KEY`). Keep `.env` on your computer; it is excluded from Git. Provider settings do not change the deterministic calculations.
+
+## What is not finished
+
+The current evidence base is too small for a reliable cross-company conclusion. In particular, ARGUS still needs more independently reviewed peer histories with matching periods and reporting scope, a comparable volume series, independent red-team evidence, and real-world validation. Its current evaluation includes synthetic cases; those results should not be presented as real-company accuracy.
+
+Until the existing validation gates pass, treat the output as a research lead or an abstention—not as a real discovery. The project plan and [implementation status](IMPLEMENTATION_STATUS.md) describe the remaining work in more detail.
+
+## Demo
+
+The narrated walkthrough is available at [demo/ARGUS-Consumer-Submission-Demo.mp4](demo/ARGUS-Consumer-Submission-Demo.mp4), with a separate [subtitle file](demo/ARGUS-Consumer-Submission-Demo.srt). The narration uses a generated English voice, not a human recording.
