@@ -19,7 +19,7 @@ Missing values stay missing. ARGUS does not fill gaps with zeroes or estimates.
 
 ## Current project status
 
-The latest recorded company runs are for Hindustan Unilever Limited (HUL) and ITC Limited. Both currently return `no_reliable_finding`. HUL has 30 verified observations across 7 panels; ITC has 32 across 13 panels. Those counts do not mean that either company has a validated discovery. The peer history, comparable volume data, and real-world validation are still incomplete.
+The latest recorded company runs cover Hindustan Unilever Limited (HUL), ITC Limited, Britannia Industries Limited, and Marico Limited. All currently return `no_reliable_finding`. Marico now has a manually reviewed six-period standalone peer panel, alongside its separate two-period consolidated panel; the four core standalone company panels now list three distinct peer companies where periods overlap. This does not mean any company has a validated discovery. Comparable volume data, broader Track C coverage, and real-world validation are still incomplete.
 
 For the evidence behind those results, current evaluation measurements, and remaining work, see [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md). Synthetic test results are not measurements of real-world accuracy.
 

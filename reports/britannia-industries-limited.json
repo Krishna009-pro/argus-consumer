@@ -131,13 +131,14 @@
     "generated_candidates": [],
     "peer_companies": [
       "Hindustan Unilever Limited",
-      "ITC Limited"
+      "ITC Limited",
+      "Marico Limited"
     ],
     "period_type": "annual",
     "consolidation_basis": "standalone",
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "Britannia_standalone_FY2020_FY2025",
     "verified_ledger_entries": 18,
-    "elapsed_seconds": 27.1335
+    "elapsed_seconds": 36.5185
   }
 }

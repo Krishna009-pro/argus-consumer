@@ -563,13 +563,14 @@
     "generated_candidates": [],
     "peer_companies": [
       "ITC Limited",
-      "Britannia Industries Limited"
+      "Britannia Industries Limited",
+      "Marico Limited"
     ],
     "period_type": "annual",
     "consolidation_basis": "standalone",
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
     "verified_ledger_entries": 30,
-    "elapsed_seconds": 27.0265
+    "elapsed_seconds": 41.5957
   }
 }

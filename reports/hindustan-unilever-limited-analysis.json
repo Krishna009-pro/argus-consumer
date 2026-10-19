@@ -942,14 +942,6 @@
           }
         ],
         "metrics": {
-          "trade_receivables": [
-            1046.0,
-            1648.0,
-            1932.0,
-            2735.0,
-            2690.0,
-            3450.0
-          ],
           "revenue": [
             38785.0,
             45996.0,
@@ -957,6 +949,14 @@
             59144.0,
             60469.0,
             61469.0
+          ],
+          "trade_receivables": [
+            1046.0,
+            1648.0,
+            1932.0,
+            2735.0,
+            2690.0,
+            3450.0
           ],
           "inventory": [
             2636.0,
@@ -968,26 +968,6 @@
           ]
         },
         "ledger_ids": {
-          "trade_receivables": [
-            [
-              "L0015"
-            ],
-            [
-              "L0018"
-            ],
-            [
-              "L0021"
-            ],
-            [
-              "L0024"
-            ],
-            [
-              "L0027"
-            ],
-            [
-              "L0030"
-            ]
-          ],
           "revenue": [
             [
               "L0013"
@@ -1006,6 +986,26 @@
             ],
             [
               "L0028"
+            ]
+          ],
+          "trade_receivables": [
+            [
+              "L0015"
+            ],
+            [
+              "L0018"
+            ],
+            [
+              "L0021"
+            ],
+            [
+              "L0024"
+            ],
+            [
+              "L0027"
+            ],
+            [
+              "L0030"
             ]
           ],
           "inventory": [
@@ -1307,7 +1307,8 @@
       "tested_patterns": 2,
       "peer_companies": [
         "ITC Limited",
-        "Britannia Industries Limited"
+        "Britannia Industries Limited",
+        "Marico Limited"
       ]
     }
   ],

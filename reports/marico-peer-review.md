@@ -37,3 +37,24 @@ Command: `python scripts/argus.py run --company "Marico Limited"`.
 - No eligible peer panels were available for Marico's consolidated cohort. Its basis also differs from the three reviewed companies' standalone historical cohorts.
 
 No finding is claimed. Extend this cohort only with manually checked consolidated data using periods and scope that remain comparable; do not fill the missing history with estimates or zeroes.
+
+## Supplemental standalone peer panel
+
+Review date: 2026-10-20. A separate standalone panel was added from manually checked annual-report statement pages. These rows are kept in a different cohort from the consolidated FY2024–25 rows above; the two bases are never combined.
+
+| Fiscal year | Revenue (INR crore) | Inventory (INR crore) | Trade receivables (INR crore) | Official report / PDF page |
+|---|---:|---:|---:|---|
+| FY2020 | 5,853 | 1,165 | 465 | [FY2020–21](https://marico.com/investorspdf/annual-report-fy-2020-21.pdf), p.151, comparative columns marked “Recast” |
+| FY2021 | 6,337 | 873 | 310 | [FY2020–21](https://marico.com/investorspdf/annual-report-fy-2020-21.pdf), p.151 |
+| FY2022 | 7,500 | 1,093 | 555 | [FY2022–23](https://marico.com/investorspdf/Marico_Annual_Report_FY23.pdf), p.178 |
+| FY2023 | 7,478 | 895 | 838 | [FY2022–23](https://marico.com/investorspdf/Marico_Annual_Report_FY23.pdf), p.178 |
+| FY2024 | 7,002 | 936 | 870 | [FY2024–25](https://marico.com/investorspdf/Marico_Annual_Report_FY25.pdf), p.215 |
+| FY2025 | 7,581 | 804 | 935 | [FY2024–25](https://marico.com/investorspdf/Marico_Annual_Report_FY25.pdf), p.215 |
+
+All 18 observations are standalone, annual, INR crore, and company-total scope. Each row is manually checked against the rendered PDF statement table and stored with its exact official URL, cached-file SHA-256, PDF page, exact row snippet, date range, reviewer identity, and verified status in the append-only ledger. The cached hashes are:
+
+- FY2020–21 report: `a84d5c622d999c796ab02c2000f8fe2025438602d4ce1bfb4a621a0fff304df0`
+- FY2022–23 report: `0f41759d903f2f9e1185d1bd52228a1653592583ca729abe75edf430b9332b0a`
+- FY2024–25 report: `74e0f6c239f6b611a1d66f361988a65f52bdfb51956ada929de3f4857b1e3474`
+
+FY2020 is explicitly labeled “Recast” in the FY2020–21 standalone statement columns. That disclosure is retained in its row-level comparability note; no pre-FY2020 values are included. We have not inferred the reason for the recast from this page alone. The Marico panel is now six verified annual periods for revenue, inventory, and trade receivables. Volume-growth data remains unavailable in a matched six-period scope, so volume-sensitive metrics continue to abstain. The consolidated two-period cohort remains separate and is not eligible as a standalone peer panel.

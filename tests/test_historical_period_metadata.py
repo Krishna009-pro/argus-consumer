@@ -50,6 +50,23 @@ class HistoricalPeriodMetadataTests(unittest.TestCase):
                                  {f"FY{year}" for year in range(2020, 2026)})
                 self.assertTrue(all(row["verified"] for row in metric_rows))
 
+    def test_marico_standalone_panel_has_six_verified_periods_and_recased_fy2020(self):
+        rows = [row for row in self.read_ledger()
+                if row.get("company") == "Marico Limited"
+                and row.get("comparability_cohort") == "Marico_standalone_FY2020_FY2025_recast_FY2020"]
+        self.assertEqual(len(rows), 18)
+        for metric in ("revenue", "inventory", "trade_receivables"):
+            metric_rows = [row for row in rows if row["metric"] == metric]
+            with self.subTest(metric=metric):
+                self.assertEqual({row["period"] for row in metric_rows},
+                                 {f"FY{year}" for year in range(2020, 2026)})
+                self.assertTrue(all(row["verified"] for row in metric_rows))
+                self.assertTrue(all(row["consolidation_basis"] == "standalone" for row in metric_rows))
+                self.assertTrue(all(row["source_sha256"] and row["doc_page"] for row in metric_rows))
+        fy2020 = [row for row in rows if row["period"] == "FY2020"]
+        self.assertEqual(len(fy2020), 3)
+        self.assertTrue(all("marked Recast" in row["comparability_note"] for row in fy2020))
+
 
 if __name__ == "__main__":
     unittest.main()

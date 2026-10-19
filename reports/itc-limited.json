@@ -896,13 +896,14 @@
     "generated_candidates": [],
     "peer_companies": [
       "Hindustan Unilever Limited",
-      "Britannia Industries Limited"
+      "Britannia Industries Limited",
+      "Marico Limited"
     ],
     "period_type": "annual",
     "consolidation_basis": "standalone",
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "ITC_standalone_pre_demerger",
     "verified_ledger_entries": 38,
-    "elapsed_seconds": 27.0144
+    "elapsed_seconds": 37.5266
   }
 }
