@@ -34,13 +34,13 @@
           }
         ],
         "metrics": {
-          "revenue": [
-            9653.0,
-            10831.0
-          ],
           "trade_receivables": [
             1069.0,
             1271.0
+          ],
+          "revenue": [
+            9653.0,
+            10831.0
           ],
           "inventory": [
             1336.0,
@@ -48,20 +48,20 @@
           ]
         },
         "ledger_ids": {
-          "revenue": [
-            [
-              "L0090"
-            ],
-            [
-              "L0089"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0094"
             ],
             [
               "L0093"
+            ]
+          ],
+          "revenue": [
+            [
+              "L0090"
+            ],
+            [
+              "L0089"
             ]
           ],
           "inventory": [
@@ -270,14 +270,6 @@
           }
         ],
         "metrics": {
-          "revenue": [
-            5853.0,
-            6337.0,
-            7500.0,
-            7478.0,
-            7002.0,
-            7581.0
-          ],
           "trade_receivables": [
             465.0,
             310.0,
@@ -285,6 +277,14 @@
             838.0,
             870.0,
             935.0
+          ],
+          "revenue": [
+            5853.0,
+            6337.0,
+            7500.0,
+            7478.0,
+            7002.0,
+            7581.0
           ],
           "inventory": [
             1165.0,
@@ -296,26 +296,6 @@
           ]
         },
         "ledger_ids": {
-          "revenue": [
-            [
-              "L0095"
-            ],
-            [
-              "L0096"
-            ],
-            [
-              "L0097"
-            ],
-            [
-              "L0098"
-            ],
-            [
-              "L0099"
-            ],
-            [
-              "L0100"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0107"
@@ -334,6 +314,26 @@
             ],
             [
               "L0112"
+            ]
+          ],
+          "revenue": [
+            [
+              "L0095"
+            ],
+            [
+              "L0096"
+            ],
+            [
+              "L0097"
+            ],
+            [
+              "L0098"
+            ],
+            [
+              "L0099"
+            ],
+            [
+              "L0100"
             ]
           ],
           "inventory": [
@@ -636,7 +636,8 @@
       "peer_companies": [
         "Hindustan Unilever Limited",
         "ITC Limited",
-        "Britannia Industries Limited"
+        "Britannia Industries Limited",
+        "Dabur India Limited"
       ]
     }
   ],

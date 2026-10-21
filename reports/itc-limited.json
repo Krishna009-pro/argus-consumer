@@ -897,13 +897,14 @@
     "peer_companies": [
       "Hindustan Unilever Limited",
       "Britannia Industries Limited",
-      "Marico Limited"
+      "Marico Limited",
+      "Dabur India Limited"
     ],
     "period_type": "annual",
     "consolidation_basis": "standalone",
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "ITC_standalone_pre_demerger",
     "verified_ledger_entries": 38,
-    "elapsed_seconds": 37.5266
+    "elapsed_seconds": 31.2458
   }
 }

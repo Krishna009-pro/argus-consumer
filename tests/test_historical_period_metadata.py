@@ -67,6 +67,33 @@ class HistoricalPeriodMetadataTests(unittest.TestCase):
         self.assertEqual(len(fy2020), 3)
         self.assertTrue(all("marked Recast" in row["comparability_note"] for row in fy2020))
 
+    def test_dabur_standalone_panel_has_six_verified_periods_with_source_provenance(self):
+        rows = [row for row in self.read_ledger()
+                if row.get("company") == "Dabur India Limited"
+                and row.get("comparability_cohort") == "Dabur_standalone_FY2020_FY2025"]
+        self.assertEqual(len(rows), 18)
+        expected_values = {
+            "revenue": [6309.80, 7184.73, 8179.50, 8684.35, 9135.60, 9070.71],
+            "inventory": [809.14, 1114.16, 1237.96, 1223.77, 1149.88, 1288.07],
+            "trade_receivables": [379.63, 281.24, 454.55, 561.18, 719.21, 600.58],
+        }
+        for metric, values in expected_values.items():
+            metric_rows = sorted((row for row in rows if row["metric"] == metric),
+                                 key=lambda row: row["period"])
+            with self.subTest(metric=metric):
+                self.assertEqual([row["period"] for row in metric_rows],
+                                 [f"FY{year}" for year in range(2020, 2026)])
+                self.assertEqual([row["value"] for row in metric_rows], values)
+                for row in metric_rows:
+                    self.assertTrue(row["verified"])
+                    self.assertEqual(row["consolidation_basis"], "standalone")
+                    self.assertEqual(row["unit"], "INR_crore")
+                    self.assertEqual(row["period_type"], "annual")
+                    self.assertEqual(row["reporting_scope"], "company_total_operations")
+                    self.assertTrue(row["source_sha256"])
+                    self.assertIsInstance(row["doc_page"], int)
+                    self.assertTrue(row["snippet"])
+
 
 if __name__ == "__main__":
     unittest.main()

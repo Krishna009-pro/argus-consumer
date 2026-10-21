@@ -1,0 +1,69 @@
+# ARGUS-Consumer dossier — Dabur India Limited
+
+## Discovery
+No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.
+
+## Why it matters
+- Reported values are compared with the company’s own historical range.
+- The workflow separates calculated deviations from explanations and abstains when independent evidence is missing.
+
+## Linked evidence
+- L0113
+- L0114
+- L0115
+- L0116
+- L0117
+- L0118
+- L0119
+- L0120
+- L0121
+- L0122
+- L0123
+- L0124
+- L0125
+- L0126
+- L0127
+- L0128
+- L0129
+- L0130
+
+## Timeline
+- {'period': 'FY2025', 'angle': 'price_volume', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': ['L0116', 'L0113'], 'status': 'abstained', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'Dabur_standalone_FY2020_FY2025'}
+- {'period': 'FY2025', 'angle': 'receivable_days', 'reported': 24.1669836209073, 'expected_low': 16.255858650693824, 'expected_high': 26.04831017944052, 'ledger_ids': ['L0115', 'L0113'], 'status': 'tested', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'Dabur_standalone_FY2020_FY2025'}
+- {'period': 'FY2025', 'angle': 'inventory_days', 'reported': 51.83117418592371, 'expected_low': 45.677668314388725, 'expected_high': 60.99935268518918, 'ledger_ids': ['L0114', 'L0113'], 'status': 'tested', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'Dabur_standalone_FY2020_FY2025'}
+- {'period': 'FY2025', 'angle': 'cash_conversion', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'Dabur_standalone_FY2020_FY2025'}
+- {'period': 'FY2025', 'angle': 'margin_vs_input_cost', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'Dabur_standalone_FY2020_FY2025'}
+
+## Numerical evidence
+- receivable_days FY2020 [L0130] [L0128]: 22.020441218422135
+- receivable_days FY2021 [L0127] [L0125]: 14.28760718913585
+- receivable_days FY2022 [L0124] [L0122]: 20.28372761171221
+- receivable_days FY2023 [L0121] [L0119]: 23.58618664609326
+- receivable_days FY2024 [L0118] [L0116]: 28.813746223564955
+- receivable_days FY2025 [L0115] [L0113]: 24.1669836209073
+- inventory_days FY2020 [L0129] [L0128]: 46.934172240007605
+- inventory_days FY2021 [L0126] [L0125]: 56.60176513244062
+- inventory_days FY2022 [L0123] [L0122]: 55.242423130998226
+- inventory_days FY2023 [L0120] [L0119]: 51.43459786857969
+- inventory_days FY2024 [L0117] [L0116]: 46.06769998686458
+- inventory_days FY2025 [L0114] [L0113]: 51.83117418592371
+
+## Counterargument
+Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.
+
+## Falsification condition
+The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.
+
+## Evidence strength
+Weak (score 0.0)
+
+## Not tested
+- standalone, company_total_operations, Dabur_standalone_FY2020_FY2025 — price_volume: Matched revenue and disclosed volume-growth inputs are required.
+- standalone, company_total_operations, Dabur_standalone_FY2020_FY2025 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.
+- standalone, company_total_operations, Dabur_standalone_FY2020_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.
+
+## Hypotheses (unverified)
+- None; optional research model is not configured or no source excerpts were available.
+
+## Red-team review
+- Not run.

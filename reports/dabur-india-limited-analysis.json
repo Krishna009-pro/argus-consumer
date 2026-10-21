@@ -1,0 +1,455 @@
+{
+  "company": "Dabur India Limited",
+  "panels": [
+    {
+      "panel": {
+        "company": "Dabur India Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "standalone",
+        "reporting_scope": "company_total_operations",
+        "comparability_cohort": "Dabur_standalone_FY2020_FY2025",
+        "periods": [
+          {
+            "period": "FY2020",
+            "period_type": "annual",
+            "period_start": "2019-04-01",
+            "period_end": "2020-03-31",
+            "days": 366,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Dabur_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2021",
+            "period_type": "annual",
+            "period_start": "2020-04-01",
+            "period_end": "2021-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Dabur_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2022",
+            "period_type": "annual",
+            "period_start": "2021-04-01",
+            "period_end": "2022-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Dabur_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2023",
+            "period_type": "annual",
+            "period_start": "2022-04-01",
+            "period_end": "2023-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Dabur_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2024",
+            "period_type": "annual",
+            "period_start": "2023-04-01",
+            "period_end": "2024-03-31",
+            "days": 366,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Dabur_standalone_FY2020_FY2025"
+          },
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": "2024-04-01",
+            "period_end": "2025-03-31",
+            "days": 365,
+            "currency": "INR",
+            "consolidation_basis": "standalone",
+            "reporting_scope": "company_total_operations",
+            "comparability_cohort": "Dabur_standalone_FY2020_FY2025"
+          }
+        ],
+        "metrics": {
+          "inventory": [
+            809.14,
+            1114.16,
+            1237.96,
+            1223.77,
+            1149.88,
+            1288.07
+          ],
+          "revenue": [
+            6309.8,
+            7184.73,
+            8179.5,
+            8684.35,
+            9135.6,
+            9070.71
+          ],
+          "trade_receivables": [
+            379.63,
+            281.24,
+            454.55,
+            561.18,
+            719.21,
+            600.58
+          ]
+        },
+        "ledger_ids": {
+          "inventory": [
+            [
+              "L0129"
+            ],
+            [
+              "L0126"
+            ],
+            [
+              "L0123"
+            ],
+            [
+              "L0120"
+            ],
+            [
+              "L0117"
+            ],
+            [
+              "L0114"
+            ]
+          ],
+          "revenue": [
+            [
+              "L0128"
+            ],
+            [
+              "L0125"
+            ],
+            [
+              "L0122"
+            ],
+            [
+              "L0119"
+            ],
+            [
+              "L0116"
+            ],
+            [
+              "L0113"
+            ]
+          ],
+          "trade_receivables": [
+            [
+              "L0130"
+            ],
+            [
+              "L0127"
+            ],
+            [
+              "L0124"
+            ],
+            [
+              "L0121"
+            ],
+            [
+              "L0118"
+            ],
+            [
+              "L0115"
+            ]
+          ]
+        },
+        "units": {
+          "revenue": "INR_crore",
+          "inventory": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {}
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [
+              "L0128",
+              "L0125"
+            ],
+            [
+              "L0125",
+              "L0122"
+            ],
+            [
+              "L0122",
+              "L0119"
+            ],
+            [
+              "L0119",
+              "L0116"
+            ],
+            [
+              "L0116",
+              "L0113"
+            ]
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "tested",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            22.020441218422135,
+            14.28760718913585,
+            20.28372761171221,
+            23.58618664609326,
+            28.813746223564955,
+            24.1669836209073
+          ],
+          "expected_low": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            16.255858650693824
+          ],
+          "expected_high": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            26.04831017944052
+          ],
+          "expected_spread": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            2.4481128821866736
+          ],
+          "gap_flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0130",
+              "L0128"
+            ],
+            [
+              "L0127",
+              "L0125"
+            ],
+            [
+              "L0124",
+              "L0122"
+            ],
+            [
+              "L0121",
+              "L0119"
+            ],
+            [
+              "L0118",
+              "L0116"
+            ],
+            [
+              "L0115",
+              "L0113"
+            ]
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "tested",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            46.934172240007605,
+            56.60176513244062,
+            55.242423130998226,
+            51.43459786857969,
+            46.06769998686458,
+            51.83117418592371
+          ],
+          "expected_low": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            45.677668314388725
+          ],
+          "expected_high": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            60.99935268518918
+          ],
+          "expected_spread": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            3.830421092700114
+          ],
+          "gap_flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "ledger_ids_by_period": [
+            [
+              "L0129",
+              "L0128"
+            ],
+            [
+              "L0126",
+              "L0125"
+            ],
+            [
+              "L0123",
+              "L0122"
+            ],
+            [
+              "L0120",
+              "L0119"
+            ],
+            [
+              "L0117",
+              "L0116"
+            ],
+            [
+              "L0114",
+              "L0113"
+            ]
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+          "periods": [
+            "FY2020",
+            "FY2021",
+            "FY2022",
+            "FY2023",
+            "FY2024",
+            "FY2025"
+          ],
+          "reported": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ledger_ids_by_period": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 2,
+      "peer_companies": [
+        "Hindustan Unilever Limited",
+        "ITC Limited",
+        "Britannia Industries Limited",
+        "Marico Limited"
+      ]
+    }
+  ],
+  "rejected": [],
+  "status": "analyzed",
+  "reason": null
+}
