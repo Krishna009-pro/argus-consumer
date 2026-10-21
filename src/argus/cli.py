@@ -12,10 +12,10 @@ from .engine import run_engine, make_dossier
 def slug(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-") or "company"
 
-def run_company(company: str) -> dict:
+def run_company(company: str, entries=None) -> dict:
     started = time.perf_counter()
-    ledger = EvidenceLedger()
-    entries = ledger.verified_entries()
+    if entries is None:
+        entries = EvidenceLedger().verified_entries()
     analysis = run_engine(entries, company)
     dossier = make_dossier(analysis, entries)
     dossier.validation["verified_ledger_entries"] = len([e for e in entries if e.company and e.company.casefold() == company.casefold()])
@@ -38,6 +38,7 @@ def main(argv: list[str] | None = None) -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     run = sub.add_parser("run", help="Run analysis for a company (abstains when inputs are insufficient)")
     run.add_argument("--company", required=True)
+    all_runs = sub.add_parser("run-all", help="Run every company represented in verified ledger data")
     ev = sub.add_parser("eval", help="Run deterministic evaluations")
     ing = sub.add_parser("cache", help="Fetch and cache a public source file")
     ing.add_argument("url")
@@ -82,6 +83,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     if args.command == "run":
         print(json.dumps(run_company(args.company), indent=2)); return 0
+    if args.command == "run-all":
+        from eval.run_all import evaluate as evaluate_all
+        print(json.dumps(evaluate_all(), indent=2)); return 0
     if args.command == "cache":
         from .ingest.cache import fetch
         try: path, digest = fetch(args.url)
@@ -200,11 +204,13 @@ def main(argv: list[str] | None = None) -> int:
         from eval.reconcile import evaluate as reconcile
         from eval.grounding import evaluate as grounding
         from eval.baselines.score import evaluate as baselines
+        from eval.run_all import latest_measurement as run_all_measurement
         ground = grounding()
         results = {**run_canary(), **missing(), **rerun(), **stability(),
                    "M02_claim_grounding_rate": ground["M02_claim_grounding_rate"],
                    "M03_unsupported_claims": ground["M03_unsupported_claims"],
                    "reconciliation": reconcile(), "grounding": ground, "baselines": baselines()}
+        results.update(run_all_measurement())
         out = Path("eval/results"); out.mkdir(parents=True, exist_ok=True)
         (out / "summary.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
         (out / "scoreboard.md").write_text(scoreboard(results), encoding="utf-8")

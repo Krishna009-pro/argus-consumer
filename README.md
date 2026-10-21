@@ -45,6 +45,15 @@ python scripts/run_tests.py
 python scripts/argus.py eval
 ```
 
+To rerun every company represented in the verified ledger and measure end-to-end coverage and cached analysis time, run:
+
+```powershell
+python scripts/argus.py run-all
+python scripts/argus.py eval
+```
+
+`run-all` discovers company names from verified ledger rows; it does not maintain a company-specific list in the analysis code. It refreshes the dossiers and saves the measured run details to `eval/results/run_all.json`. The subsequent `eval` command includes M05 and M15 only while that measurement still matches the current ledger and analysis implementation.
+
 Run a company analysis with:
 
 ```powershell
