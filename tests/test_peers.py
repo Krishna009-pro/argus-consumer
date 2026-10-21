@@ -1,7 +1,7 @@
 import unittest
 
 from argus.peers import eligible_peer_panels
-from argus.engine import make_dossier
+from argus.engine import make_dossier, _peer_company_names
 
 
 def panel(company, *, cohort, scope="continuing_operations", basis="consolidated", currency="INR", period="FY2025", period_end=None):
@@ -11,6 +11,13 @@ def panel(company, *, cohort, scope="continuing_operations", basis="consolidated
 
 
 class PeerSelectionTests(unittest.TestCase):
+    def test_multiple_compatible_cohorts_count_as_one_peer_company(self):
+        self.assertEqual(_peer_company_names([
+            {"company": "GCPL", "comparability_cohort": "pre-acquisition"},
+            {"company": "GCPL", "comparability_cohort": "post-acquisition"},
+            {"company": "Peer B", "comparability_cohort": "baseline"},
+        ]), ["GCPL", "Peer B"])
+
     def test_company_local_cohort_names_do_not_block_comparable_peers(self):
         target = panel("Target Co", cohort="post_demerger_fy2026")
         peer = panel("Peer Co", cohort="FY2025-26_report_comparables")

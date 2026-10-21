@@ -19,7 +19,7 @@ Missing values stay missing. ARGUS does not fill gaps with zeroes or estimates.
 
 ## Current project status
 
-The latest recorded company runs cover Hindustan Unilever Limited (HUL), ITC Limited, Britannia Industries Limited, Marico Limited, and Dabur India Limited. All currently return `no_reliable_finding`. Dabur now has a manually reviewed six-period standalone panel (FY2020–FY2025) for revenue, inventory, and trade receivables; the core standalone panels list four distinct peer companies where periods overlap. This does not mean any company has a validated discovery. Comparable volume data, broader Track C coverage, and real-world validation are still incomplete.
+The latest recorded company runs cover Hindustan Unilever Limited (HUL), ITC Limited, Britannia Industries Limited, Marico Limited, Dabur India Limited, and Godrej Consumer Products Limited (GCPL). All return `no_reliable_finding`; none is a validated discovery. GCPL has manually reviewed standalone revenue, inventory, and trade-receivable data for FY2020–FY2025. Its FY2020–FY2023 pre-acquisition panel is kept separate from FY2024–FY2025 because GCPL acquired and integrated Raymond Consumer Care's FMCG business in May 2023. GCPL's published turnover ratios have also been recorded for reconciliation review, but their average-balance/net-sales formulas differ from ARGUS's closing-balance days formulas, so M01 remains unavailable. Comparable volume data, broader Track C coverage, and real-world validation are still incomplete.
 
 For the evidence behind those results, current evaluation measurements, and remaining work, see [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md). Synthetic test results are not measurements of real-world accuracy.
 

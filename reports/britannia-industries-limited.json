@@ -133,13 +133,14 @@
       "Hindustan Unilever Limited",
       "ITC Limited",
       "Marico Limited",
-      "Dabur India Limited"
+      "Dabur India Limited",
+      "Godrej Consumer Products Limited"
     ],
     "period_type": "annual",
     "consolidation_basis": "standalone",
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "Britannia_standalone_FY2020_FY2025",
     "verified_ledger_entries": 18,
-    "elapsed_seconds": 31.1272
+    "elapsed_seconds": 15.4189
   }
 }

@@ -78,6 +78,14 @@
           }
         ],
         "metrics": {
+          "revenue": [
+            10986.68,
+            12378.83,
+            13371.62,
+            15618.42,
+            16186.08,
+            17295.92
+          ],
           "trade_receivables": [
             242.23,
             198.36,
@@ -93,17 +101,29 @@
             1074.62,
             1075.44,
             1128.9
-          ],
-          "revenue": [
-            10986.68,
-            12378.83,
-            13371.62,
-            15618.42,
-            16186.08,
-            17295.92
           ]
         },
         "ledger_ids": {
+          "revenue": [
+            [
+              "L0084"
+            ],
+            [
+              "L0083"
+            ],
+            [
+              "L0078"
+            ],
+            [
+              "L0077"
+            ],
+            [
+              "L0072"
+            ],
+            [
+              "L0071"
+            ]
+          ],
           "trade_receivables": [
             [
               "L0088"
@@ -142,26 +162,6 @@
             ],
             [
               "L0073"
-            ]
-          ],
-          "revenue": [
-            [
-              "L0084"
-            ],
-            [
-              "L0083"
-            ],
-            [
-              "L0078"
-            ],
-            [
-              "L0077"
-            ],
-            [
-              "L0072"
-            ],
-            [
-              "L0071"
             ]
           ]
         },
@@ -445,7 +445,8 @@
         "Hindustan Unilever Limited",
         "ITC Limited",
         "Marico Limited",
-        "Dabur India Limited"
+        "Dabur India Limited",
+        "Godrej Consumer Products Limited"
       ]
     }
   ],

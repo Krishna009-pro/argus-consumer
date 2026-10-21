@@ -6,6 +6,11 @@ from .panels import build_company_panels, derive_angle_series
 from .schemas import Candidate, Dossier, LedgerEntry
 from .validation_gate import validate
 from .peers import eligible_peer_panels, period_key
+
+
+def _peer_company_names(peer_panels: list[dict]) -> list[str]:
+    """Return distinct peer entities when one peer has multiple compatible cohorts."""
+    return list(dict.fromkeys(panel["company"] for panel in peer_panels))
 from .verify.score import calculate as calculate_score
 from .ledger import EvidenceLedger
 from .agents.hypothesis import research
@@ -105,7 +110,7 @@ def run_engine(entries: list[LedgerEntry], company: str) -> dict:
                     rejected.append({"candidate_id": cand.id, "state": gate["state"], "gate": gate,
                                      "reason": "One or more evidence gates were not met; missing peer or red-team evidence is not treated as a pass."})
         panel_analyses.append({"panel": panel, "angles": angle_evaluations, "candidates": candidates,
-                               "tested_patterns": windows_tested, "peer_companies": [p["company"] for p in eligible_peers]})
+                               "tested_patterns": windows_tested, "peer_companies": _peer_company_names(eligible_peers)})
     return {"company": company, "panels": panel_analyses, "rejected": rejected,
             "status": "analyzed" if panel_analyses else "abstained",
             "reason": None if panel_analyses else "No verified, compatible observations were available for this company."}

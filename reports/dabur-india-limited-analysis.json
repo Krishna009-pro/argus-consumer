@@ -78,14 +78,6 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            809.14,
-            1114.16,
-            1237.96,
-            1223.77,
-            1149.88,
-            1288.07
-          ],
           "revenue": [
             6309.8,
             7184.73,
@@ -101,29 +93,17 @@
             561.18,
             719.21,
             600.58
+          ],
+          "inventory": [
+            809.14,
+            1114.16,
+            1237.96,
+            1223.77,
+            1149.88,
+            1288.07
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0129"
-            ],
-            [
-              "L0126"
-            ],
-            [
-              "L0123"
-            ],
-            [
-              "L0120"
-            ],
-            [
-              "L0117"
-            ],
-            [
-              "L0114"
-            ]
-          ],
           "revenue": [
             [
               "L0128"
@@ -162,6 +142,26 @@
             ],
             [
               "L0115"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0129"
+            ],
+            [
+              "L0126"
+            ],
+            [
+              "L0123"
+            ],
+            [
+              "L0120"
+            ],
+            [
+              "L0117"
+            ],
+            [
+              "L0114"
             ]
           ]
         },
@@ -445,7 +445,8 @@
         "Hindustan Unilever Limited",
         "ITC Limited",
         "Britannia Industries Limited",
-        "Marico Limited"
+        "Marico Limited",
+        "Godrej Consumer Products Limited"
       ]
     }
   ],

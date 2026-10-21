@@ -23,22 +23,22 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            17931.9
-          ],
           "trade_receivables": [
             2925.6
+          ],
+          "inventory": [
+            17931.9
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0031"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0033"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0031"
             ]
           ]
         },
@@ -280,22 +280,22 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            18622.96
-          ],
           "trade_receivables": [
             3922.86
+          ],
+          "inventory": [
+            18622.96
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0035"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0037"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0035"
             ]
           ]
         },
@@ -414,22 +414,22 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            15637.56
-          ],
           "trade_receivables": [
             4719.67
+          ],
+          "inventory": [
+            15637.56
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0036"
-            ]
-          ],
           "trade_receivables": [
             [
               "L0038"
+            ]
+          ],
+          "inventory": [
+            [
+              "L0036"
             ]
           ]
         },
@@ -1151,14 +1151,14 @@
           }
         ],
         "metrics": {
-          "inventory": [
-            7237.15,
-            7587.24,
-            8038.07,
-            9470.87,
-            9997.77,
-            10593.9,
-            null
+          "revenue": [
+            44329.77,
+            45784.39,
+            46807.34,
+            48524.54,
+            59745.56,
+            70251.28,
+            70105.29
           ],
           "trade_receivables": [
             2357.01,
@@ -1169,59 +1169,17 @@
             2321.33,
             null
           ],
-          "revenue": [
-            44329.77,
-            45784.39,
-            46807.34,
-            48524.54,
-            59745.56,
-            70251.28,
-            70105.29
+          "inventory": [
+            7237.15,
+            7587.24,
+            8038.07,
+            9470.87,
+            9997.77,
+            10593.9,
+            null
           ]
         },
         "ledger_ids": {
-          "inventory": [
-            [
-              "L0069"
-            ],
-            [
-              "L0066"
-            ],
-            [
-              "L0046"
-            ],
-            [
-              "L0045"
-            ],
-            [
-              "L0050"
-            ],
-            [
-              "L0049"
-            ],
-            []
-          ],
-          "trade_receivables": [
-            [
-              "L0070"
-            ],
-            [
-              "L0067"
-            ],
-            [
-              "L0048"
-            ],
-            [
-              "L0047"
-            ],
-            [
-              "L0052"
-            ],
-            [
-              "L0051"
-            ],
-            []
-          ],
           "revenue": [
             [
               "L0068"
@@ -1244,6 +1202,48 @@
             [
               "L0062"
             ]
+          ],
+          "trade_receivables": [
+            [
+              "L0070"
+            ],
+            [
+              "L0067"
+            ],
+            [
+              "L0048"
+            ],
+            [
+              "L0047"
+            ],
+            [
+              "L0052"
+            ],
+            [
+              "L0051"
+            ],
+            []
+          ],
+          "inventory": [
+            [
+              "L0069"
+            ],
+            [
+              "L0066"
+            ],
+            [
+              "L0046"
+            ],
+            [
+              "L0045"
+            ],
+            [
+              "L0050"
+            ],
+            [
+              "L0049"
+            ],
+            []
           ]
         },
         "units": {
@@ -1252,8 +1252,8 @@
           "revenue": "INR_crore"
         },
         "unavailable": {
-          "inventory:FY2024": "More than one verified value exists for this metric and period.",
-          "trade_receivables:FY2024": "More than one verified value exists for this metric and period."
+          "trade_receivables:FY2024": "More than one verified value exists for this metric and period.",
+          "inventory:FY2024": "More than one verified value exists for this metric and period."
         }
       },
       "angles": {
@@ -1559,7 +1559,8 @@
         "Hindustan Unilever Limited",
         "Britannia Industries Limited",
         "Marico Limited",
-        "Dabur India Limited"
+        "Dabur India Limited",
+        "Godrej Consumer Products Limited"
       ]
     },
     {
