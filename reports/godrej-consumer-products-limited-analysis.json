@@ -56,17 +56,17 @@
           }
         ],
         "metrics": {
-          "trade_receivables": [
-            305.52,
-            247.46,
-            336.92,
-            320.79
-          ],
           "revenue": [
             5474.45,
             6254.33,
             6951.56,
             7667.17
+          ],
+          "trade_receivables": [
+            305.52,
+            247.46,
+            336.92,
+            320.79
           ],
           "inventory": [
             657.72,
@@ -76,20 +76,6 @@
           ]
         },
         "ledger_ids": {
-          "trade_receivables": [
-            [
-              "L0132"
-            ],
-            [
-              "L0135"
-            ],
-            [
-              "L0138"
-            ],
-            [
-              "L0141"
-            ]
-          ],
           "revenue": [
             [
               "L0133"
@@ -102,6 +88,20 @@
             ],
             [
               "L0142"
+            ]
+          ],
+          "trade_receivables": [
+            [
+              "L0132"
+            ],
+            [
+              "L0135"
+            ],
+            [
+              "L0138"
+            ],
+            [
+              "L0141"
             ]
           ],
           "inventory": [
@@ -326,13 +326,13 @@
           }
         ],
         "metrics": {
-          "trade_receivables": [
-            491.34,
-            595.62
-          ],
           "revenue": [
             8411.4,
             8910.15
+          ],
+          "trade_receivables": [
+            491.34,
+            595.62
           ],
           "inventory": [
             646.86,
@@ -340,20 +340,20 @@
           ]
         },
         "ledger_ids": {
-          "trade_receivables": [
-            [
-              "L0144"
-            ],
-            [
-              "L0147"
-            ]
-          ],
           "revenue": [
             [
               "L0145"
             ],
             [
               "L0148"
+            ]
+          ],
+          "trade_receivables": [
+            [
+              "L0144"
+            ],
+            [
+              "L0147"
             ]
           ],
           "inventory": [

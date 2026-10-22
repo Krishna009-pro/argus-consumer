@@ -4105,6 +4105,33 @@
       "comparability_note": null
     },
     {
+      "id": "L0153",
+      "metric": "trade_receivables",
+      "value": 12337.48,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.varunbeverages.com/Annual-Report-FY-2025.pdf",
+      "source_type": "filing",
+      "doc_page": 282,
+      "snippet": "Trade receivables considered good - Unsecured  12,337.48  8,243.01",
+      "source_sha256": "acdc43ec29dc0ad6a0f36491bac53961ea8a3e93607466f69ae8f18ccbaf1df3",
+      "retrieved_at": "2026-10-22T15:03:14.602136Z",
+      "cache_path": "data\\cache\\acdc43ec29dc0ad6a0f36491bac53961ea8a3e93607466f69ae8f18ccbaf1df3.pdf",
+      "company": "Varun Beverages Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "consolidated",
+      "verified": true,
+      "verified_by": "Your Name",
+      "verified_at": "2026-10-22T15:03:14.602136Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
       "id": "C-0cc21036eadc-39b99641c70d",
       "company": "Nestle India Limited",
       "metric": "inventory",
@@ -4434,7 +4461,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Britannia_standalone_FY2020_FY2025",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 9.1403
+          "elapsed_seconds": 16.5189
         }
       },
       "analysis": {
@@ -4517,14 +4544,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  242.23,
-                  198.36,
-                  253.85,
-                  278.42,
-                  347.05,
-                  379.63
-                ],
                 "revenue": [
                   10986.68,
                   12378.83,
@@ -4532,6 +4551,14 @@
                   15618.42,
                   16186.08,
                   17295.92
+                ],
+                "trade_receivables": [
+                  242.23,
+                  198.36,
+                  253.85,
+                  278.42,
+                  347.05,
+                  379.63
                 ],
                 "inventory": [
                   633.53,
@@ -4543,26 +4570,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0088"
-                  ],
-                  [
-                    "L0087"
-                  ],
-                  [
-                    "L0082"
-                  ],
-                  [
-                    "L0081"
-                  ],
-                  [
-                    "L0076"
-                  ],
-                  [
-                    "L0075"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0084"
@@ -4581,6 +4588,26 @@
                   ],
                   [
                     "L0071"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0088"
+                  ],
+                  [
+                    "L0087"
+                  ],
+                  [
+                    "L0082"
+                  ],
+                  [
+                    "L0081"
+                  ],
+                  [
+                    "L0076"
+                  ],
+                  [
+                    "L0075"
                   ]
                 ],
                 "inventory": [
@@ -5038,7 +5065,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Britannia_standalone_FY2020_FY2025",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 9.1403
+          "elapsed_seconds": 16.5189
         }
       },
       "analysis": {
@@ -5121,14 +5148,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  242.23,
-                  198.36,
-                  253.85,
-                  278.42,
-                  347.05,
-                  379.63
-                ],
                 "revenue": [
                   10986.68,
                   12378.83,
@@ -5136,6 +5155,14 @@
                   15618.42,
                   16186.08,
                   17295.92
+                ],
+                "trade_receivables": [
+                  242.23,
+                  198.36,
+                  253.85,
+                  278.42,
+                  347.05,
+                  379.63
                 ],
                 "inventory": [
                   633.53,
@@ -5147,26 +5174,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0088"
-                  ],
-                  [
-                    "L0087"
-                  ],
-                  [
-                    "L0082"
-                  ],
-                  [
-                    "L0081"
-                  ],
-                  [
-                    "L0076"
-                  ],
-                  [
-                    "L0075"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0084"
@@ -5185,6 +5192,26 @@
                   ],
                   [
                     "L0071"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0088"
+                  ],
+                  [
+                    "L0087"
+                  ],
+                  [
+                    "L0082"
+                  ],
+                  [
+                    "L0081"
+                  ],
+                  [
+                    "L0076"
+                  ],
+                  [
+                    "L0075"
                   ]
                 ],
                 "inventory": [
@@ -5642,7 +5669,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Britannia_standalone_FY2020_FY2025",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 9.1403
+          "elapsed_seconds": 16.5189
         }
       },
       "analysis": {
@@ -5725,14 +5752,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  242.23,
-                  198.36,
-                  253.85,
-                  278.42,
-                  347.05,
-                  379.63
-                ],
                 "revenue": [
                   10986.68,
                   12378.83,
@@ -5740,6 +5759,14 @@
                   15618.42,
                   16186.08,
                   17295.92
+                ],
+                "trade_receivables": [
+                  242.23,
+                  198.36,
+                  253.85,
+                  278.42,
+                  347.05,
+                  379.63
                 ],
                 "inventory": [
                   633.53,
@@ -5751,26 +5778,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0088"
-                  ],
-                  [
-                    "L0087"
-                  ],
-                  [
-                    "L0082"
-                  ],
-                  [
-                    "L0081"
-                  ],
-                  [
-                    "L0076"
-                  ],
-                  [
-                    "L0075"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0084"
@@ -5789,6 +5796,26 @@
                   ],
                   [
                     "L0071"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0088"
+                  ],
+                  [
+                    "L0087"
+                  ],
+                  [
+                    "L0082"
+                  ],
+                  [
+                    "L0081"
+                  ],
+                  [
+                    "L0076"
+                  ],
+                  [
+                    "L0075"
                   ]
                 ],
                 "inventory": [
@@ -6246,7 +6273,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Dabur_standalone_FY2020_FY2025",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 11.7963
+          "elapsed_seconds": 15.9947
         }
       },
       "analysis": {
@@ -6329,14 +6356,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  379.63,
-                  281.24,
-                  454.55,
-                  561.18,
-                  719.21,
-                  600.58
-                ],
                 "revenue": [
                   6309.8,
                   7184.73,
@@ -6344,6 +6363,14 @@
                   8684.35,
                   9135.6,
                   9070.71
+                ],
+                "trade_receivables": [
+                  379.63,
+                  281.24,
+                  454.55,
+                  561.18,
+                  719.21,
+                  600.58
                 ],
                 "inventory": [
                   809.14,
@@ -6355,26 +6382,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0130"
-                  ],
-                  [
-                    "L0127"
-                  ],
-                  [
-                    "L0124"
-                  ],
-                  [
-                    "L0121"
-                  ],
-                  [
-                    "L0118"
-                  ],
-                  [
-                    "L0115"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0128"
@@ -6393,6 +6400,26 @@
                   ],
                   [
                     "L0113"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0130"
+                  ],
+                  [
+                    "L0127"
+                  ],
+                  [
+                    "L0124"
+                  ],
+                  [
+                    "L0121"
+                  ],
+                  [
+                    "L0118"
+                  ],
+                  [
+                    "L0115"
                   ]
                 ],
                 "inventory": [
@@ -6850,7 +6877,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Dabur_standalone_FY2020_FY2025",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 11.7963
+          "elapsed_seconds": 15.9947
         }
       },
       "analysis": {
@@ -6933,14 +6960,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  379.63,
-                  281.24,
-                  454.55,
-                  561.18,
-                  719.21,
-                  600.58
-                ],
                 "revenue": [
                   6309.8,
                   7184.73,
@@ -6948,6 +6967,14 @@
                   8684.35,
                   9135.6,
                   9070.71
+                ],
+                "trade_receivables": [
+                  379.63,
+                  281.24,
+                  454.55,
+                  561.18,
+                  719.21,
+                  600.58
                 ],
                 "inventory": [
                   809.14,
@@ -6959,26 +6986,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0130"
-                  ],
-                  [
-                    "L0127"
-                  ],
-                  [
-                    "L0124"
-                  ],
-                  [
-                    "L0121"
-                  ],
-                  [
-                    "L0118"
-                  ],
-                  [
-                    "L0115"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0128"
@@ -6997,6 +7004,26 @@
                   ],
                   [
                     "L0113"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0130"
+                  ],
+                  [
+                    "L0127"
+                  ],
+                  [
+                    "L0124"
+                  ],
+                  [
+                    "L0121"
+                  ],
+                  [
+                    "L0118"
+                  ],
+                  [
+                    "L0115"
                   ]
                 ],
                 "inventory": [
@@ -7454,7 +7481,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Dabur_standalone_FY2020_FY2025",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 11.7963
+          "elapsed_seconds": 15.9947
         }
       },
       "analysis": {
@@ -7537,14 +7564,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  379.63,
-                  281.24,
-                  454.55,
-                  561.18,
-                  719.21,
-                  600.58
-                ],
                 "revenue": [
                   6309.8,
                   7184.73,
@@ -7552,6 +7571,14 @@
                   8684.35,
                   9135.6,
                   9070.71
+                ],
+                "trade_receivables": [
+                  379.63,
+                  281.24,
+                  454.55,
+                  561.18,
+                  719.21,
+                  600.58
                 ],
                 "inventory": [
                   809.14,
@@ -7563,26 +7590,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0130"
-                  ],
-                  [
-                    "L0127"
-                  ],
-                  [
-                    "L0124"
-                  ],
-                  [
-                    "L0121"
-                  ],
-                  [
-                    "L0118"
-                  ],
-                  [
-                    "L0115"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0128"
@@ -7601,6 +7608,26 @@
                   ],
                   [
                     "L0113"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0130"
+                  ],
+                  [
+                    "L0127"
+                  ],
+                  [
+                    "L0124"
+                  ],
+                  [
+                    "L0121"
+                  ],
+                  [
+                    "L0118"
+                  ],
+                  [
+                    "L0115"
                   ]
                 ],
                 "inventory": [
@@ -8134,7 +8161,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 12.4597
+          "elapsed_seconds": 16.1156
         }
       },
       "analysis": {
@@ -8195,17 +8222,17 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  305.52,
-                  247.46,
-                  336.92,
-                  320.79
-                ],
                 "revenue": [
                   5474.45,
                   6254.33,
                   6951.56,
                   7667.17
+                ],
+                "trade_receivables": [
+                  305.52,
+                  247.46,
+                  336.92,
+                  320.79
                 ],
                 "inventory": [
                   657.72,
@@ -8215,20 +8242,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0132"
-                  ],
-                  [
-                    "L0135"
-                  ],
-                  [
-                    "L0138"
-                  ],
-                  [
-                    "L0141"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0133"
@@ -8241,6 +8254,20 @@
                   ],
                   [
                     "L0142"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0132"
+                  ],
+                  [
+                    "L0135"
+                  ],
+                  [
+                    "L0138"
+                  ],
+                  [
+                    "L0141"
                   ]
                 ],
                 "inventory": [
@@ -8465,13 +8492,13 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  491.34,
-                  595.62
-                ],
                 "revenue": [
                   8411.4,
                   8910.15
+                ],
+                "trade_receivables": [
+                  491.34,
+                  595.62
                 ],
                 "inventory": [
                   646.86,
@@ -8479,20 +8506,20 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0144"
-                  ],
-                  [
-                    "L0147"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0145"
                   ],
                   [
                     "L0148"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0144"
+                  ],
+                  [
+                    "L0147"
                   ]
                 ],
                 "inventory": [
@@ -8856,7 +8883,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 12.4597
+          "elapsed_seconds": 16.1156
         }
       },
       "analysis": {
@@ -8917,17 +8944,17 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  305.52,
-                  247.46,
-                  336.92,
-                  320.79
-                ],
                 "revenue": [
                   5474.45,
                   6254.33,
                   6951.56,
                   7667.17
+                ],
+                "trade_receivables": [
+                  305.52,
+                  247.46,
+                  336.92,
+                  320.79
                 ],
                 "inventory": [
                   657.72,
@@ -8937,20 +8964,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0132"
-                  ],
-                  [
-                    "L0135"
-                  ],
-                  [
-                    "L0138"
-                  ],
-                  [
-                    "L0141"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0133"
@@ -8963,6 +8976,20 @@
                   ],
                   [
                     "L0142"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0132"
+                  ],
+                  [
+                    "L0135"
+                  ],
+                  [
+                    "L0138"
+                  ],
+                  [
+                    "L0141"
                   ]
                 ],
                 "inventory": [
@@ -9187,13 +9214,13 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  491.34,
-                  595.62
-                ],
                 "revenue": [
                   8411.4,
                   8910.15
+                ],
+                "trade_receivables": [
+                  491.34,
+                  595.62
                 ],
                 "inventory": [
                   646.86,
@@ -9201,20 +9228,20 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0144"
-                  ],
-                  [
-                    "L0147"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0145"
                   ],
                   [
                     "L0148"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0144"
+                  ],
+                  [
+                    "L0147"
                   ]
                 ],
                 "inventory": [
@@ -9578,7 +9605,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 12.4597
+          "elapsed_seconds": 16.1156
         }
       },
       "analysis": {
@@ -9639,17 +9666,17 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  305.52,
-                  247.46,
-                  336.92,
-                  320.79
-                ],
                 "revenue": [
                   5474.45,
                   6254.33,
                   6951.56,
                   7667.17
+                ],
+                "trade_receivables": [
+                  305.52,
+                  247.46,
+                  336.92,
+                  320.79
                 ],
                 "inventory": [
                   657.72,
@@ -9659,20 +9686,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0132"
-                  ],
-                  [
-                    "L0135"
-                  ],
-                  [
-                    "L0138"
-                  ],
-                  [
-                    "L0141"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0133"
@@ -9685,6 +9698,20 @@
                   ],
                   [
                     "L0142"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0132"
+                  ],
+                  [
+                    "L0135"
+                  ],
+                  [
+                    "L0138"
+                  ],
+                  [
+                    "L0141"
                   ]
                 ],
                 "inventory": [
@@ -9909,13 +9936,13 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  491.34,
-                  595.62
-                ],
                 "revenue": [
                   8411.4,
                   8910.15
+                ],
+                "trade_receivables": [
+                  491.34,
+                  595.62
                 ],
                 "inventory": [
                   646.86,
@@ -9923,20 +9950,20 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0144"
-                  ],
-                  [
-                    "L0147"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0145"
                   ],
                   [
                     "L0148"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0144"
+                  ],
+                  [
+                    "L0147"
                   ]
                 ],
                 "inventory": [
@@ -10300,7 +10327,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
           "verified_ledger_entries": 18,
-          "elapsed_seconds": 12.4597
+          "elapsed_seconds": 16.1156
         }
       },
       "analysis": {
@@ -10361,17 +10388,17 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  305.52,
-                  247.46,
-                  336.92,
-                  320.79
-                ],
                 "revenue": [
                   5474.45,
                   6254.33,
                   6951.56,
                   7667.17
+                ],
+                "trade_receivables": [
+                  305.52,
+                  247.46,
+                  336.92,
+                  320.79
                 ],
                 "inventory": [
                   657.72,
@@ -10381,20 +10408,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0132"
-                  ],
-                  [
-                    "L0135"
-                  ],
-                  [
-                    "L0138"
-                  ],
-                  [
-                    "L0141"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0133"
@@ -10407,6 +10420,20 @@
                   ],
                   [
                     "L0142"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0132"
+                  ],
+                  [
+                    "L0135"
+                  ],
+                  [
+                    "L0138"
+                  ],
+                  [
+                    "L0141"
                   ]
                 ],
                 "inventory": [
@@ -10631,13 +10658,13 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  491.34,
-                  595.62
-                ],
                 "revenue": [
                   8411.4,
                   8910.15
+                ],
+                "trade_receivables": [
+                  491.34,
+                  595.62
                 ],
                 "inventory": [
                   646.86,
@@ -10645,20 +10672,20 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0144"
-                  ],
-                  [
-                    "L0147"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0145"
                   ],
                   [
                     "L0148"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0144"
+                  ],
+                  [
+                    "L0147"
                   ]
                 ],
                 "inventory": [
@@ -11378,7 +11405,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
           "verified_ledger_entries": 30,
-          "elapsed_seconds": 17.8998
+          "elapsed_seconds": 18.8205
         }
       },
       "analysis": {
@@ -12325,14 +12352,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  1046.0,
-                  1648.0,
-                  1932.0,
-                  2735.0,
-                  2690.0,
-                  3450.0
-                ],
                 "revenue": [
                   38785.0,
                   45996.0,
@@ -12340,6 +12359,14 @@
                   59144.0,
                   60469.0,
                   61469.0
+                ],
+                "trade_receivables": [
+                  1046.0,
+                  1648.0,
+                  1932.0,
+                  2735.0,
+                  2690.0,
+                  3450.0
                 ],
                 "inventory": [
                   2636.0,
@@ -12351,26 +12378,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0015"
-                  ],
-                  [
-                    "L0018"
-                  ],
-                  [
-                    "L0021"
-                  ],
-                  [
-                    "L0024"
-                  ],
-                  [
-                    "L0027"
-                  ],
-                  [
-                    "L0030"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0013"
@@ -12389,6 +12396,26 @@
                   ],
                   [
                     "L0028"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0015"
+                  ],
+                  [
+                    "L0018"
+                  ],
+                  [
+                    "L0021"
+                  ],
+                  [
+                    "L0024"
+                  ],
+                  [
+                    "L0027"
+                  ],
+                  [
+                    "L0030"
                   ]
                 ],
                 "inventory": [
@@ -13311,7 +13338,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
           "verified_ledger_entries": 30,
-          "elapsed_seconds": 17.8998
+          "elapsed_seconds": 18.8205
         }
       },
       "analysis": {
@@ -14258,14 +14285,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  1046.0,
-                  1648.0,
-                  1932.0,
-                  2735.0,
-                  2690.0,
-                  3450.0
-                ],
                 "revenue": [
                   38785.0,
                   45996.0,
@@ -14273,6 +14292,14 @@
                   59144.0,
                   60469.0,
                   61469.0
+                ],
+                "trade_receivables": [
+                  1046.0,
+                  1648.0,
+                  1932.0,
+                  2735.0,
+                  2690.0,
+                  3450.0
                 ],
                 "inventory": [
                   2636.0,
@@ -14284,26 +14311,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0015"
-                  ],
-                  [
-                    "L0018"
-                  ],
-                  [
-                    "L0021"
-                  ],
-                  [
-                    "L0024"
-                  ],
-                  [
-                    "L0027"
-                  ],
-                  [
-                    "L0030"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0013"
@@ -14322,6 +14329,26 @@
                   ],
                   [
                     "L0028"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0015"
+                  ],
+                  [
+                    "L0018"
+                  ],
+                  [
+                    "L0021"
+                  ],
+                  [
+                    "L0024"
+                  ],
+                  [
+                    "L0027"
+                  ],
+                  [
+                    "L0030"
                   ]
                 ],
                 "inventory": [
@@ -15544,7 +15571,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "ITC_standalone_pre_demerger",
           "verified_ledger_entries": 38,
-          "elapsed_seconds": 17.2527
+          "elapsed_seconds": 16.9998
         }
       },
       "analysis": {
@@ -16700,15 +16727,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  2357.01,
-                  3646.22,
-                  2092.0,
-                  2090.35,
-                  1952.5,
-                  2321.33,
-                  null
-                ],
                 "revenue": [
                   44329.77,
                   45784.39,
@@ -16717,6 +16735,15 @@
                   59745.56,
                   70251.28,
                   70105.29
+                ],
+                "trade_receivables": [
+                  2357.01,
+                  3646.22,
+                  2092.0,
+                  2090.35,
+                  1952.5,
+                  2321.33,
+                  null
                 ],
                 "inventory": [
                   7237.15,
@@ -16729,27 +16756,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0070"
-                  ],
-                  [
-                    "L0067"
-                  ],
-                  [
-                    "L0048"
-                  ],
-                  [
-                    "L0047"
-                  ],
-                  [
-                    "L0052"
-                  ],
-                  [
-                    "L0051"
-                  ],
-                  []
-                ],
                 "revenue": [
                   [
                     "L0068"
@@ -16772,6 +16778,27 @@
                   [
                     "L0062"
                   ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0070"
+                  ],
+                  [
+                    "L0067"
+                  ],
+                  [
+                    "L0048"
+                  ],
+                  [
+                    "L0047"
+                  ],
+                  [
+                    "L0052"
+                  ],
+                  [
+                    "L0051"
+                  ],
+                  []
                 ],
                 "inventory": [
                   [
@@ -17526,6 +17553,39 @@
         "reason": "No verified, compatible observations were available for this company."
       }
     },
+    "manpasand-beverages": {
+      "dossier": {
+        "company": "Manpasand Beverages",
+        "discovery": "No reliable finding: verified compatible financial observations are unavailable.",
+        "why_it_matters": [
+          "The analysis abstains rather than filling missing periods or metrics."
+        ],
+        "evidence": [],
+        "timeline": [],
+        "numbers": {},
+        "counterargument": "No company-specific finding was tested.",
+        "falsification_condition": "Import and verify public observations from compatible filings, then rerun.",
+        "evidence_score": 0.0,
+        "evidence_label": "Weak",
+        "not_tested": [
+          "No verified, compatible observations were available for this company."
+        ],
+        "hypotheses": [],
+        "red_team_log": [],
+        "score_components": {},
+        "validation": {
+          "verified_ledger_entries": 0,
+          "elapsed_seconds": 21.4728
+        }
+      },
+      "analysis": {
+        "company": "Manpasand Beverages",
+        "panels": [],
+        "rejected": [],
+        "status": "abstained",
+        "reason": "No verified, compatible observations were available for this company."
+      }
+    },
     "marico-limited": {
       "dossier": {
         "company": "Marico Limited",
@@ -17754,7 +17814,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Marico_standalone_FY2020_FY2025_recast_FY2020",
           "verified_ledger_entries": 24,
-          "elapsed_seconds": 16.8394
+          "elapsed_seconds": 15.6458
         }
       },
       "analysis": {
@@ -17793,13 +17853,13 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  1069.0,
-                  1271.0
-                ],
                 "revenue": [
                   9653.0,
                   10831.0
+                ],
+                "trade_receivables": [
+                  1069.0,
+                  1271.0
                 ],
                 "inventory": [
                   1336.0,
@@ -17807,20 +17867,20 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0094"
-                  ],
-                  [
-                    "L0093"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0090"
                   ],
                   [
                     "L0089"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0094"
+                  ],
+                  [
+                    "L0093"
                   ]
                 ],
                 "inventory": [
@@ -18029,14 +18089,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  465.0,
-                  310.0,
-                  555.0,
-                  838.0,
-                  870.0,
-                  935.0
-                ],
                 "revenue": [
                   5853.0,
                   6337.0,
@@ -18044,6 +18096,14 @@
                   7478.0,
                   7002.0,
                   7581.0
+                ],
+                "trade_receivables": [
+                  465.0,
+                  310.0,
+                  555.0,
+                  838.0,
+                  870.0,
+                  935.0
                 ],
                 "inventory": [
                   1165.0,
@@ -18055,26 +18115,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0107"
-                  ],
-                  [
-                    "L0108"
-                  ],
-                  [
-                    "L0109"
-                  ],
-                  [
-                    "L0110"
-                  ],
-                  [
-                    "L0111"
-                  ],
-                  [
-                    "L0112"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0095"
@@ -18093,6 +18133,26 @@
                   ],
                   [
                     "L0100"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0107"
+                  ],
+                  [
+                    "L0108"
+                  ],
+                  [
+                    "L0109"
+                  ],
+                  [
+                    "L0110"
+                  ],
+                  [
+                    "L0111"
+                  ],
+                  [
+                    "L0112"
                   ]
                 ],
                 "inventory": [
@@ -18634,7 +18694,7 @@
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "Marico_standalone_FY2020_FY2025_recast_FY2020",
           "verified_ledger_entries": 24,
-          "elapsed_seconds": 16.8394
+          "elapsed_seconds": 15.6458
         }
       },
       "analysis": {
@@ -18673,13 +18733,13 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  1069.0,
-                  1271.0
-                ],
                 "revenue": [
                   9653.0,
                   10831.0
+                ],
+                "trade_receivables": [
+                  1069.0,
+                  1271.0
                 ],
                 "inventory": [
                   1336.0,
@@ -18687,20 +18747,20 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0094"
-                  ],
-                  [
-                    "L0093"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0090"
                   ],
                   [
                     "L0089"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0094"
+                  ],
+                  [
+                    "L0093"
                   ]
                 ],
                 "inventory": [
@@ -18909,14 +18969,6 @@
                 }
               ],
               "metrics": {
-                "trade_receivables": [
-                  465.0,
-                  310.0,
-                  555.0,
-                  838.0,
-                  870.0,
-                  935.0
-                ],
                 "revenue": [
                   5853.0,
                   6337.0,
@@ -18924,6 +18976,14 @@
                   7478.0,
                   7002.0,
                   7581.0
+                ],
+                "trade_receivables": [
+                  465.0,
+                  310.0,
+                  555.0,
+                  838.0,
+                  870.0,
+                  935.0
                 ],
                 "inventory": [
                   1165.0,
@@ -18935,26 +18995,6 @@
                 ]
               },
               "ledger_ids": {
-                "trade_receivables": [
-                  [
-                    "L0107"
-                  ],
-                  [
-                    "L0108"
-                  ],
-                  [
-                    "L0109"
-                  ],
-                  [
-                    "L0110"
-                  ],
-                  [
-                    "L0111"
-                  ],
-                  [
-                    "L0112"
-                  ]
-                ],
                 "revenue": [
                   [
                     "L0095"
@@ -18973,6 +19013,26 @@
                   ],
                   [
                     "L0100"
+                  ]
+                ],
+                "trade_receivables": [
+                  [
+                    "L0107"
+                  ],
+                  [
+                    "L0108"
+                  ],
+                  [
+                    "L0109"
+                  ],
+                  [
+                    "L0110"
+                  ],
+                  [
+                    "L0111"
+                  ],
+                  [
+                    "L0112"
                   ]
                 ],
                 "inventory": [
@@ -22132,7 +22192,7 @@
           "reporting_scope": "unspecified",
           "comparability_cohort": "unspecified",
           "verified_ledger_entries": 4,
-          "elapsed_seconds": 21.0633
+          "elapsed_seconds": 16.8185
         }
       },
       "analysis": {
@@ -22434,7 +22494,7 @@
           "reporting_scope": "unspecified",
           "comparability_cohort": "unspecified",
           "verified_ledger_entries": 4,
-          "elapsed_seconds": 21.0633
+          "elapsed_seconds": 16.8185
         }
       },
       "analysis": {
@@ -22736,7 +22796,7 @@
           "reporting_scope": "unspecified",
           "comparability_cohort": "unspecified",
           "verified_ledger_entries": 4,
-          "elapsed_seconds": 21.0633
+          "elapsed_seconds": 16.8185
         }
       },
       "analysis": {
@@ -23038,7 +23098,7 @@
           "reporting_scope": "unspecified",
           "comparability_cohort": "unspecified",
           "verified_ledger_entries": 4,
-          "elapsed_seconds": 21.0633
+          "elapsed_seconds": 16.8185
         }
       },
       "analysis": {
@@ -23212,6 +23272,245 @@
                 ],
                 "ledger_ids_by_period": [
                   [],
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
+          }
+        ],
+        "rejected": [],
+        "status": "analyzed",
+        "reason": null
+      }
+    },
+    "varun-beverages-limited": {
+      "dossier": {
+        "company": "Varun Beverages Limited",
+        "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+        "why_it_matters": [
+          "Reported values are compared with the company\u2019s own historical range.",
+          "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
+        ],
+        "evidence": [
+          "L0153"
+        ],
+        "timeline": [
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [
+              "L0153"
+            ],
+            "status": "abstained",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "consolidated",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          }
+        ],
+        "numbers": {},
+        "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
+        "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
+        "evidence_score": 0.0,
+        "evidence_label": "Weak",
+        "not_tested": [
+          "consolidated, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "consolidated, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "consolidated, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "consolidated, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "consolidated, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "Peer-adjusted comparison: no eligible peer panels were available."
+        ],
+        "hypotheses": [],
+        "red_team_log": [],
+        "score_components": {},
+        "validation": {
+          "state": "no_reliable_finding",
+          "candidates": [],
+          "rejected_findings": [],
+          "tested_patterns": 0,
+          "panel_count": 1,
+          "generated_candidates": [],
+          "peer_companies": [],
+          "period_type": "annual",
+          "consolidation_basis": "consolidated",
+          "reporting_scope": "unspecified",
+          "comparability_cohort": "unspecified",
+          "verified_ledger_entries": 1,
+          "elapsed_seconds": 17.2038
+        }
+      },
+      "analysis": {
+        "company": "Varun Beverages Limited",
+        "panels": [
+          {
+            "panel": {
+              "company": "Varun Beverages Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "consolidated",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "consolidated",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "trade_receivables": [
+                  12337.48
+                ]
+              },
+              "ledger_ids": {
+                "trade_receivables": [
+                  [
+                    "L0153"
+                  ]
+                ]
+              },
+              "units": {
+                "trade_receivables": "INR_crore"
+              },
+              "unavailable": {}
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  [
+                    "L0153"
+                  ]
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
                   []
                 ],
                 "metadata": {}
