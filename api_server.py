@@ -304,6 +304,150 @@ def get_company_pdf(company_slug: str):
         filename=f"{company_slug}-audit-dossier.pdf"
     )
 
+class VerifyCandidateRequest(BaseModel):
+    candidate_file: str
+    candidate_id: str
+    company: str
+    verified_by: Optional[str] = "Audit Reviewer"
+    period: Optional[str] = "FY2025"
+    unit: Optional[str] = "INR_crore"
+    period_type: Optional[str] = "annual"
+    currency: Optional[str] = "INR"
+    basis: Optional[str] = "consolidated"
+    run_analysis: Optional[bool] = True
+
+class VerifyAllCandidatesRequest(BaseModel):
+    candidate_file: str
+    candidate_ids: List[str]
+    company: str
+    verified_by: Optional[str] = "Audit Reviewer"
+    run_analysis: Optional[bool] = True
+
+@app.post("/api/candidate/verify")
+def api_verify_candidate(req: VerifyCandidateRequest):
+    from argus.ingest.local_import import verify_candidate
+    from argus.cli import run_company, slug
+    
+    cand_path = Path(req.candidate_file)
+    if not cand_path.exists():
+        raise HTTPException(status_code=404, detail=f"Candidate file not found: {req.candidate_file}")
+    
+    try:
+        entry = verify_candidate(
+            candidate_file=cand_path,
+            candidate_id=req.candidate_id,
+            verified_by=req.verified_by or "Audit Reviewer",
+            period=req.period or "FY2025",
+            unit=req.unit or "INR_crore",
+            period_type=req.period_type or "annual",
+            currency=req.currency or "INR",
+            consolidation_basis=req.basis or "consolidated",
+        )
+    except Exception as exc:
+        logger.error(f"Candidate verification error: {exc}")
+        raise HTTPException(status_code=400, detail=str(exc))
+    
+    updated_candidates = []
+    if cand_path.exists():
+        try:
+            updated_candidates = json.loads(cand_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+
+    dossier = None
+    analysis = None
+    if req.run_analysis and req.company:
+        try:
+            logger.info(f"Re-running deterministic engine for '{req.company}'...")
+            run_company(req.company)
+            company_slug = slug(req.company)
+            rep_json = Path(f"reports/{company_slug}.json")
+            an_json = Path(f"reports/{company_slug}-analysis.json")
+            if rep_json.exists():
+                dossier = json.loads(rep_json.read_text(encoding="utf-8"))
+            if an_json.exists():
+                analysis = json.loads(an_json.read_text(encoding="utf-8"))
+        except Exception as exc:
+            logger.warning(f"Error re-running engine for {req.company}: {exc}")
+
+    return {
+        "success": True,
+        "entry": entry.model_dump(mode="json"),
+        "candidates": updated_candidates,
+        "dossier": dossier,
+        "analysis": analysis,
+        "company": req.company,
+        "company_key": slug(req.company),
+        "message": f"Candidate {req.candidate_id} verified into ledger.",
+    }
+
+@app.post("/api/candidate/verify-all")
+def api_verify_all(req: VerifyAllCandidatesRequest):
+    from argus.ingest.local_import import verify_candidate
+    from argus.cli import run_company, slug
+    
+    cand_path = Path(req.candidate_file)
+    if not cand_path.exists():
+        raise HTTPException(status_code=404, detail=f"Candidate file not found: {req.candidate_file}")
+    
+    rows = json.loads(cand_path.read_text(encoding="utf-8"))
+    entries = []
+    errors = []
+    for cand_id in req.candidate_ids:
+        match = next((r for r in rows if r.get("id") == cand_id), None)
+        if not match or match.get("status") != "unverified":
+            continue
+        try:
+            entry = verify_candidate(
+                candidate_file=cand_path,
+                candidate_id=cand_id,
+                verified_by=req.verified_by or "Audit Reviewer",
+                period=match.get("period") or "FY2025",
+                unit=match.get("unit") or "INR_crore",
+                period_type="annual",
+                currency="INR",
+                consolidation_basis=match.get("consolidation_basis") or "consolidated",
+            )
+            entries.append(entry.model_dump(mode="json"))
+        except Exception as exc:
+            errors.append(f"{cand_id}: {exc}")
+
+    updated_candidates = []
+    if cand_path.exists():
+        try:
+            updated_candidates = json.loads(cand_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+
+    dossier = None
+    analysis = None
+    if req.run_analysis and req.company and entries:
+        try:
+            logger.info(f"Re-running deterministic engine for '{req.company}' ({len(entries)} verified)...")
+            run_company(req.company)
+            company_slug = slug(req.company)
+            rep_json = Path(f"reports/{company_slug}.json")
+            an_json = Path(f"reports/{company_slug}-analysis.json")
+            if rep_json.exists():
+                dossier = json.loads(rep_json.read_text(encoding="utf-8"))
+            if an_json.exists():
+                analysis = json.loads(an_json.read_text(encoding="utf-8"))
+        except Exception as exc:
+            logger.warning(f"Error re-running engine for {req.company}: {exc}")
+
+    return {
+        "success": True,
+        "verified_count": len(entries),
+        "entries": entries,
+        "candidates": updated_candidates,
+        "dossier": dossier,
+        "analysis": analysis,
+        "errors": errors,
+        "company": req.company,
+        "company_key": slug(req.company),
+        "message": f"Successfully verified {len(entries)} candidate(s) into ledger.",
+    }
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")

@@ -209,6 +209,38 @@ export default function App() {
     window.open(`/api/pdf/${selectedKey}`, '_blank');
   };
 
+  const handleCandidateVerified = (result) => {
+    if (!result) return;
+    const { entry, entries, dossier: newDossier, analysis: newAnalysis, company: verifiedCompany, company_key } = result;
+
+    // 1. Add verified entry/entries to ledger state
+    if (entry) {
+      setLedger((prev) => [entry, ...prev.filter((e) => e.id !== entry.id)]);
+    } else if (entries && entries.length) {
+      const newIds = new Set(entries.map((e) => e.id));
+      setLedger((prev) => [...entries, ...prev.filter((e) => !newIds.has(e.id))]);
+    }
+
+    // 2. If new dossier and analysis returned from engine, update reports
+    if (newDossier && newAnalysis) {
+      const key = company_key || (verifiedCompany ? verifiedCompany.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : selectedKey);
+      setReports((prev) => ({
+        ...prev,
+        [key]: { dossier: newDossier, analysis: newAnalysis }
+      }));
+      setSelectedKey(key);
+    }
+
+    // 3. Update candidates in active intake
+    if (result.candidates && activeIntake) {
+      setActiveIntake((prev) => ({
+        ...prev,
+        candidates: result.candidates,
+        candidate_count: result.candidates.filter((c) => c.status === 'unverified').length,
+      }));
+    }
+  };
+
   const tabs = [
     { id: 'brief', label: 'Executive Brief & Proof', icon: ShieldCheck },
     { id: 'charts', label: 'Financial Residuals', icon: BarChart3 },
@@ -233,12 +265,13 @@ export default function App() {
         />
 
         <main className="content-area">
-          {/* Active Online Source Intake Workspace (matching streamlit_app.py lines 524-564) */}
+          {/* Active Online Source Intake Workspace */}
           {activeIntake && (
             <IntakeWorkspace
               intake={activeIntake}
               onClose={() => setActiveIntake(null)}
               currentDossierCompany={company}
+              onCandidateVerified={handleCandidateVerified}
             />
           )}
 
