@@ -205,7 +205,8 @@ export default function App() {
   const linkedEntries = ledger.filter((e) => evidenceIds.has(e.id));
 
   const handleExportPdf = () => {
-    window.print();
+    // Open or download the verified audit dossier PDF
+    window.open(`/api/pdf/${selectedKey}`, '_blank');
   };
 
   const tabs = [

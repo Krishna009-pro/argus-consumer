@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -267,6 +268,41 @@ def _search_local_cache(company: str) -> list[dict[str, str]]:
         except Exception:
             continue
     return results
+
+@app.get("/api/pdf/{company_slug}")
+def get_company_pdf(company_slug: str):
+    slug = company_slug.lower().strip()
+    pdf_path = Path(f"reports/{slug}-audit-dossier.pdf")
+    if not pdf_path.exists():
+        # Check if alternative exists or generate from dossier
+        report_json = Path(f"reports/{slug}.json")
+        if not report_json.exists():
+            # Try finding matching report
+            for cand in Path("reports").glob("*.json"):
+                if cand.stem.startswith(slug) and not cand.name.endswith("-analysis.json"):
+                    report_json = cand
+                    break
+        if not report_json.exists():
+            raise HTTPException(status_code=404, detail=f"No dossier found for company '{company_slug}'")
+        try:
+            from argus.schemas import Dossier
+            from argus.ledger import EvidenceLedger
+            from argus.report.pdf_export import build_pdf
+            dossier_data = json.loads(report_json.read_text(encoding="utf-8"))
+            analysis_path = report_json.parent / f"{report_json.stem}-analysis.json"
+            analysis_data = json.loads(analysis_path.read_text(encoding="utf-8")) if analysis_path.exists() else None
+            dossier = Dossier.model_validate(dossier_data)
+            ledger = EvidenceLedger("data/ledger.jsonl")
+            pdf_bytes = build_pdf(dossier, ledger_entries=ledger.entries(), analysis=analysis_data)
+            pdf_path.write_bytes(pdf_bytes)
+        except Exception as exc:
+            logger.error("Failed to generate PDF for %s: %s", company_slug, exc)
+            raise HTTPException(status_code=500, detail=f"Failed to generate audit PDF: {exc}")
+    return FileResponse(
+        str(pdf_path),
+        media_type="application/pdf",
+        filename=f"{company_slug}-audit-dossier.pdf"
+    )
 
 if __name__ == "__main__":
     import uvicorn
