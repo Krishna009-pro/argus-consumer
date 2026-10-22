@@ -540,88 +540,90 @@ python scripts/argus.py run --company "${company}"`;
         </div>
       )}
 
-      {/* Collapsible CLI Reproduction Command (Optional for Terminal Reproducibility) */}
-      <div style={{ marginTop: '1.25rem', borderTop: '1px solid #f1f5f9', paddingTop: '0.85rem' }}>
-        <button
-          type="button"
-          onClick={() => setShowCli(!showCli)}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#64748b',
-            fontSize: '0.76rem',
-            fontWeight: 650,
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '5px',
-            padding: '0.2rem 0',
-          }}
-        >
-          <Terminal size={13} color="#0284c7" />
-          <span>{showCli ? 'Hide CLI audit reproduction command' : 'View CLI reproduction command (PowerShell / Terminal)'}</span>
-          {showCli ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
-        </button>
-
-        {showCli && (
-          <div
+      {/* Collapsible CLI Reproduction Command (Only if candidate claims exist) */}
+      {candidates.length > 0 && (
+        <div style={{ marginTop: '1.25rem', borderTop: '1px solid #f1f5f9', paddingTop: '0.85rem' }}>
+          <button
+            type="button"
+            onClick={() => setShowCli(!showCli)}
             style={{
-              background: '#0f172a',
-              borderRadius: '10px',
-              padding: '1rem 1.25rem',
-              color: '#f8fafc',
-              marginTop: '0.65rem',
-              maxWidth: '100%',
-              boxSizing: 'border-box',
+              background: 'none',
+              border: 'none',
+              color: '#64748b',
+              fontSize: '0.76rem',
+              fontWeight: 650,
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '5px',
+              padding: '0.2rem 0',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.65rem' }}>
-              <div style={{ fontSize: '0.76rem', color: '#94a3b8' }}>
-                Run this command in terminal to verify via deterministic CLI:
-              </div>
-              <button
-                type="button"
-                onClick={copyToClipboard}
-                style={{
-                  background: copied ? '#059669' : '#334155',
-                  border: 'none',
-                  borderRadius: '6px',
-                  padding: '0.35rem 0.75rem',
-                  color: '#ffffff',
-                  fontSize: '0.74rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  transition: 'background 0.2s',
-                }}
-              >
-                {copied ? <Check size={12} /> : <Copy size={12} />}
-                <span>{copied ? 'Copied' : 'Copy PowerShell'}</span>
-              </button>
-            </div>
-            <pre
+            <Terminal size={13} color="#0284c7" />
+            <span>{showCli ? 'Hide CLI audit reproduction command' : 'View CLI reproduction command (PowerShell / Terminal)'}</span>
+            {showCli ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+          </button>
+
+          {showCli && (
+            <div
               style={{
-                margin: 0,
-                fontSize: '0.76rem',
-                color: '#7dd3fc',
-                fontFamily: 'var(--font-mono)',
-                whiteSpace: 'pre-wrap',
-                wordBreak: 'break-all',
+                background: '#0f172a',
+                borderRadius: '10px',
+                padding: '1rem 1.25rem',
+                color: '#f8fafc',
+                marginTop: '0.65rem',
                 maxWidth: '100%',
-                lineHeight: 1.6,
-                background: 'rgba(15, 23, 42, 0.6)',
-                padding: '0.75rem',
-                borderRadius: '6px',
-                border: '1px solid #1e293b',
+                boxSizing: 'border-box',
               }}
             >
-              {cliCommand}
-            </pre>
-          </div>
-        )}
-      </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.65rem' }}>
+                <div style={{ fontSize: '0.76rem', color: '#94a3b8' }}>
+                  Run this command in terminal to verify via deterministic CLI:
+                </div>
+                <button
+                  type="button"
+                  onClick={copyToClipboard}
+                  style={{
+                    background: copied ? '#059669' : '#334155',
+                    border: 'none',
+                    borderRadius: '6px',
+                    padding: '0.35rem 0.75rem',
+                    color: '#ffffff',
+                    fontSize: '0.74rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    transition: 'background 0.2s',
+                  }}
+                >
+                  {copied ? <Check size={12} /> : <Copy size={12} />}
+                  <span>{copied ? 'Copied' : 'Copy PowerShell'}</span>
+                </button>
+              </div>
+              <pre
+                style={{
+                  margin: 0,
+                  fontSize: '0.76rem',
+                  color: '#7dd3fc',
+                  fontFamily: 'var(--font-mono)',
+                  whiteSpace: 'pre-wrap',
+                  wordBreak: 'break-all',
+                  maxWidth: '100%',
+                  lineHeight: 1.6,
+                  background: 'rgba(15, 23, 42, 0.6)',
+                  padding: '0.75rem',
+                  borderRadius: '6px',
+                  border: '1px solid #1e293b',
+                }}
+              >
+                {cliCommand}
+              </pre>
+            </div>
+          )}
+        </div>
+      )}
     </motion.div>
   );
 }
