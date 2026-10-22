@@ -1,6 +1,6 @@
 {
   "company": "Hindustan Unilever Limited",
-  "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+  "discovery": "A persistent historical-range deviation remains in receivable_days; it is unverified as a business explanation.",
   "why_it_matters": [
     "Reported values are compared with the company’s own historical range.",
     "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
@@ -514,7 +514,7 @@
   },
   "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
   "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
-  "evidence_score": 0.0,
+  "evidence_score": 54.28,
   "evidence_label": "Weak",
   "not_tested": [
     "standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
@@ -552,15 +552,186 @@
     "standalone, company_total_operations, pre_demerger_standalone_FY2020_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
   ],
   "hypotheses": [],
-  "red_team_log": [],
-  "score_components": {},
+  "red_team_log": [
+    {
+      "test": "seasonality",
+      "label": "Seasonality",
+      "outcome": "not_tested",
+      "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+      "sources": [],
+      "benign_gap_share": null
+    },
+    {
+      "test": "base_effect",
+      "label": "Base effects",
+      "outcome": "not_tested",
+      "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+      "sources": [],
+      "benign_gap_share": null
+    },
+    {
+      "test": "one_off_event",
+      "label": "One-off events",
+      "outcome": "not_tested",
+      "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+      "sources": [],
+      "benign_gap_share": null
+    },
+    {
+      "test": "accounting_change",
+      "label": "Accounting changes",
+      "outcome": "not_tested",
+      "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+      "sources": [],
+      "benign_gap_share": null
+    },
+    {
+      "test": "acquisition",
+      "label": "Acquisitions or demergers",
+      "outcome": "not_tested",
+      "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+      "sources": [],
+      "benign_gap_share": null
+    },
+    {
+      "test": "pricing_lag",
+      "label": "Pricing lags",
+      "outcome": "not_tested",
+      "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+      "sources": [],
+      "benign_gap_share": null
+    },
+    {
+      "test": "sector_trend",
+      "label": "Sector-wide movements",
+      "outcome": "not_tested",
+      "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+      "sources": [],
+      "benign_gap_share": null
+    }
+  ],
+  "score_components": {
+    "persistence": 4.166666666666666,
+    "magnitude": 16.702926424112356,
+    "peer_adjusted": 11.748313648624478,
+    "independent_sources": 6.666666666666666,
+    "robustness": 15.0
+  },
   "validation": {
-    "state": "no_reliable_finding",
-    "candidates": [],
+    "state": "unexplained",
+    "candidates": [
+      {
+        "id": "Hindustan Unilever Limited:annual:FY2025:receivable_days",
+        "angles": [
+          "receivable_days"
+        ],
+        "gap_start_period": "FY2025",
+        "summary_numbers": {
+          "gap_magnitude": 7.059641453711858,
+          "spread": 2.817726376986073,
+          "persistence": 1.0,
+          "peer_gap_count": 3.0
+        },
+        "hypotheses": [],
+        "red_team_log": [],
+        "gate": {
+          "checks": {
+            "persistence": {
+              "passed": true,
+              "observed": 1,
+              "required": 1
+            },
+            "peer_adjusted_deviation": {
+              "passed": true,
+              "observed": 2.3496627297248955,
+              "required": 1.5
+            },
+            "data_quality": {
+              "passed": true,
+              "observed": true
+            },
+            "alternative_explanations": {
+              "passed": true,
+              "observed_benign_gap_share": null,
+              "required_max": 0.6
+            },
+            "multiple_testing": {
+              "passed": true,
+              "observed": 2.3496627297248955,
+              "required": 1.75,
+              "patterns_tested": 2
+            },
+            "independent_source_layers": {
+              "passed": true,
+              "observed": 1,
+              "required": 1
+            }
+          },
+          "passed": true,
+          "state": "unexplained",
+          "label_cap": "Weak"
+        },
+        "state": "unexplained"
+      }
+    ],
     "rejected_findings": [],
     "tested_patterns": 2,
     "panel_count": 7,
-    "generated_candidates": [],
+    "generated_candidates": [
+      {
+        "id": "Hindustan Unilever Limited:annual:FY2025:receivable_days",
+        "angles": [
+          "receivable_days"
+        ],
+        "gap_start_period": "FY2025",
+        "summary_numbers": {
+          "gap_magnitude": 7.059641453711858,
+          "spread": 2.817726376986073,
+          "persistence": 1.0,
+          "peer_gap_count": 3.0
+        },
+        "hypotheses": [],
+        "red_team_log": [],
+        "gate": {
+          "checks": {
+            "persistence": {
+              "passed": true,
+              "observed": 1,
+              "required": 1
+            },
+            "peer_adjusted_deviation": {
+              "passed": true,
+              "observed": 2.3496627297248955,
+              "required": 1.5
+            },
+            "data_quality": {
+              "passed": true,
+              "observed": true
+            },
+            "alternative_explanations": {
+              "passed": true,
+              "observed_benign_gap_share": null,
+              "required_max": 0.6
+            },
+            "multiple_testing": {
+              "passed": true,
+              "observed": 2.3496627297248955,
+              "required": 1.75,
+              "patterns_tested": 2
+            },
+            "independent_source_layers": {
+              "passed": true,
+              "observed": 1,
+              "required": 1
+            }
+          },
+          "passed": true,
+          "state": "unexplained",
+          "label_cap": "Weak"
+        },
+        "state": "unexplained"
+      }
+    ],
     "peer_companies": [
       "ITC Limited",
       "Britannia Industries Limited",
@@ -573,6 +744,6 @@
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "pre_demerger_standalone_FY2020_FY2025",
     "verified_ledger_entries": 30,
-    "elapsed_seconds": 18.8205
+    "elapsed_seconds": 21.0815
   }
 }

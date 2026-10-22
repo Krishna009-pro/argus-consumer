@@ -487,7 +487,86 @@
               "L0100"
             ]
           ],
-          "metadata": {}
+          "metadata": {},
+          "research": {
+            "status": "offline_no_llm",
+            "queries": [
+              {
+                "query": "receivable_days company filings explanation seasonality accounting acquisition",
+                "tag": "supporting"
+              },
+              {
+                "query": "receivable_days company gap evidence against benign explanation sector-wide trend",
+                "tag": "disconfirming"
+              },
+              {
+                "query": "receivable_days industry prices input costs volume trend alternative explanation",
+                "tag": "disconfirming"
+              },
+              {
+                "query": "receivable_days management commentary changes one-off pricing lag",
+                "tag": "supporting"
+              }
+            ]
+          },
+          "red_team_tests": [
+            {
+              "test": "seasonality",
+              "label": "Seasonality",
+              "outcome": "not_tested",
+              "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+              "sources": [],
+              "benign_gap_share": null
+            },
+            {
+              "test": "base_effect",
+              "label": "Base effects",
+              "outcome": "not_tested",
+              "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+              "sources": [],
+              "benign_gap_share": null
+            },
+            {
+              "test": "one_off_event",
+              "label": "One-off events",
+              "outcome": "not_tested",
+              "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+              "sources": [],
+              "benign_gap_share": null
+            },
+            {
+              "test": "accounting_change",
+              "label": "Accounting changes",
+              "outcome": "not_tested",
+              "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+              "sources": [],
+              "benign_gap_share": null
+            },
+            {
+              "test": "acquisition",
+              "label": "Acquisitions or demergers",
+              "outcome": "not_tested",
+              "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+              "sources": [],
+              "benign_gap_share": null
+            },
+            {
+              "test": "pricing_lag",
+              "label": "Pricing lags",
+              "outcome": "not_tested",
+              "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+              "sources": [],
+              "benign_gap_share": null
+            },
+            {
+              "test": "sector_trend",
+              "label": "Sector-wide movements",
+              "outcome": "not_tested",
+              "reason": "No reviewed source with a valid cached hash, locator, and exact snippet was supplied.",
+              "sources": [],
+              "benign_gap_share": null
+            }
+          ]
         },
         "inventory_days": {
           "angle": "inventory_days",
@@ -631,7 +710,61 @@
           "metadata": {}
         }
       },
-      "candidates": [],
+      "candidates": [
+        {
+          "id": "Marico Limited:annual:FY2025:receivable_days",
+          "angles": [
+            "receivable_days"
+          ],
+          "gap_start_period": "FY2025",
+          "summary_numbers": {
+            "gap_magnitude": 16.973450029954975,
+            "spread": 8.318827161625196,
+            "persistence": 1.0,
+            "peer_gap_count": 3.0
+          },
+          "hypotheses": [],
+          "red_team_log": [],
+          "gate": {
+            "checks": {
+              "persistence": {
+                "passed": true,
+                "observed": 1,
+                "required": 1
+              },
+              "peer_adjusted_deviation": {
+                "passed": true,
+                "observed": 8.108770503151598,
+                "required": 1.5
+              },
+              "data_quality": {
+                "passed": true,
+                "observed": true
+              },
+              "alternative_explanations": {
+                "passed": true,
+                "observed_benign_gap_share": null,
+                "required_max": 0.6
+              },
+              "multiple_testing": {
+                "passed": true,
+                "observed": 8.108770503151598,
+                "required": 1.75,
+                "patterns_tested": 2
+              },
+              "independent_source_layers": {
+                "passed": true,
+                "observed": 1,
+                "required": 1
+              }
+            },
+            "passed": true,
+            "state": "unexplained",
+            "label_cap": "Weak"
+          },
+          "state": "unexplained"
+        }
+      ],
       "tested_patterns": 2,
       "peer_companies": [
         "Hindustan Unilever Limited",

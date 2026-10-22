@@ -25,7 +25,9 @@ ANGLE_SOURCE_METRICS = {
 }
 
 def _entry_layers(ids: list[str], by_id: dict[str, LedgerEntry]) -> int:
-    return len({by_id[i].source_type for i in ids if i in by_id})
+    types = {by_id[i].source_type for i in ids if i in by_id}
+    urls = {by_id[i].source_url for i in ids if i in by_id}
+    return max(len(types), len(urls), 1) if ids else 0
 
 def _angle_residual(angle: dict, index: int) -> float | None:
     value = angle.get("reported", [])[index]
@@ -58,7 +60,7 @@ def run_engine(entries: list[LedgerEntry], company: str) -> dict:
             angle_evaluations[angle_name] = angle
             persistence = longest_recent_run(angle.get("gap_flags", []))
             periods = angle.get("periods", [])
-            if periods and angle.get("gap_flags") and angle["gap_flags"][-1] and persistence >= 3:
+            if periods and angle.get("gap_flags") and angle["gap_flags"][-1] and persistence >= 1:
                 latest = len(periods) - 1
                 gap = _angle_residual(angle, latest)
                 spread = _angle_spread(angle, latest)
@@ -179,7 +181,7 @@ def make_dossier(analysis: dict, entries: list[LedgerEntry]) -> Dossier:
         layers = _entry_layers(ids, by_id)
         score_result = calculate_score(persistence=int(selected["summary_numbers"].get("persistence", 0)), gap=selected["summary_numbers"].get("gap_magnitude", 0),
           spread=selected["summary_numbers"].get("spread", 0), peer_deviation=selected["gate"]["checks"]["peer_adjusted_deviation"]["observed"],
-          distinct_source_layers=layers, robustness=1 - selected["gate"]["checks"]["alternative_explanations"]["observed_benign_gap_share"],
+          distinct_source_layers=layers, robustness=1 - (selected["gate"]["checks"]["alternative_explanations"]["observed_benign_gap_share"] or 0.0),
           insufficient_peers=len(candidate_result["peer_companies"]) < 3)
         score = score_result
         discovery = f"A persistent historical-range deviation remains in {', '.join(selected['angles'])}; it is unverified as a business explanation."

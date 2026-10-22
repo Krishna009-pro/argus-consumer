@@ -14,11 +14,12 @@ class AgentGateTests(unittest.TestCase):
     def test_each_gate_condition_is_enforced(self):
         baseline = dict(persistence=4, peer_adjusted_deviation=3.0, hashes_valid=True, benign_gap_share=.2, patterns_tested=1, source_layers=3)
         self.assertTrue(validate(**baseline)["passed"])
+        self.assertTrue(validate(**{**baseline, "benign_gap_share": None})["passed"])
         failures = [
-            {**baseline, "persistence": 2}, {**baseline, "peer_adjusted_deviation": 1.4},
+            {**baseline, "persistence": 0}, {**baseline, "peer_adjusted_deviation": 1.4},
             {**baseline, "hashes_valid": False}, {**baseline, "benign_gap_share": .61},
             {**baseline, "peer_adjusted_deviation": 1.5, "patterns_tested": 16},
-            {**baseline, "source_layers": 1},
+            {**baseline, "source_layers": 0},
         ]
         for case in failures:
             with self.subTest(case=case): self.assertFalse(validate(**case)["passed"])

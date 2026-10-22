@@ -1,7 +1,7 @@
 # ARGUS-Consumer dossier — Hindustan Unilever Limited
 
 ## Discovery
-No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.
+A persistent historical-range deviation remains in receivable_days; it is unverified as a business explanation.
 
 ## Why it matters
 - Reported values are compared with the company’s own historical range.
@@ -97,7 +97,7 @@ Seasonality, base effects, one-off events, accounting changes, acquisitions, pri
 The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.
 
 ## Evidence strength
-Weak (score 0.0)
+Weak (score 54.28)
 
 ## Not tested
 - standalone, continuing_operations, FY2025-26_report_continuing_operations_comparatives — price_volume: Matched revenue and disclosed volume-growth inputs are required.
@@ -138,4 +138,10 @@ Weak (score 0.0)
 - None; optional research model is not configured or no source excerpts were available.
 
 ## Red-team review
-- Not run.
+- seasonality: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.
+- base_effect: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.
+- one_off_event: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.
+- accounting_change: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.
+- acquisition: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.
+- pricing_lag: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.
+- sector_trend: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.
