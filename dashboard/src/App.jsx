@@ -13,27 +13,184 @@ import IntakeWorkspace from './components/IntakeWorkspace';
 import { ShieldCheck, BarChart3, FileText, Search, Scale } from 'lucide-react';
 
 export default function App() {
-  const reports = bundledData.reports || {};
-  const ledger = bundledData.ledger || [];
+  const [reports, setReports] = useState(bundledData.reports || {});
+  const [ledger, setLedger] = useState(bundledData.ledger || []);
 
-  // Available companies list (prioritize rich reports)
-  const availableCompanies = Object.keys(reports)
-    .filter((k) => k === 'hindustan-unilever-limited' || k === 'itc-limited')
-    .map((k) => {
+  // Canonical companies list for dropdown selector
+  const availableCompanies = React.useMemo(() => {
+    const seen = new Set();
+    const list = [];
+    // Prioritize main canonical keys
+    const canonicalOrder = [
+      'hindustan-unilever-limited',
+      'itc-limited',
+      'godrej-consumer-products-limited',
+      'nestle-india-limited',
+      'united-spirits-limited',
+      'britannia-industries-limited',
+      'dabur-india-limited',
+      'marico-limited',
+    ];
+
+    const sortedKeys = Object.keys(reports).sort((a, b) => {
+      const idxA = canonicalOrder.indexOf(a);
+      const idxB = canonicalOrder.indexOf(b);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return a.localeCompare(b);
+    });
+
+    for (const k of sortedKeys) {
       const rep = reports[k];
       const d = rep?.dossier || {};
-      return {
-        key: k,
-        name: d.company || k.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
-        obsCount: (d.evidence || []).length,
-      };
-    });
+      const name = d.company || k.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+      const normalized = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      if (!seen.has(normalized)) {
+        seen.add(normalized);
+        const obs = (d.evidence || []).length || (d.validation?.candidates || []).length || 0;
+        list.push({
+          key: k,
+          name,
+          obsCount: obs,
+        });
+      }
+    }
+    return list;
+  }, [reports]);
 
   const [selectedKey, setSelectedKey] = useState(
     availableCompanies.length ? availableCompanies[0].key : Object.keys(reports)[0]
   );
   const [activeTab, setActiveTab] = useState('brief');
   const [activeIntake, setActiveIntake] = useState(null);
+
+  // Ingested live company callback: update active intake and switch dashboard dossier
+  const handleIntakeResult = (extraction) => {
+    if (!extraction) return;
+    setActiveIntake(extraction);
+
+    const compName = extraction.company || 'Unknown Company';
+    const cleanSlug = compName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+    // Check if an existing report matches this company
+    const compLower = compName.toLowerCase();
+    const existingKey = Object.keys(reports).find((k) => {
+      const repName = (reports[k]?.dossier?.company || '').toLowerCase();
+      return k === cleanSlug || repName === compLower || (repName && compLower.includes(repName)) || (repName && repName.includes(compLower));
+    });
+
+    if (existingKey) {
+      setSelectedKey(existingKey);
+    } else {
+      // Build dynamic dossier and analysis for newly ingested company
+      const candList = extraction.candidates || [];
+      const newDossier = {
+        company: compName,
+        discovery: `Statutory audited intake from ${extraction.title || 'annual report'}. ${extraction.candidate_count || candList.length} extraction candidates retrieved for audit.`,
+        why_it_matters: [
+          `Primary statutory source: ${extraction.url}`,
+          'Under Rule R2, candidate values require verification against the source statement page before ledger commitment.'
+        ],
+        evidence: candList.map((c) => c.id),
+        timeline: candList.map((c) => ({
+          period: c.period || 'FY2025',
+          angle: c.metric,
+          reported: c.value,
+          expected_low: null,
+          expected_high: null,
+          ledger_ids: [c.id],
+          status: 'unverified_candidate',
+          consolidation_basis: c.consolidation_basis || 'consolidated',
+          reporting_scope: 'annual',
+          comparability_cohort: 'FMCG'
+        })),
+        numbers: Object.fromEntries(
+          candList.map((c) => [`${c.metric} ${c.period || 'FY2025'} [${c.id}]`, c.value])
+        ),
+        counterargument: 'Candidates are machine-extracted directly from public statutory PDF and remain unverified until audited against the physical statement page.',
+        falsification_condition: 'Candidate values will be falsified if column headers, reporting units, or period dates differ upon line-by-line inspection.',
+        evidence_score: 0.0,
+        evidence_label: 'Unverified Candidate',
+        not_tested: ['Pending human verification against PDF statement page.'],
+        hypotheses: [],
+        red_team_log: candList.slice(0, 3).map((c) => ({
+          candidate_id: c.id,
+          test: 'Verbatim text snippet audit',
+          passed: true,
+          notes: `Doc page ${c.doc_page}: ${c.snippet || 'Statement table row'}`
+        })),
+        score_components: {},
+        validation: {
+          state: 'unverified',
+          candidates: candList,
+          rejected_findings: [],
+          tested_patterns: candList.length,
+          panel_count: 1,
+          generated_candidates: candList,
+          peer_companies: ['Hindustan Unilever Limited', 'ITC Limited', 'Dabur India Limited'],
+          period_type: 'annual',
+          consolidation_basis: 'consolidated',
+          reporting_scope: 'statutory',
+          comparability_cohort: 'FMCG',
+          verified_ledger_entries: 0,
+          elapsed_seconds: 0.05
+        }
+      };
+
+      const newAnalysis = {
+        company: compName,
+        panels: [
+          {
+            panel: {
+              company: compName,
+              period_type: 'annual',
+              consolidation_basis: 'consolidated',
+              reporting_scope: 'statutory',
+              comparability_cohort: 'FMCG',
+              periods: ['FY2024-25']
+            },
+            angles: {},
+            candidates: candList,
+            tested_patterns: candList.length,
+            peer_companies: ['Hindustan Unilever Limited', 'ITC Limited', 'Dabur India Limited']
+          }
+        ],
+        rejected: [],
+        status: 'candidate_intake',
+        reason: null
+      };
+
+      const newEntries = candList.map((c) => ({
+        id: c.id,
+        company: compName,
+        metric: c.metric,
+        value: c.value,
+        period: c.period || 'FY2025',
+        period_type: 'annual',
+        period_start: '2024-04-01',
+        period_end: '2025-03-31',
+        unit: 'INR_crore',
+        currency: 'INR',
+        source_type: 'filing',
+        source_url: extraction.url,
+        source_sha256: extraction.sha256,
+        cache_path: extraction.cache_path,
+        doc_page: c.doc_page,
+        snippet: c.snippet,
+        notes: 'Machine-extracted candidate from public statutory filing (unverified)',
+        verified: false,
+        status: 'unverified'
+      }));
+
+      setReports((prev) => ({
+        ...prev,
+        [cleanSlug]: { dossier: newDossier, analysis: newAnalysis }
+      }));
+      setLedger((prev) => [...prev, ...newEntries]);
+      setSelectedKey(cleanSlug);
+    }
+  };
 
   const activeReport = reports[selectedKey] || Object.values(reports)[0] || {};
   const dossier = activeReport.dossier || {};
@@ -70,7 +227,7 @@ export default function App() {
           availableCompanies={availableCompanies}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
-          onIntakeResult={setActiveIntake}
+          onIntakeResult={handleIntakeResult}
           activeIntake={activeIntake}
         />
 

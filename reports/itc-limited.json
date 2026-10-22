@@ -906,6 +906,6 @@
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "ITC_standalone_pre_demerger",
     "verified_ledger_entries": 38,
-    "elapsed_seconds": 13.2043
+    "elapsed_seconds": 17.2527
   }
 }

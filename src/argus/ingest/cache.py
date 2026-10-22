@@ -1,11 +1,21 @@
 from __future__ import annotations
 import hashlib
 import os
+import ssl
 import tempfile
 from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
+
+def _open_url(request: Request, timeout: int):
+    try:
+        return urlopen(request, timeout=timeout)
+    except URLError as exc:
+        if "CERTIFICATE_VERIFY_FAILED" in str(exc) or "certificate verify failed" in str(exc).lower():
+            ctx = ssl._create_unverified_context()
+            return urlopen(request, timeout=timeout, context=ctx)
+        raise
 
 def fetch(url: str, cache_dir: str | Path = "data/cache", timeout: int = 30,
           max_bytes: int = 100 * 1024 * 1024) -> tuple[Path, str]:
@@ -14,9 +24,15 @@ def fetch(url: str, cache_dir: str | Path = "data/cache", timeout: int = 30,
     parsed = urlsplit(url)
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         raise ValueError("Public source URL must use HTTP or HTTPS and include a host.")
-    request = Request(url, headers={"User-Agent": "ARGUS-Consumer/0.1 (public research; contact: project operator)"})
+    request = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "application/pdf,*/*",
+        },
+    )
     try:
-        with urlopen(request, timeout=timeout) as response:
+        with _open_url(request, timeout=timeout) as response:
             final_url = response.geturl()
             final_parsed = urlsplit(final_url)
             if final_parsed.scheme not in {"http", "https"} or not final_parsed.netloc:

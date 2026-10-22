@@ -1,0 +1,625 @@
+{
+  "company": "Nestle India Limited",
+  "discovery": "Audited statutory extraction from National Stock Exchange (NSE) statutory archive FY2024-25. 8 unverified financial statement candidates extracted for human audit.",
+  "why_it_matters": [
+    "Primary financial statements from official NSE filing (AR_26487_NESTLEIND_2024_2025).",
+    "Under Rule R2, candidate values require verification against PDF pages 93 and 151."
+  ],
+  "evidence": [
+    "C-0cc21036eadc-39b99641c70d",
+    "C-0cc21036eadc-606a79100d7b",
+    "C-0cc21036eadc-90ee5fce43b4",
+    "C-0cc21036eadc-0d1bf806cf3e",
+    "C-0cc21036eadc-5f53a893830f",
+    "C-0cc21036eadc-c1cf52b27c1d",
+    "C-0cc21036eadc-718b87a426c5",
+    "C-0cc21036eadc-6bbb85ea9031"
+  ],
+  "timeline": [
+    {
+      "period": "FY2024-25",
+      "angle": "inventory",
+      "reported": 28501.4,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-39b99641c70d"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    },
+    {
+      "period": "FY2024-25",
+      "angle": "inventory",
+      "reported": 20893.6,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-606a79100d7b"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    },
+    {
+      "period": "FY2024-25",
+      "angle": "trade_receivables",
+      "reported": 3631.5,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-90ee5fce43b4"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    },
+    {
+      "period": "FY2024-25",
+      "angle": "trade_receivables",
+      "reported": 3004.6,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-0d1bf806cf3e"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    },
+    {
+      "period": "FY2024-25",
+      "angle": "inventory",
+      "reported": 28501.4,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-5f53a893830f"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    },
+    {
+      "period": "FY2024-25",
+      "angle": "inventory",
+      "reported": 20893.6,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-c1cf52b27c1d"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    },
+    {
+      "period": "FY2024-25",
+      "angle": "trade_receivables",
+      "reported": 3631.5,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-718b87a426c5"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    },
+    {
+      "period": "FY2024-25",
+      "angle": "trade_receivables",
+      "reported": 3004.6,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [
+        "C-0cc21036eadc-6bbb85ea9031"
+      ],
+      "status": "unverified_candidate",
+      "consolidation_basis": "consolidated",
+      "reporting_scope": "annual",
+      "comparability_cohort": "FMCG"
+    }
+  ],
+  "numbers": {
+    "inventory FY2025 [C-0cc21036eadc-39b99641c70d]": 28501.4,
+    "inventory FY2025 [C-0cc21036eadc-606a79100d7b]": 20893.6,
+    "trade_receivables FY2025 [C-0cc21036eadc-90ee5fce43b4]": 3631.5,
+    "trade_receivables FY2025 [C-0cc21036eadc-0d1bf806cf3e]": 3004.6,
+    "inventory FY2025 [C-0cc21036eadc-5f53a893830f]": 28501.4,
+    "inventory FY2025 [C-0cc21036eadc-c1cf52b27c1d]": 20893.6,
+    "trade_receivables FY2025 [C-0cc21036eadc-718b87a426c5]": 3631.5,
+    "trade_receivables FY2025 [C-0cc21036eadc-6bbb85ea9031]": 3004.6
+  },
+  "counterargument": "Candidates are machine-extracted directly from official NSE statutory PDF and remain unverified until audited against the physical statement page.",
+  "falsification_condition": "Candidate values will be falsified if column headers, reporting units (INR Crores vs Millions), or period dates differ upon line-by-line inspection.",
+  "evidence_score": 0.0,
+  "evidence_label": "Unverified Candidate",
+  "not_tested": [
+    "Independent second-source verification pending human audit.",
+    "Peer-adjusted residual comparison requires verified ledger commitment."
+  ],
+  "hypotheses": [],
+  "red_team_log": [
+    {
+      "candidate_id": "C-0cc21036eadc-39b99641c70d",
+      "test": "Verbatim text snippet audit",
+      "passed": true,
+      "notes": "Snippet matched on page 93: Inventories 12  28,501.4  20,893.6"
+    },
+    {
+      "candidate_id": "C-0cc21036eadc-606a79100d7b",
+      "test": "Verbatim text snippet audit",
+      "passed": true,
+      "notes": "Snippet matched on page 93: Inventories 12  28,501.4  20,893.6"
+    },
+    {
+      "candidate_id": "C-0cc21036eadc-90ee5fce43b4",
+      "test": "Verbatim text snippet audit",
+      "passed": true,
+      "notes": "Snippet matched on page 93: Trade receivables 13  3,631.5  3,004.6"
+    }
+  ],
+  "score_components": {},
+  "validation": {
+    "state": "unverified",
+    "candidates": [
+      {
+        "id": "C-0cc21036eadc-39b99641c70d",
+        "metric": "inventory",
+        "value": 28501.4,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-606a79100d7b",
+        "metric": "inventory",
+        "value": 20893.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-90ee5fce43b4",
+        "metric": "trade_receivables",
+        "value": 3631.5,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-0d1bf806cf3e",
+        "metric": "trade_receivables",
+        "value": 3004.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-5f53a893830f",
+        "metric": "inventory",
+        "value": 28501.4,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-c1cf52b27c1d",
+        "metric": "inventory",
+        "value": 20893.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-718b87a426c5",
+        "metric": "trade_receivables",
+        "value": 3631.5,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-6bbb85ea9031",
+        "metric": "trade_receivables",
+        "value": 3004.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      }
+    ],
+    "rejected_findings": [],
+    "tested_patterns": 8,
+    "panel_count": 1,
+    "generated_candidates": [
+      {
+        "id": "C-0cc21036eadc-39b99641c70d",
+        "metric": "inventory",
+        "value": 28501.4,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-606a79100d7b",
+        "metric": "inventory",
+        "value": 20893.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-90ee5fce43b4",
+        "metric": "trade_receivables",
+        "value": 3631.5,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-0d1bf806cf3e",
+        "metric": "trade_receivables",
+        "value": 3004.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 93,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: STANDALONE BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-5f53a893830f",
+        "metric": "inventory",
+        "value": 28501.4,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-c1cf52b27c1d",
+        "metric": "inventory",
+        "value": 20893.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Inventories 12  28,501.4  20,893.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-718b87a426c5",
+        "metric": "trade_receivables",
+        "value": 3631.5,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2025.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      },
+      {
+        "id": "C-0cc21036eadc-6bbb85ea9031",
+        "metric": "trade_receivables",
+        "value": 3004.6,
+        "unit": null,
+        "period": null,
+        "period_type": null,
+        "period_start": null,
+        "period_end": null,
+        "currency": null,
+        "consolidation_basis": "unknown",
+        "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_26487_NESTLEIND_2024_2025_A_03062025002440.pdf",
+        "source_type": "filing",
+        "doc_page": 151,
+        "snippet": "Trade receivables 13  3,631.5  3,004.6",
+        "source_sha256": "0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f",
+        "cache_path": "data\\cache\\0cc21036eadc946f78da5e8863558b9ff8eab59c7b454efc6a968840260e6f6f.pdf",
+        "company": "Nestle India Limited",
+        "status": "unverified",
+        "notes": [
+          "Machine-extracted financial-statement candidate; verify the value, column header, units, reporting period, basis and scope against the PDF.",
+          "Dated column header year: 2024.",
+          "Statement header: CONSOLIDATED BALANCE SHEET AS AT 31st MARCH, 2025 | (J in million) | Particulars Notes As at  31st March, 2025 As at  31st March, 2024",
+          "No value is verified until a human resolves the period, units, statement basis and table alignment."
+        ],
+        "ledger_entry_id": null
+      }
+    ],
+    "peer_companies": [
+      "Britannia Industries Limited",
+      "Dabur India Limited",
+      "ITC Limited"
+    ],
+    "period_type": "annual",
+    "consolidation_basis": "consolidated",
+    "reporting_scope": "statutory",
+    "comparability_cohort": "FMCG",
+    "verified_ledger_entries": 0,
+    "elapsed_seconds": 0.05
+  }
+}

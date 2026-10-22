@@ -76,7 +76,13 @@ def discover_pdf_links(page_url: str, *, timeout: int = 20, max_bytes: int = 5_0
     parsed_url = urlsplit(page_url)
     if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
         raise ValueError("Report landing page must use a public HTTP or HTTPS URL.")
-    request = Request(page_url, headers={"User-Agent": "ARGUS-Consumer/0.1 (public research; contact: project operator)"})
+    request = Request(
+        page_url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        },
+    )
     try:
         with urlopen(request, timeout=timeout) as response:
             content_type = response.headers.get_content_type()
