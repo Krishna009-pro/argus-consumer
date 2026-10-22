@@ -5,13 +5,15 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+import yaml
+
 from argus.metrics import receivable_days
 from eval.reconcile import _engine_value, evaluate
 
 
 class ReconciliationTests(unittest.TestCase):
     def test_gcpl_turnover_ratios_are_excluded_when_formulas_differ(self):
-        dataset = json.loads(Path("data/reconciliation/published_figures.json").read_text(encoding="utf-8"))
+        dataset = yaml.safe_load(Path("config/reconciliation.yaml").read_text(encoding="utf-8"))
         refs = dataset["references"]
         self.assertEqual(len(refs), 4)
         with tempfile.TemporaryDirectory() as tmp:

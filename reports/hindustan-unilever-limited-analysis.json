@@ -942,14 +942,6 @@
           }
         ],
         "metrics": {
-          "revenue": [
-            38785.0,
-            45996.0,
-            51193.0,
-            59144.0,
-            60469.0,
-            61469.0
-          ],
           "inventory": [
             2636.0,
             3383.0,
@@ -957,6 +949,14 @@
             4031.0,
             3812.0,
             4161.0
+          ],
+          "revenue": [
+            38785.0,
+            45996.0,
+            51193.0,
+            59144.0,
+            60469.0,
+            61469.0
           ],
           "trade_receivables": [
             1046.0,
@@ -968,26 +968,6 @@
           ]
         },
         "ledger_ids": {
-          "revenue": [
-            [
-              "L0013"
-            ],
-            [
-              "L0016"
-            ],
-            [
-              "L0019"
-            ],
-            [
-              "L0022"
-            ],
-            [
-              "L0025"
-            ],
-            [
-              "L0028"
-            ]
-          ],
           "inventory": [
             [
               "L0014"
@@ -1006,6 +986,26 @@
             ],
             [
               "L0029"
+            ]
+          ],
+          "revenue": [
+            [
+              "L0013"
+            ],
+            [
+              "L0016"
+            ],
+            [
+              "L0019"
+            ],
+            [
+              "L0022"
+            ],
+            [
+              "L0025"
+            ],
+            [
+              "L0028"
             ]
           ],
           "trade_receivables": [
@@ -1309,7 +1309,8 @@
         "ITC Limited",
         "Britannia Industries Limited",
         "Marico Limited",
-        "Dabur India Limited"
+        "Dabur India Limited",
+        "Godrej Consumer Products Limited"
       ]
     }
   ],

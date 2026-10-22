@@ -19,13 +19,20 @@ Missing values stay missing. ARGUS does not fill gaps with zeroes or estimates.
 
 ## Current project status
 
-The latest recorded company runs cover Hindustan Unilever Limited (HUL), ITC Limited, Britannia Industries Limited, Marico Limited, Dabur India Limited, and Godrej Consumer Products Limited (GCPL). All return `no_reliable_finding`; none is a validated discovery. GCPL has manually reviewed standalone revenue, inventory, and trade-receivable data for FY2020–FY2025. Its FY2020–FY2023 pre-acquisition panel is kept separate from FY2024–FY2025 because GCPL acquired and integrated Raymond Consumer Care's FMCG business in May 2023. GCPL's published turnover ratios have also been recorded for reconciliation review, but their average-balance/net-sales formulas differ from ARGUS's closing-balance days formulas, so M01 remains unavailable. Comparable volume data, broader Track C coverage, and real-world validation are still incomplete.
+The latest recorded company runs cover Hindustan Unilever Limited (HUL), ITC Limited, Britannia Industries Limited, Marico Limited, Dabur India Limited, and Godrej Consumer Products Limited (GCPL). All return `no_reliable_finding`; none is a validated discovery. GCPL has manually reviewed standalone revenue, inventory, and trade-receivable data for FY2020–FY2025. Its FY2020–FY2023 pre-acquisition panel is kept separate from FY2024–FY2025 because GCPL acquired and integrated Raymond Consumer Care's FMCG business in May 2023. The four visually reviewed GCPL turnover ratios are catalogued in `config/reconciliation.yaml`; their average-balance/net-sales formulas differ from ARGUS's closing-balance days formulas, so they are explicitly excluded and M01 remains unavailable. An LLM-assisted scan helped prioritize source pages, but did not supply financial values or verify claims. Comparable volume data, broader Track C coverage, and real-world validation are still incomplete.
 
 For the evidence behind those results, current evaluation measurements, and remaining work, see [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md). Synthetic test results are not measurements of real-world accuracy.
 
 ## Set up on Windows
 
-You need Python 3.11 or newer. From the project folder, open PowerShell and run:
+For a fresh setup, install Git and Python 3.11 or newer, then open PowerShell and run:
+
+```powershell
+git clone https://github.com/Krishna009-pro/argus-consumer.git
+cd argus-consumer
+```
+
+Create the virtual environment and install the dashboard, PDF, and development dependencies:
 
 ```powershell
 python -m venv .venv
@@ -33,6 +40,14 @@ python -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -e ".[dashboard,ingest,dev]"
 ```
+
+Start the web dashboard from the project folder:
+
+```powershell
+streamlit run app/streamlit_app.py
+```
+
+Streamlit prints a local address and opens the dashboard in your browser. To use live company search, create a `.env` file in the project root and add a Serper API key as described under [Search online](#search-online). Keys are optional for working with reports and evidence already on the device. Keep `.env` private; it is excluded from Git.
 
 This installs the command-line tools, PDF import and export support, dashboard, and test dependencies. If you only need the deterministic engine, install the base package with `python -m pip install -e .` instead.
 

@@ -10,8 +10,7 @@ import CohortsView from './components/CohortsView';
 import EvidenceTrail from './components/EvidenceTrail';
 import FalsificationView from './components/FalsificationView';
 import IntakeWorkspace from './components/IntakeWorkspace';
-import LiveIntakeStudio from './components/LiveIntakeStudio';
-import { ShieldCheck, BarChart3, FileText, Search, Scale, Globe } from 'lucide-react';
+import { ShieldCheck, BarChart3, FileText, Search, Scale } from 'lucide-react';
 
 export default function App() {
   const reports = bundledData.reports || {};
@@ -35,7 +34,6 @@ export default function App() {
   );
   const [activeTab, setActiveTab] = useState('brief');
   const [activeIntake, setActiveIntake] = useState(null);
-  const [isLiveIntakeOpen, setIsLiveIntakeOpen] = useState(false);
 
   const activeReport = reports[selectedKey] || Object.values(reports)[0] || {};
   const dossier = activeReport.dossier || {};
@@ -59,15 +57,11 @@ export default function App() {
     { id: 'cohorts', label: 'Statements & Cohorts', icon: FileText },
     { id: 'evidence', label: 'Forensic Evidence Trail', icon: Search },
     { id: 'eval', label: 'Falsification & Scoreboard', icon: Scale },
-    { id: 'intake', label: '🌐 Live Company Intake', icon: Globe },
   ];
 
   return (
     <div className="app-container">
-      <Header
-        onOpenLiveIntake={() => setActiveTab('intake')}
-        isIntakeActive={activeTab === 'intake'}
-      />
+      <Header />
 
       <div className="main-layout">
         <Sidebar
@@ -78,13 +72,11 @@ export default function App() {
           setActiveTab={setActiveTab}
           onIntakeResult={setActiveIntake}
           activeIntake={activeIntake}
-          isLiveIntakeOpen={isLiveIntakeOpen}
-          setIsLiveIntakeOpen={setIsLiveIntakeOpen}
         />
 
         <main className="content-area">
-          {/* Active Online Source Intake Workspace (pinned when in other analysis tabs) */}
-          {activeIntake && activeTab !== 'intake' && (
+          {/* Active Online Source Intake Workspace (matching streamlit_app.py lines 524-564) */}
+          {activeIntake && (
             <IntakeWorkspace
               intake={activeIntake}
               onClose={() => setActiveIntake(null)}
@@ -92,60 +84,46 @@ export default function App() {
             />
           )}
 
-          {/* Dedicated Full Live Intake Studio View */}
-          {activeTab === 'intake' && (
-            <LiveIntakeStudio
-              onIntakeResult={setActiveIntake}
-              activeIntake={activeIntake}
-              currentDossierCompany={company}
-            />
-          )}
+          <HeroBanner
+            company={company}
+            state={state}
+            evidenceCount={linkedEntries.length}
+            onExportPdf={handleExportPdf}
+          />
 
-          {/* Standard Company Dossier Views */}
-          {activeTab !== 'intake' && (
-            <>
-              <HeroBanner
-                company={company}
-                state={state}
-                evidenceCount={linkedEntries.length}
-                onExportPdf={handleExportPdf}
-              />
+          <MetricCards
+            state={state}
+            obsCount={linkedEntries.length}
+            panelCount={(analysis.panels || []).length}
+            score={dossier.evidence_score || 0.0}
+            scoreLabel={dossier.evidence_label || 'Weak'}
+          />
 
-              <MetricCards
-                state={state}
-                obsCount={linkedEntries.length}
-                panelCount={(analysis.panels || []).length}
-                score={dossier.evidence_score || 0.0}
-                scoreLabel={dossier.evidence_label || 'Weak'}
-              />
+          {/* Interactive Navigation Tabs (Original 5 Modules) */}
+          <div className="tabs-header">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`tab-btn ${isActive ? 'active' : ''}`}
+                >
+                  <Icon size={16} />
+                  <span>{tab.label}</span>
+                  {isActive && <div className="tab-active-indicator" />}
+                </button>
+              );
+            })}
+          </div>
 
-              {/* Interactive Navigation Tabs */}
-              <div className="tabs-header">
-                {tabs.map((tab) => {
-                  const Icon = tab.icon;
-                  const isActive = activeTab === tab.id;
-                  return (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
-                      className={`tab-btn ${isActive ? 'active' : ''}`}
-                    >
-                      <Icon size={16} />
-                      <span>{tab.label}</span>
-                      {isActive && <div className="tab-active-indicator" />}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Active Tab View */}
-              {activeTab === 'brief' && <ProofPanel dossier={dossier} analysis={analysis} />}
-              {activeTab === 'charts' && <ResidualChart analysis={analysis} />}
-              {activeTab === 'cohorts' && <CohortsView analysis={analysis} />}
-              {activeTab === 'evidence' && <EvidenceTrail linkedEntries={linkedEntries} />}
-              {activeTab === 'eval' && <FalsificationView dossier={dossier} />}
-            </>
-          )}
+          {/* Active Tab View */}
+          {activeTab === 'brief' && <ProofPanel dossier={dossier} analysis={analysis} />}
+          {activeTab === 'charts' && <ResidualChart analysis={analysis} />}
+          {activeTab === 'cohorts' && <CohortsView analysis={analysis} />}
+          {activeTab === 'evidence' && <EvidenceTrail linkedEntries={linkedEntries} />}
+          {activeTab === 'eval' && <FalsificationView dossier={dossier} />}
         </main>
       </div>
     </div>

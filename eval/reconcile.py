@@ -1,15 +1,16 @@
 """Compare deterministic metrics with verified, formula-compatible published figures."""
 from __future__ import annotations
 
-import json
 from pathlib import Path
+
+import yaml
 
 from argus.ledger import EvidenceLedger
 from argus.metrics import (cash_conversion, inventory_days, margin_vs_input_cost,
                            price_mix_growth, receivable_days)
 
 
-DATA_PATH = Path("data/reconciliation/published_figures.json")
+DATA_PATH = Path("config/reconciliation.yaml")
 FORMULAS = {
     "price_volume": "price_mix_from_revenue_growth_and_volume_growth",
     "receivable_days": "closing_trade_receivables_over_revenue_from_operations_times_period_days",
@@ -107,7 +108,7 @@ def evaluate(path: str | Path = DATA_PATH) -> dict:
         return {"metric": "M01_reconciliation_rate", "value": None, "matched": 0,
                 "compared": 0, "excluded": 0, "status": "unavailable_no_published_figure_dataset",
                 "exclusions": []}
-    dataset = json.loads(source_path.read_text(encoding="utf-8"))
+    dataset = yaml.safe_load(source_path.read_text(encoding="utf-8")) or {}
     references = dataset.get("references", [])
     ledger = EvidenceLedger()
     entries = None

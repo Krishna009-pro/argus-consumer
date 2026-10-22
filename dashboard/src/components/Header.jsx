@@ -1,7 +1,7 @@
 import React from 'react';
-import { Database, Sparkles, Globe } from 'lucide-react';
+import { Database, Sparkles } from 'lucide-react';
 
-export default function Header({ onOpenLiveIntake, isIntakeActive }) {
+export default function Header() {
   return (
     <header className="top-navbar">
       <div className="top-nav-left">
@@ -17,31 +17,6 @@ export default function Header({ onOpenLiveIntake, isIntakeActive }) {
       </div>
 
       <div className="top-nav-right">
-        {/* Quick Launcher for 🌐 Live Company Intake */}
-        <button
-          onClick={onOpenLiveIntake}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            padding: '0.42rem 0.95rem',
-            borderRadius: '20px',
-            background: isIntakeActive ? '#0284c7' : 'rgba(2, 132, 199, 0.08)',
-            border: '1.5px solid',
-            borderColor: isIntakeActive ? '#0284c7' : 'rgba(2, 132, 199, 0.35)',
-            color: isIntakeActive ? '#ffffff' : '#0284c7',
-            fontWeight: 800,
-            fontSize: '0.78rem',
-            cursor: 'pointer',
-            transition: 'all 0.18s ease',
-            boxShadow: isIntakeActive ? '0 2px 10px rgba(2, 132, 199, 0.3)' : 'none',
-          }}
-          title="Open Live Company Intake Showcase Studio"
-        >
-          <Globe size={14} />
-          <span>🌐 Live Company Intake</span>
-        </button>
-
         <div className="status-pill status-emerald">
           <span className="pulse-dot pulse-emerald"></span>
           <span>Deterministic R1–R8 Active</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileDown, Sparkles, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { FileDown } from 'lucide-react';
 
 export default function HeroBanner({ company, state, evidenceCount, onExportPdf }) {
   const isAnomaly = state === 'validated' || state === 'unexplained';
@@ -41,7 +41,7 @@ export default function HeroBanner({ company, state, evidenceCount, onExportPdf 
           <FileDown size={15} />
           <span>Export Dossier</span>
         </button>
-        <span style={{ fontSize: '0.68rem', color: '#94a3b8', marginTop: '0.4rem' }}>
+        <span style={{ fontSize: '0.68rem', color: '#94a3b8', marginTop: '0.4rem', display: 'block' }}>
           SHA-256 Verified Audit Trail
         </span>
       </div>
