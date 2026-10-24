@@ -163,6 +163,66 @@
       "consolidation_basis": "standalone",
       "reporting_scope": "company_total_operations",
       "comparability_cohort": "GCPL_standalone_post_RCCL_FY2024_FY2025"
+    },
+    {
+      "period": "FY2025",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
     }
   ],
   "numbers": {
@@ -193,7 +253,12 @@
     "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — receivable_days: Fewer than six usable disclosed periods (2 of 2).",
     "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — inventory_days: Fewer than six usable disclosed periods (2 of 2).",
     "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
-    "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
+    "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "unknown, unspecified, unspecified — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "unknown, unspecified, unspecified — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+    "unknown, unspecified, unspecified — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "unknown, unspecified, unspecified — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "unknown, unspecified, unspecified — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
   ],
   "hypotheses": [],
   "red_team_log": [],
@@ -203,7 +268,7 @@
     "candidates": [],
     "rejected_findings": [],
     "tested_patterns": 0,
-    "panel_count": 2,
+    "panel_count": 3,
     "generated_candidates": [],
     "peer_companies": [
       "Hindustan Unilever Limited",
@@ -216,7 +281,7 @@
     "consolidation_basis": "standalone",
     "reporting_scope": "company_total_operations",
     "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
-    "verified_ledger_entries": 18,
-    "elapsed_seconds": 18.0116
+    "verified_ledger_entries": 22,
+    "elapsed_seconds": 50.9913
   }
 }

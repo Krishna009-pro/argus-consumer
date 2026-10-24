@@ -38,6 +38,11 @@ No persistent, peer-adjusted anomaly cleared the deterministic screening criteri
 - {'period': 'FY2025', 'angle': 'inventory_days', 'reported': 28.558004074005492, 'expected_low': None, 'expected_high': None, 'ledger_ids': ['L0146', 'L0148'], 'status': 'abstained', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'GCPL_standalone_post_RCCL_FY2024_FY2025'}
 - {'period': 'FY2025', 'angle': 'cash_conversion', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'GCPL_standalone_post_RCCL_FY2024_FY2025'}
 - {'period': 'FY2025', 'angle': 'margin_vs_input_cost', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'standalone', 'reporting_scope': 'company_total_operations', 'comparability_cohort': 'GCPL_standalone_post_RCCL_FY2024_FY2025'}
+- {'period': 'FY2025', 'angle': 'price_volume', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'unknown', 'reporting_scope': 'unspecified', 'comparability_cohort': 'unspecified'}
+- {'period': 'FY2025', 'angle': 'receivable_days', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'unknown', 'reporting_scope': 'unspecified', 'comparability_cohort': 'unspecified'}
+- {'period': 'FY2025', 'angle': 'inventory_days', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'unknown', 'reporting_scope': 'unspecified', 'comparability_cohort': 'unspecified'}
+- {'period': 'FY2025', 'angle': 'cash_conversion', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'unknown', 'reporting_scope': 'unspecified', 'comparability_cohort': 'unspecified'}
+- {'period': 'FY2025', 'angle': 'margin_vs_input_cost', 'reported': None, 'expected_low': None, 'expected_high': None, 'ledger_ids': [], 'status': 'abstained', 'consolidation_basis': 'unknown', 'reporting_scope': 'unspecified', 'comparability_cohort': 'unspecified'}
 
 ## Numerical evidence
 - receivable_days FY2020 [L0132] [L0133]: 20.425854652065503
@@ -73,6 +78,11 @@ Weak (score 0.0)
 - standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — inventory_days: Fewer than six usable disclosed periods (2 of 2).
 - standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.
 - standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.
+- unknown, unspecified, unspecified — price_volume: Matched revenue and disclosed volume-growth inputs are required.
+- unknown, unspecified, unspecified — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.
+- unknown, unspecified, unspecified — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.
+- unknown, unspecified, unspecified — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.
+- unknown, unspecified, unspecified — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.
 
 ## Hypotheses (unverified)
 - None; optional research model is not configured or no source excerpts were available.

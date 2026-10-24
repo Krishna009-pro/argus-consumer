@@ -56,6 +56,12 @@
           }
         ],
         "metrics": {
+          "inventory": [
+            657.72,
+            702.83,
+            790.84,
+            591.6
+          ],
           "revenue": [
             5474.45,
             6254.33,
@@ -67,15 +73,23 @@
             247.46,
             336.92,
             320.79
-          ],
-          "inventory": [
-            657.72,
-            702.83,
-            790.84,
-            591.6
           ]
         },
         "ledger_ids": {
+          "inventory": [
+            [
+              "L0131"
+            ],
+            [
+              "L0134"
+            ],
+            [
+              "L0137"
+            ],
+            [
+              "L0140"
+            ]
+          ],
           "revenue": [
             [
               "L0133"
@@ -102,20 +116,6 @@
             ],
             [
               "L0141"
-            ]
-          ],
-          "inventory": [
-            [
-              "L0131"
-            ],
-            [
-              "L0134"
-            ],
-            [
-              "L0137"
-            ],
-            [
-              "L0140"
             ]
           ]
         },
@@ -326,6 +326,10 @@
           }
         ],
         "metrics": {
+          "inventory": [
+            646.86,
+            697.14
+          ],
           "revenue": [
             8411.4,
             8910.15
@@ -333,13 +337,17 @@
           "trade_receivables": [
             491.34,
             595.62
-          ],
-          "inventory": [
-            646.86,
-            697.14
           ]
         },
         "ledger_ids": {
+          "inventory": [
+            [
+              "L0143"
+            ],
+            [
+              "L0146"
+            ]
+          ],
           "revenue": [
             [
               "L0145"
@@ -354,14 +362,6 @@
             ],
             [
               "L0147"
-            ]
-          ],
-          "inventory": [
-            [
-              "L0143"
-            ],
-            [
-              "L0146"
             ]
           ]
         },
@@ -490,6 +490,135 @@
         "Marico Limited",
         "Dabur India Limited"
       ]
+    },
+    {
+      "panel": {
+        "company": "Godrej Consumer Products Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "unknown",
+        "reporting_scope": "unspecified",
+        "comparability_cohort": "unspecified",
+        "periods": [
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": null,
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "unknown",
+            "reporting_scope": null,
+            "comparability_cohort": null
+          }
+        ],
+        "metrics": {
+          "revenue": [
+            null
+          ],
+          "trade_receivables": [
+            null
+          ]
+        },
+        "ledger_ids": {
+          "revenue": [
+            []
+          ],
+          "trade_receivables": [
+            []
+          ]
+        },
+        "units": {
+          "revenue": "INR_crore",
+          "trade_receivables": "INR_crore"
+        },
+        "unavailable": {
+          "revenue:FY2025": "More than one verified value exists for this metric and period.",
+          "trade_receivables:FY2025": "More than one verified value exists for this metric and period."
+        }
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": []
     }
   ],
   "rejected": [],

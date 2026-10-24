@@ -1,0 +1,137 @@
+{
+  "company": "Zydus Wellness Limited",
+  "panels": [
+    {
+      "panel": {
+        "company": "Zydus Wellness Limited",
+        "period_type": "annual",
+        "currency": "INR",
+        "consolidation_basis": "unknown",
+        "reporting_scope": "unspecified",
+        "comparability_cohort": "unspecified",
+        "periods": [
+          {
+            "period": "FY2025",
+            "period_type": "annual",
+            "period_start": null,
+            "period_end": null,
+            "days": null,
+            "currency": "INR",
+            "consolidation_basis": "unknown",
+            "reporting_scope": null,
+            "comparability_cohort": null
+          }
+        ],
+        "metrics": {
+          "inventory": [
+            null
+          ],
+          "revenue": [
+            null
+          ]
+        },
+        "ledger_ids": {
+          "inventory": [
+            []
+          ],
+          "revenue": [
+            []
+          ]
+        },
+        "units": {
+          "inventory": "INR_crore",
+          "revenue": "INR_crore"
+        },
+        "unavailable": {
+          "inventory:FY2025": "More than one verified value exists for this metric and period.",
+          "revenue:FY2025": "More than one verified value exists for this metric and period."
+        }
+      },
+      "angles": {
+        "price_volume": {
+          "angle": "price_volume",
+          "status": "abstained",
+          "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "receivable_days": {
+          "angle": "receivable_days",
+          "status": "abstained",
+          "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "inventory_days": {
+          "angle": "inventory_days",
+          "status": "abstained",
+          "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {
+            "denominator": "revenue"
+          }
+        },
+        "cash_conversion": {
+          "angle": "cash_conversion",
+          "status": "abstained",
+          "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        },
+        "margin_vs_input_cost": {
+          "angle": "margin_vs_input_cost",
+          "status": "abstained",
+          "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+          "periods": [
+            "FY2025"
+          ],
+          "reported": [
+            null
+          ],
+          "ledger_ids_by_period": [
+            []
+          ],
+          "metadata": {}
+        }
+      },
+      "candidates": [],
+      "tested_patterns": 0,
+      "peer_companies": []
+    }
+  ],
+  "rejected": [],
+  "status": "analyzed",
+  "reason": null
+}
