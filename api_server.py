@@ -366,6 +366,7 @@ def api_verify_candidate(req: VerifyCandidateRequest):
             period_type=req.period_type or "annual",
             currency=req.currency or "INR",
             consolidation_basis=req.basis or "consolidated",
+            company=req.company,
         )
     except Exception as exc:
         logger.error(f"Candidate verification error: {exc}")
@@ -431,6 +432,7 @@ def api_verify_all(req: VerifyAllCandidatesRequest):
                 period_type="annual",
                 currency="INR",
                 consolidation_basis=match.get("consolidation_basis") or "consolidated",
+                company=req.company,
             )
             entries.append(entry.model_dump(mode="json"))
         except Exception as exc:

@@ -1,0 +1,102 @@
+{
+  "company": "Tata Consumer Products Limited",
+  "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+  "why_it_matters": [
+    "Reported values are compared with the company’s own historical range.",
+    "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
+  ],
+  "evidence": [],
+  "timeline": [
+    {
+      "period": "FY2025",
+      "angle": "price_volume",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "receivable_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "inventory_days",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "cash_conversion",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    },
+    {
+      "period": "FY2025",
+      "angle": "margin_vs_input_cost",
+      "reported": null,
+      "expected_low": null,
+      "expected_high": null,
+      "ledger_ids": [],
+      "status": "abstained",
+      "consolidation_basis": "unknown",
+      "reporting_scope": "unspecified",
+      "comparability_cohort": "unspecified"
+    }
+  ],
+  "numbers": {},
+  "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
+  "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
+  "evidence_score": 0.0,
+  "evidence_label": "Weak",
+  "not_tested": [
+    "unknown, unspecified, unspecified — price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+    "unknown, unspecified, unspecified — receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+    "unknown, unspecified, unspecified — inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+    "unknown, unspecified, unspecified — cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+    "unknown, unspecified, unspecified — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+    "Peer-adjusted comparison: no eligible peer panels were available."
+  ],
+  "hypotheses": [],
+  "red_team_log": [],
+  "score_components": {},
+  "validation": {
+    "state": "no_reliable_finding",
+    "candidates": [],
+    "rejected_findings": [],
+    "tested_patterns": 0,
+    "panel_count": 1,
+    "generated_candidates": [],
+    "peer_companies": [],
+    "period_type": "annual",
+    "consolidation_basis": "unknown",
+    "reporting_scope": "unspecified",
+    "comparability_cohort": "unspecified",
+    "verified_ledger_entries": 8,
+    "elapsed_seconds": 43.3973
+  }
+}

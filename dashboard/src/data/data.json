@@ -4132,6 +4132,600 @@
       "comparability_note": null
     },
     {
+      "id": "L0154",
+      "metric": "operating_cash_flow",
+      "value": 1329.38,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_25679_BECTORFOOD_2023_2024_0409202416391.pdf",
+      "source_type": "filing",
+      "doc_page": 113,
+      "snippet": "Net cash from operating activities (A)  1,329.38  1,470.36",
+      "source_sha256": "765bf6a1f1083a600090cbb6c7cf79fa68bc15cb947d6367fe859a985379b81c",
+      "retrieved_at": "2026-10-24T12:34:12.190030Z",
+      "cache_path": "data\\cache\\765bf6a1f1083a600090cbb6c7cf79fa68bc15cb947d6367fe859a985379b81c.pdf",
+      "company": "Mrs. Bectors Food Specialities Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:34:12.190030Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0155",
+      "metric": "operating_cash_flow",
+      "value": 1470.36,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://nsearchives.nseindia.com/annual_reports/AR_25679_BECTORFOOD_2023_2024_0409202416391.pdf",
+      "source_type": "filing",
+      "doc_page": 113,
+      "snippet": "Net cash from operating activities (A)  1,329.38  1,470.36",
+      "source_sha256": "765bf6a1f1083a600090cbb6c7cf79fa68bc15cb947d6367fe859a985379b81c",
+      "retrieved_at": "2026-10-24T12:34:15.433882Z",
+      "cache_path": "data\\cache\\765bf6a1f1083a600090cbb6c7cf79fa68bc15cb947d6367fe859a985379b81c.pdf",
+      "company": "Mrs. Bectors Food Specialities Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:34:15.433882Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0156",
+      "metric": "operating_cash_flow",
+      "value": 5444.4,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 172,
+      "snippet": "Net cash from operating activities  5444.40  2119.34",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:39:40.081291Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:39:40.081291Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0157",
+      "metric": "operating_cash_flow",
+      "value": 2119.34,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 172,
+      "snippet": "Net cash from operating activities  5444.40  2119.34",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:39:44.999509Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:39:44.999509Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0158",
+      "metric": "inventory",
+      "value": 57828.84,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 232,
+      "snippet": "(a) Inventories  2.6  57828.84  51914.04",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:39:49.087449Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:39:49.087449Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0159",
+      "metric": "inventory",
+      "value": 51914.04,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 232,
+      "snippet": "(a) Inventories  2.6  57828.84  51914.04",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:39:53.701302Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:39:53.701302Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0160",
+      "metric": "trade_receivables",
+      "value": 44140.66,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 232,
+      "snippet": "(i)  Trade  receivables 2.7  44140.66  31955.31",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:39:57.342781Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:39:57.342781Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0161",
+      "metric": "trade_receivables",
+      "value": 31955.31,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 232,
+      "snippet": "(i)  Trade  receivables 2.7  44140.66  31955.31",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:40:01.310792Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:40:01.310792Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0162",
+      "metric": "operating_cash_flow",
+      "value": 19832.58,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 237,
+      "snippet": "Net Cash from operating activities  19832.58  11626.25",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:40:05.254256Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:40:05.254256Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0163",
+      "metric": "operating_cash_flow",
+      "value": 11626.25,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.cclproducts.com/wp-content/uploads/2023/07/Annual-Report_2022-20283.pdf",
+      "source_type": "filing",
+      "doc_page": 237,
+      "snippet": "Net Cash from operating activities  19832.58  11626.25",
+      "source_sha256": "598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f",
+      "retrieved_at": "2026-10-24T12:40:09.367824Z",
+      "cache_path": "data\\cache\\598477067164cc0dcfa088024a5a3e852405cc187d44e3fdef415057c642460f.pdf",
+      "company": "Tata Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T12:40:09.367824Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0164",
+      "metric": "inventory",
+      "value": 21778.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 224,
+      "snippet": "Inventories 9  21,778  19,521",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:29:34.951901Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:29:34.951901Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0165",
+      "metric": "inventory",
+      "value": 19521.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 224,
+      "snippet": "Inventories 9  21,778  19,521",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:29:40.220366Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:29:40.220366Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0166",
+      "metric": "revenue",
+      "value": 114840.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 225,
+      "snippet": "Revenue from Operations 30  114,840  151,163",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:29:44.508585Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:29:44.508585Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0167",
+      "metric": "revenue",
+      "value": 151163.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 225,
+      "snippet": "Revenue from Operations 30  114,840  151,163",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:29:47.635984Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:29:47.635984Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0168",
+      "metric": "inventory",
+      "value": 56281.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 306,
+      "snippet": "Inventories 11  56,281  39,440",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:29:50.874826Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:29:50.874826Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0169",
+      "metric": "inventory",
+      "value": 39440.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 306,
+      "snippet": "Inventories 11  56,281  39,440",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:29:53.766311Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:29:53.766311Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0170",
+      "metric": "revenue",
+      "value": 271484.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 307,
+      "snippet": "Revenue from Operations 33  271,484  232,415",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:29:56.971486Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:29:56.971486Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0171",
+      "metric": "revenue",
+      "value": 232415.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://zyduslife.com/investor/admin/uploads/14/2/2025-2026.pdf",
+      "source_type": "filing",
+      "doc_page": 307,
+      "snippet": "Revenue from Operations 33  271,484  232,415",
+      "source_sha256": "a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1",
+      "retrieved_at": "2026-10-24T17:30:01.566677Z",
+      "cache_path": "data\\cache\\a44f55b94596c3fb2928a153aabb986ddf3251227e23cd018c8c503b04ea44d1.pdf",
+      "company": "Zydus Wellness Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:30:01.566677Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0172",
+      "metric": "revenue",
+      "value": 8910.15,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.godrejcp.com/uploads/GCPL_Annual_and_Integrated_Report_2024_25_1_a988ff386b.pdf",
+      "source_type": "filing",
+      "doc_page": 403,
+      "snippet": "I Revenue from Operations 36  8,910.15  8,411.40",
+      "source_sha256": "70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa",
+      "retrieved_at": "2026-10-24T17:45:03.714555Z",
+      "cache_path": "data\\cache\\70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa.pdf",
+      "company": "Godrej Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:45:03.714555Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0173",
+      "metric": "revenue",
+      "value": 8411.4,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.godrejcp.com/uploads/GCPL_Annual_and_Integrated_Report_2024_25_1_a988ff386b.pdf",
+      "source_type": "filing",
+      "doc_page": 403,
+      "snippet": "I Revenue from Operations 36  8,910.15  8,411.40",
+      "source_sha256": "70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa",
+      "retrieved_at": "2026-10-24T17:45:10.841666Z",
+      "cache_path": "data\\cache\\70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa.pdf",
+      "company": "Godrej Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:45:10.841666Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0174",
+      "metric": "trade_receivables",
+      "value": 20.36,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.godrejcp.com/uploads/GCPL_Annual_and_Integrated_Report_2024_25_1_a988ff386b.pdf",
+      "source_type": "filing",
+      "doc_page": 478,
+      "snippet": "trade receivables)  16.22  20.36 -20%",
+      "source_sha256": "70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa",
+      "retrieved_at": "2026-10-24T17:45:18.374211Z",
+      "cache_path": "data\\cache\\70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa.pdf",
+      "company": "Godrej Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:45:18.374211Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
+      "id": "L0175",
+      "metric": "trade_receivables",
+      "value": -20.0,
+      "unit": "INR_crore",
+      "period": "FY2025",
+      "source_url": "https://www.godrejcp.com/uploads/GCPL_Annual_and_Integrated_Report_2024_25_1_a988ff386b.pdf",
+      "source_type": "filing",
+      "doc_page": 478,
+      "snippet": "trade receivables)  16.22  20.36 -20%",
+      "source_sha256": "70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa",
+      "retrieved_at": "2026-10-24T17:45:24.268265Z",
+      "cache_path": "data\\cache\\70b1e1c718091f8be4ad084c637938fe7d89356e847e55021217819b0a939dfa.pdf",
+      "company": "Godrej Consumer Products Limited",
+      "period_type": "annual",
+      "period_start": null,
+      "period_end": null,
+      "currency": "INR",
+      "consolidation_basis": "unknown",
+      "verified": true,
+      "verified_by": "Audit Reviewer",
+      "verified_at": "2026-10-24T17:45:24.268265Z",
+      "denominator": null,
+      "reporting_scope": null,
+      "comparability_cohort": null,
+      "comparability_note": null
+    },
+    {
       "id": "C-0cc21036eadc-39b99641c70d",
       "company": "Nestle India Limited",
       "metric": "inventory",
@@ -8107,6 +8701,66 @@
             "consolidation_basis": "standalone",
             "reporting_scope": "company_total_operations",
             "comparability_cohort": "GCPL_standalone_post_RCCL_FY2024_FY2025"
+          },
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
           }
         ],
         "numbers": {
@@ -8137,7 +8791,12 @@
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 receivable_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 inventory_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
-          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
+          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "unknown, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "unknown, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "unknown, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "unknown, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "unknown, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
         ],
         "hypotheses": [],
         "red_team_log": [],
@@ -8147,7 +8806,7 @@
           "candidates": [],
           "rejected_findings": [],
           "tested_patterns": 0,
-          "panel_count": 2,
+          "panel_count": 3,
           "generated_candidates": [],
           "peer_companies": [
             "Hindustan Unilever Limited",
@@ -8160,8 +8819,8 @@
           "consolidation_basis": "standalone",
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
-          "verified_ledger_entries": 18,
-          "elapsed_seconds": 18.0116
+          "verified_ledger_entries": 22,
+          "elapsed_seconds": 50.9913
         }
       },
       "analysis": {
@@ -8222,6 +8881,12 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  657.72,
+                  702.83,
+                  790.84,
+                  591.6
+                ],
                 "revenue": [
                   5474.45,
                   6254.33,
@@ -8233,15 +8898,23 @@
                   247.46,
                   336.92,
                   320.79
-                ],
-                "inventory": [
-                  657.72,
-                  702.83,
-                  790.84,
-                  591.6
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0131"
+                  ],
+                  [
+                    "L0134"
+                  ],
+                  [
+                    "L0137"
+                  ],
+                  [
+                    "L0140"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0133"
@@ -8268,20 +8941,6 @@
                   ],
                   [
                     "L0141"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0131"
-                  ],
-                  [
-                    "L0134"
-                  ],
-                  [
-                    "L0137"
-                  ],
-                  [
-                    "L0140"
                   ]
                 ]
               },
@@ -8492,6 +9151,10 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  646.86,
+                  697.14
+                ],
                 "revenue": [
                   8411.4,
                   8910.15
@@ -8499,13 +9162,17 @@
                 "trade_receivables": [
                   491.34,
                   595.62
-                ],
-                "inventory": [
-                  646.86,
-                  697.14
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0143"
+                  ],
+                  [
+                    "L0146"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0145"
@@ -8520,14 +9187,6 @@
                   ],
                   [
                     "L0147"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0143"
-                  ],
-                  [
-                    "L0146"
                   ]
                 ]
               },
@@ -8656,6 +9315,135 @@
               "Marico Limited",
               "Dabur India Limited"
             ]
+          },
+          {
+            "panel": {
+              "company": "Godrej Consumer Products Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "unknown",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "unknown",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "revenue": [
+                  null
+                ],
+                "trade_receivables": [
+                  null
+                ]
+              },
+              "ledger_ids": {
+                "revenue": [
+                  []
+                ],
+                "trade_receivables": [
+                  []
+                ]
+              },
+              "units": {
+                "revenue": "INR_crore",
+                "trade_receivables": "INR_crore"
+              },
+              "unavailable": {
+                "revenue:FY2025": "More than one verified value exists for this metric and period.",
+                "trade_receivables:FY2025": "More than one verified value exists for this metric and period."
+              }
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
           }
         ],
         "rejected": [],
@@ -8829,6 +9617,66 @@
             "consolidation_basis": "standalone",
             "reporting_scope": "company_total_operations",
             "comparability_cohort": "GCPL_standalone_post_RCCL_FY2024_FY2025"
+          },
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
           }
         ],
         "numbers": {
@@ -8859,7 +9707,12 @@
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 receivable_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 inventory_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
-          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
+          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "unknown, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "unknown, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "unknown, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "unknown, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "unknown, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
         ],
         "hypotheses": [],
         "red_team_log": [],
@@ -8869,7 +9722,7 @@
           "candidates": [],
           "rejected_findings": [],
           "tested_patterns": 0,
-          "panel_count": 2,
+          "panel_count": 3,
           "generated_candidates": [],
           "peer_companies": [
             "Hindustan Unilever Limited",
@@ -8882,8 +9735,8 @@
           "consolidation_basis": "standalone",
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
-          "verified_ledger_entries": 18,
-          "elapsed_seconds": 18.0116
+          "verified_ledger_entries": 22,
+          "elapsed_seconds": 50.9913
         }
       },
       "analysis": {
@@ -8944,6 +9797,12 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  657.72,
+                  702.83,
+                  790.84,
+                  591.6
+                ],
                 "revenue": [
                   5474.45,
                   6254.33,
@@ -8955,15 +9814,23 @@
                   247.46,
                   336.92,
                   320.79
-                ],
-                "inventory": [
-                  657.72,
-                  702.83,
-                  790.84,
-                  591.6
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0131"
+                  ],
+                  [
+                    "L0134"
+                  ],
+                  [
+                    "L0137"
+                  ],
+                  [
+                    "L0140"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0133"
@@ -8990,20 +9857,6 @@
                   ],
                   [
                     "L0141"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0131"
-                  ],
-                  [
-                    "L0134"
-                  ],
-                  [
-                    "L0137"
-                  ],
-                  [
-                    "L0140"
                   ]
                 ]
               },
@@ -9214,6 +10067,10 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  646.86,
+                  697.14
+                ],
                 "revenue": [
                   8411.4,
                   8910.15
@@ -9221,13 +10078,17 @@
                 "trade_receivables": [
                   491.34,
                   595.62
-                ],
-                "inventory": [
-                  646.86,
-                  697.14
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0143"
+                  ],
+                  [
+                    "L0146"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0145"
@@ -9242,14 +10103,6 @@
                   ],
                   [
                     "L0147"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0143"
-                  ],
-                  [
-                    "L0146"
                   ]
                 ]
               },
@@ -9378,6 +10231,135 @@
               "Marico Limited",
               "Dabur India Limited"
             ]
+          },
+          {
+            "panel": {
+              "company": "Godrej Consumer Products Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "unknown",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "unknown",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "revenue": [
+                  null
+                ],
+                "trade_receivables": [
+                  null
+                ]
+              },
+              "ledger_ids": {
+                "revenue": [
+                  []
+                ],
+                "trade_receivables": [
+                  []
+                ]
+              },
+              "units": {
+                "revenue": "INR_crore",
+                "trade_receivables": "INR_crore"
+              },
+              "unavailable": {
+                "revenue:FY2025": "More than one verified value exists for this metric and period.",
+                "trade_receivables:FY2025": "More than one verified value exists for this metric and period."
+              }
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
           }
         ],
         "rejected": [],
@@ -9551,6 +10533,66 @@
             "consolidation_basis": "standalone",
             "reporting_scope": "company_total_operations",
             "comparability_cohort": "GCPL_standalone_post_RCCL_FY2024_FY2025"
+          },
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
           }
         ],
         "numbers": {
@@ -9581,7 +10623,12 @@
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 receivable_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 inventory_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
-          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
+          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "unknown, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "unknown, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "unknown, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "unknown, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "unknown, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
         ],
         "hypotheses": [],
         "red_team_log": [],
@@ -9591,7 +10638,7 @@
           "candidates": [],
           "rejected_findings": [],
           "tested_patterns": 0,
-          "panel_count": 2,
+          "panel_count": 3,
           "generated_candidates": [],
           "peer_companies": [
             "Hindustan Unilever Limited",
@@ -9604,8 +10651,8 @@
           "consolidation_basis": "standalone",
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
-          "verified_ledger_entries": 18,
-          "elapsed_seconds": 18.0116
+          "verified_ledger_entries": 22,
+          "elapsed_seconds": 50.9913
         }
       },
       "analysis": {
@@ -9666,6 +10713,12 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  657.72,
+                  702.83,
+                  790.84,
+                  591.6
+                ],
                 "revenue": [
                   5474.45,
                   6254.33,
@@ -9677,15 +10730,23 @@
                   247.46,
                   336.92,
                   320.79
-                ],
-                "inventory": [
-                  657.72,
-                  702.83,
-                  790.84,
-                  591.6
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0131"
+                  ],
+                  [
+                    "L0134"
+                  ],
+                  [
+                    "L0137"
+                  ],
+                  [
+                    "L0140"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0133"
@@ -9712,20 +10773,6 @@
                   ],
                   [
                     "L0141"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0131"
-                  ],
-                  [
-                    "L0134"
-                  ],
-                  [
-                    "L0137"
-                  ],
-                  [
-                    "L0140"
                   ]
                 ]
               },
@@ -9936,6 +10983,10 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  646.86,
+                  697.14
+                ],
                 "revenue": [
                   8411.4,
                   8910.15
@@ -9943,13 +10994,17 @@
                 "trade_receivables": [
                   491.34,
                   595.62
-                ],
-                "inventory": [
-                  646.86,
-                  697.14
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0143"
+                  ],
+                  [
+                    "L0146"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0145"
@@ -9964,14 +11019,6 @@
                   ],
                   [
                     "L0147"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0143"
-                  ],
-                  [
-                    "L0146"
                   ]
                 ]
               },
@@ -10100,6 +11147,135 @@
               "Marico Limited",
               "Dabur India Limited"
             ]
+          },
+          {
+            "panel": {
+              "company": "Godrej Consumer Products Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "unknown",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "unknown",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "revenue": [
+                  null
+                ],
+                "trade_receivables": [
+                  null
+                ]
+              },
+              "ledger_ids": {
+                "revenue": [
+                  []
+                ],
+                "trade_receivables": [
+                  []
+                ]
+              },
+              "units": {
+                "revenue": "INR_crore",
+                "trade_receivables": "INR_crore"
+              },
+              "unavailable": {
+                "revenue:FY2025": "More than one verified value exists for this metric and period.",
+                "trade_receivables:FY2025": "More than one verified value exists for this metric and period."
+              }
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
           }
         ],
         "rejected": [],
@@ -10273,6 +11449,66 @@
             "consolidation_basis": "standalone",
             "reporting_scope": "company_total_operations",
             "comparability_cohort": "GCPL_standalone_post_RCCL_FY2024_FY2025"
+          },
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
           }
         ],
         "numbers": {
@@ -10303,7 +11539,12 @@
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 receivable_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 inventory_days: Fewer than six usable disclosed periods (2 of 2).",
           "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
-          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
+          "standalone, company_total_operations, GCPL_standalone_post_RCCL_FY2024_FY2025 \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "unknown, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "unknown, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "unknown, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "unknown, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "unknown, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required."
         ],
         "hypotheses": [],
         "red_team_log": [],
@@ -10313,7 +11554,7 @@
           "candidates": [],
           "rejected_findings": [],
           "tested_patterns": 0,
-          "panel_count": 2,
+          "panel_count": 3,
           "generated_candidates": [],
           "peer_companies": [
             "Hindustan Unilever Limited",
@@ -10326,8 +11567,8 @@
           "consolidation_basis": "standalone",
           "reporting_scope": "company_total_operations",
           "comparability_cohort": "GCPL_standalone_pre_RCCL_FY2020_FY2023",
-          "verified_ledger_entries": 18,
-          "elapsed_seconds": 18.0116
+          "verified_ledger_entries": 22,
+          "elapsed_seconds": 50.9913
         }
       },
       "analysis": {
@@ -10388,6 +11629,12 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  657.72,
+                  702.83,
+                  790.84,
+                  591.6
+                ],
                 "revenue": [
                   5474.45,
                   6254.33,
@@ -10399,15 +11646,23 @@
                   247.46,
                   336.92,
                   320.79
-                ],
-                "inventory": [
-                  657.72,
-                  702.83,
-                  790.84,
-                  591.6
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0131"
+                  ],
+                  [
+                    "L0134"
+                  ],
+                  [
+                    "L0137"
+                  ],
+                  [
+                    "L0140"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0133"
@@ -10434,20 +11689,6 @@
                   ],
                   [
                     "L0141"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0131"
-                  ],
-                  [
-                    "L0134"
-                  ],
-                  [
-                    "L0137"
-                  ],
-                  [
-                    "L0140"
                   ]
                 ]
               },
@@ -10658,6 +11899,10 @@
                 }
               ],
               "metrics": {
+                "inventory": [
+                  646.86,
+                  697.14
+                ],
                 "revenue": [
                   8411.4,
                   8910.15
@@ -10665,13 +11910,17 @@
                 "trade_receivables": [
                   491.34,
                   595.62
-                ],
-                "inventory": [
-                  646.86,
-                  697.14
                 ]
               },
               "ledger_ids": {
+                "inventory": [
+                  [
+                    "L0143"
+                  ],
+                  [
+                    "L0146"
+                  ]
+                ],
                 "revenue": [
                   [
                     "L0145"
@@ -10686,14 +11935,6 @@
                   ],
                   [
                     "L0147"
-                  ]
-                ],
-                "inventory": [
-                  [
-                    "L0143"
-                  ],
-                  [
-                    "L0146"
                   ]
                 ]
               },
@@ -10822,6 +12063,135 @@
               "Marico Limited",
               "Dabur India Limited"
             ]
+          },
+          {
+            "panel": {
+              "company": "Godrej Consumer Products Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "unknown",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "unknown",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "revenue": [
+                  null
+                ],
+                "trade_receivables": [
+                  null
+                ]
+              },
+              "ledger_ids": {
+                "revenue": [
+                  []
+                ],
+                "trade_receivables": [
+                  []
+                ]
+              },
+              "units": {
+                "revenue": "INR_crore",
+                "trade_receivables": "INR_crore"
+              },
+              "unavailable": {
+                "revenue:FY2025": "More than one verified value exists for this metric and period.",
+                "trade_receivables:FY2025": "More than one verified value exists for this metric and period."
+              }
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
           }
         ],
         "rejected": [],
@@ -20634,6 +22004,239 @@
         "reason": null
       }
     },
+    "mrs-bectors-food-specialities-limited": {
+      "dossier": {
+        "company": "Mrs. Bectors Food Specialities Limited",
+        "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+        "why_it_matters": [
+          "Reported values are compared with the company\u2019s own historical range.",
+          "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
+        ],
+        "evidence": [],
+        "timeline": [
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          }
+        ],
+        "numbers": {},
+        "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
+        "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
+        "evidence_score": 0.0,
+        "evidence_label": "Weak",
+        "not_tested": [
+          "unknown, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "unknown, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "unknown, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "unknown, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "unknown, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "Peer-adjusted comparison: no eligible peer panels were available."
+        ],
+        "hypotheses": [],
+        "red_team_log": [],
+        "score_components": {},
+        "validation": {
+          "state": "no_reliable_finding",
+          "candidates": [],
+          "rejected_findings": [],
+          "tested_patterns": 0,
+          "panel_count": 1,
+          "generated_candidates": [],
+          "peer_companies": [],
+          "period_type": "annual",
+          "consolidation_basis": "unknown",
+          "reporting_scope": "unspecified",
+          "comparability_cohort": "unspecified",
+          "verified_ledger_entries": 2,
+          "elapsed_seconds": 74.5744
+        }
+      },
+      "analysis": {
+        "company": "Mrs. Bectors Food Specialities Limited",
+        "panels": [
+          {
+            "panel": {
+              "company": "Mrs. Bectors Food Specialities Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "unknown",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "unknown",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "operating_cash_flow": [
+                  null
+                ]
+              },
+              "ledger_ids": {
+                "operating_cash_flow": [
+                  []
+                ]
+              },
+              "units": {
+                "operating_cash_flow": "INR_crore"
+              },
+              "unavailable": {
+                "operating_cash_flow:FY2025": "More than one verified value exists for this metric and period."
+              }
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
+          }
+        ],
+        "rejected": [],
+        "status": "analyzed",
+        "reason": null
+      }
+    },
     "nestle-india-limited": {
       "dossier": {
         "company": "Nestle India Limited",
@@ -23367,6 +24970,255 @@
         "reason": null
       }
     },
+    "tata-consumer-products-limited": {
+      "dossier": {
+        "company": "Tata Consumer Products Limited",
+        "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+        "why_it_matters": [
+          "Reported values are compared with the company\u2019s own historical range.",
+          "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
+        ],
+        "evidence": [],
+        "timeline": [
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          }
+        ],
+        "numbers": {},
+        "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
+        "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
+        "evidence_score": 0.0,
+        "evidence_label": "Weak",
+        "not_tested": [
+          "unknown, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "unknown, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "unknown, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "unknown, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "unknown, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "Peer-adjusted comparison: no eligible peer panels were available."
+        ],
+        "hypotheses": [],
+        "red_team_log": [],
+        "score_components": {},
+        "validation": {
+          "state": "no_reliable_finding",
+          "candidates": [],
+          "rejected_findings": [],
+          "tested_patterns": 0,
+          "panel_count": 1,
+          "generated_candidates": [],
+          "peer_companies": [],
+          "period_type": "annual",
+          "consolidation_basis": "unknown",
+          "reporting_scope": "unspecified",
+          "comparability_cohort": "unspecified",
+          "verified_ledger_entries": 8,
+          "elapsed_seconds": 43.3973
+        }
+      },
+      "analysis": {
+        "company": "Tata Consumer Products Limited",
+        "panels": [
+          {
+            "panel": {
+              "company": "Tata Consumer Products Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "unknown",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "unknown",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "inventory": [
+                  null
+                ],
+                "trade_receivables": [
+                  null
+                ],
+                "operating_cash_flow": [
+                  null
+                ]
+              },
+              "ledger_ids": {
+                "inventory": [
+                  []
+                ],
+                "trade_receivables": [
+                  []
+                ],
+                "operating_cash_flow": [
+                  []
+                ]
+              },
+              "units": {
+                "operating_cash_flow": "INR_crore",
+                "inventory": "INR_crore",
+                "trade_receivables": "INR_crore"
+              },
+              "unavailable": {
+                "inventory:FY2025": "More than one verified value exists for this metric and period.",
+                "trade_receivables:FY2025": "More than one verified value exists for this metric and period.",
+                "operating_cash_flow:FY2025": "More than one verified value exists for this metric and period."
+              }
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
+          }
+        ],
+        "rejected": [],
+        "status": "analyzed",
+        "reason": null
+      }
+    },
     "united-spirits-limited": {
       "dossier": {
         "company": "United Spirits Limited",
@@ -24753,6 +26605,247 @@
                   [
                     "L0153"
                   ]
+                ],
+                "metadata": {}
+              },
+              "inventory_days": {
+                "angle": "inventory_days",
+                "status": "abstained",
+                "abstain_reason": "Inventory, a same-unit positive denominator, and exact period day count are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {
+                  "denominator": "revenue"
+                }
+              },
+              "cash_conversion": {
+                "angle": "cash_conversion",
+                "status": "abstained",
+                "abstain_reason": "Matched operating-cash-flow and EBITDA inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "margin_vs_input_cost": {
+                "angle": "margin_vs_input_cost",
+                "status": "abstained",
+                "abstain_reason": "Matched gross-margin and input-cost-index disclosures are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              }
+            },
+            "candidates": [],
+            "tested_patterns": 0,
+            "peer_companies": []
+          }
+        ],
+        "rejected": [],
+        "status": "analyzed",
+        "reason": null
+      }
+    },
+    "zydus-wellness-limited": {
+      "dossier": {
+        "company": "Zydus Wellness Limited",
+        "discovery": "No persistent, peer-adjusted anomaly cleared the deterministic screening criteria.",
+        "why_it_matters": [
+          "Reported values are compared with the company\u2019s own historical range.",
+          "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."
+        ],
+        "evidence": [],
+        "timeline": [
+          {
+            "period": "FY2025",
+            "angle": "price_volume",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "receivable_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "inventory_days",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "cash_conversion",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          },
+          {
+            "period": "FY2025",
+            "angle": "margin_vs_input_cost",
+            "reported": null,
+            "expected_low": null,
+            "expected_high": null,
+            "ledger_ids": [],
+            "status": "abstained",
+            "consolidation_basis": "unknown",
+            "reporting_scope": "unspecified",
+            "comparability_cohort": "unspecified"
+          }
+        ],
+        "numbers": {},
+        "counterargument": "Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
+        "falsification_condition": "The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
+        "evidence_score": 0.0,
+        "evidence_label": "Weak",
+        "not_tested": [
+          "unknown, unspecified, unspecified \u2014 price_volume: Matched revenue and disclosed volume-growth inputs are required.",
+          "unknown, unspecified, unspecified \u2014 receivable_days: Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+          "unknown, unspecified, unspecified \u2014 inventory_days: Inventory, a same-unit positive denominator, and exact period day count are required.",
+          "unknown, unspecified, unspecified \u2014 cash_conversion: Matched operating-cash-flow and EBITDA inputs are required.",
+          "unknown, unspecified, unspecified \u2014 margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.",
+          "Peer-adjusted comparison: no eligible peer panels were available."
+        ],
+        "hypotheses": [],
+        "red_team_log": [],
+        "score_components": {},
+        "validation": {
+          "state": "no_reliable_finding",
+          "candidates": [],
+          "rejected_findings": [],
+          "tested_patterns": 0,
+          "panel_count": 1,
+          "generated_candidates": [],
+          "peer_companies": [],
+          "period_type": "annual",
+          "consolidation_basis": "unknown",
+          "reporting_scope": "unspecified",
+          "comparability_cohort": "unspecified",
+          "verified_ledger_entries": 8,
+          "elapsed_seconds": 44.8128
+        }
+      },
+      "analysis": {
+        "company": "Zydus Wellness Limited",
+        "panels": [
+          {
+            "panel": {
+              "company": "Zydus Wellness Limited",
+              "period_type": "annual",
+              "currency": "INR",
+              "consolidation_basis": "unknown",
+              "reporting_scope": "unspecified",
+              "comparability_cohort": "unspecified",
+              "periods": [
+                {
+                  "period": "FY2025",
+                  "period_type": "annual",
+                  "period_start": null,
+                  "period_end": null,
+                  "days": null,
+                  "currency": "INR",
+                  "consolidation_basis": "unknown",
+                  "reporting_scope": null,
+                  "comparability_cohort": null
+                }
+              ],
+              "metrics": {
+                "inventory": [
+                  null
+                ],
+                "revenue": [
+                  null
+                ]
+              },
+              "ledger_ids": {
+                "inventory": [
+                  []
+                ],
+                "revenue": [
+                  []
+                ]
+              },
+              "units": {
+                "inventory": "INR_crore",
+                "revenue": "INR_crore"
+              },
+              "unavailable": {
+                "inventory:FY2025": "More than one verified value exists for this metric and period.",
+                "revenue:FY2025": "More than one verified value exists for this metric and period."
+              }
+            },
+            "angles": {
+              "price_volume": {
+                "angle": "price_volume",
+                "status": "abstained",
+                "abstain_reason": "Matched revenue and disclosed volume-growth inputs are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
+                ],
+                "metadata": {}
+              },
+              "receivable_days": {
+                "angle": "receivable_days",
+                "status": "abstained",
+                "abstain_reason": "Trade receivables, matching revenue, consistent units, and exact period dates are required.",
+                "periods": [
+                  "FY2025"
+                ],
+                "reported": [
+                  null
+                ],
+                "ledger_ids_by_period": [
+                  []
                 ],
                 "metadata": {}
               },

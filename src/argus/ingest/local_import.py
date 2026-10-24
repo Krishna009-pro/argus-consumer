@@ -229,6 +229,7 @@ def verify_candidate(candidate_file: str | Path, candidate_id: str, *, verified_
                      period_end: str | None = None, denominator: str | None = None,
                      reporting_scope: str | None = None, comparability_cohort: str | None = None,
                      comparability_note: str | None = None,
+                     company: str | None = None,
                      ledger_path: str | Path = "data/ledger.jsonl") -> LedgerEntry:
     rows = json.loads(Path(candidate_file).read_text(encoding="utf-8"))
     match = next((r for r in rows if r.get("id") == candidate_id), None)
@@ -241,9 +242,10 @@ def verify_candidate(candidate_file: str | Path, candidate_id: str, *, verified_
     if not cached.is_file() or ledger.sha256(cached) != candidate.source_sha256:
         raise ValueError("Cached source is absent or its SHA-256 no longer matches the candidate.")
     if candidate.doc_page is None: raise ValueError("A verified filing observation requires a real source page.")
+    assigned_company = company or candidate.company
     provisional = LedgerEntry(id="review", metric=candidate.metric, value=candidate.value, unit=unit, period=period,
       source_url=candidate.source_url, source_type=candidate.source_type, doc_page=candidate.doc_page,
-      snippet=candidate.snippet, source_sha256=candidate.source_sha256, cache_path=str(cached), company=candidate.company,
+      snippet=candidate.snippet, source_sha256=candidate.source_sha256, cache_path=str(cached), company=assigned_company,
       period_type=period_type, period_start=period_start, period_end=period_end, currency=currency,
       consolidation_basis=consolidation_basis, verified=True, verified_by=verified_by,
       verified_at=datetime.now(timezone.utc), denominator=denominator, reporting_scope=reporting_scope,
