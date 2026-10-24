@@ -202,7 +202,13 @@ export default function App() {
 
   // Ledger entries linked to this company dossier
   const evidenceIds = new Set(dossier.evidence || []);
-  const linkedEntries = ledger.filter((e) => evidenceIds.has(e.id));
+  const companyEntries = ledger.filter(
+    (e) => (e.company || '').trim().toLowerCase() === company.trim().toLowerCase()
+  );
+  const linkedEntries = (dossier.evidence && dossier.evidence.length > 0)
+    ? ledger.filter((e) => evidenceIds.has(e.id))
+    : companyEntries;
+  const verifiedCount = validation.verified_ledger_entries || companyEntries.length || linkedEntries.length;
 
   const handleExportPdf = () => {
     // Open or download the verified audit dossier PDF
@@ -278,13 +284,13 @@ export default function App() {
           <HeroBanner
             company={company}
             state={state}
-            evidenceCount={linkedEntries.length}
+            evidenceCount={verifiedCount}
             onExportPdf={handleExportPdf}
           />
 
           <MetricCards
             state={state}
-            obsCount={linkedEntries.length}
+            obsCount={verifiedCount}
             panelCount={(analysis.panels || []).length}
             score={dossier.evidence_score || 0.0}
             scoreLabel={dossier.evidence_label || 'Weak'}
