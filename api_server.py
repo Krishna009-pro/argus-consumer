@@ -95,6 +95,9 @@ class SearchRequest(BaseModel):
     company: str
     limit: Optional[int] = 8
 
+class ResolveCompanyRequest(BaseModel):
+    query: str
+
 class InspectRequest(BaseModel):
     url: str
     title: Optional[str] = None
@@ -113,15 +116,25 @@ def health():
         "rules": ["R1", "R2", "R3", "R4", "R5", "R6", "R8"],
     }
 
+@app.post("/api/intake/resolve-company")
+def api_resolve_company(req: ResolveCompanyRequest):
+    from argus.agents.entity_resolver import resolve_company_name
+    return resolve_company_name(req.query)
+
 @app.post("/api/intake/search")
 def api_search(req: SearchRequest):
-    company = req.company.strip()
-    if not company:
+    raw_query = req.company.strip()
+    if not raw_query:
         raise HTTPException(status_code=400, detail="Company name is required.")
+    
+    # 1. Resolve spelling mistakes, brand names, and abbreviations via LLM / Canonical normalizer
+    from argus.agents.entity_resolver import resolve_company_name
+    resolved = resolve_company_name(raw_query)
+    company = resolved.get("official_name") or raw_query
     
     # Target direct PDF filings from corporate sites and BSE/NSE
     query = f'"{company}" ("annual report" OR "financial results") filetype:pdf'
-    logger.info(f"Searching public filings via Serper: {query}")
+    logger.info(f"Resolved '{raw_query}' -> '{company}'. Searching public filings via Serper: {query}")
     results = []
     
     try:
@@ -137,7 +150,7 @@ def api_search(req: SearchRequest):
     # If Serper returned no direct PDF or is empty, check canonical verified sources
     q_low = company.lower()
     for key, source in COMPANY_VERIFIED_SOURCES.items():
-        if key in q_low:
+        if key in q_low or key in raw_query.lower():
             if not any(r.get("url") == source["url"] for r in results):
                 results.insert(0, {
                     "title": source["title"],
@@ -149,8 +162,15 @@ def api_search(req: SearchRequest):
     # If still empty, check local cache source files
     if not results:
         results = _search_local_cache(company)
+        if not results and raw_query != company:
+            results = _search_local_cache(raw_query)
 
-    return {"company": company, "searchResults": results}
+    return {
+        "company": company,
+        "original_query": raw_query,
+        "resolved": resolved,
+        "searchResults": results,
+    }
 
 @app.post("/api/intake/inspect")
 def api_inspect(req: InspectRequest):
@@ -185,14 +205,18 @@ def api_extract(req: ExtractRequest):
     if not url or not company:
         raise HTTPException(status_code=400, detail="Both URL and company name are required.")
     
-    logger.info(f"Executing real PDF intake and financial statement extraction for {company} -> {url}")
+    from argus.agents.entity_resolver import resolve_company_name
+    resolved = resolve_company_name(company)
+    official_company = resolved.get("official_name") or company
+
+    logger.info(f"Executing real PDF intake and financial statement extraction for '{official_company}' -> {url}")
     try:
         cache_path, digest, candidate_file, candidates, cache_reused = import_remote_pdf(
-            url, company=company
+            url, company=official_company
         )
         
         return {
-            "company": company,
+            "company": official_company,
             "title": req.title or url.split("/")[-1],
             "url": url,
             "cache_path": str(cache_path),

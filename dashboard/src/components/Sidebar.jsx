@@ -12,6 +12,7 @@ import {
   Loader2,
   AlertCircle,
   FileSearch,
+  Sparkles,
 } from 'lucide-react';
 import { getIntakeData } from '../data/intakeSamples';
 
@@ -47,6 +48,8 @@ export default function Sidebar({
   const [companyQuery, setCompanyQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isSearching, setIsSearching] = useState(false);
+  const [isResolving, setIsResolving] = useState(false);
+  const [resolutionInfo, setResolutionInfo] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
   const [selectedResultIdx, setSelectedResultIdx] = useState(0);
   const [isFetchingPdfs, setIsFetchingPdfs] = useState(false);
@@ -54,6 +57,34 @@ export default function Sidebar({
   const [selectedPdfIdx, setSelectedPdfIdx] = useState(0);
   const [isExtracting, setIsExtracting] = useState(false);
   const [intakeSuccess, setIntakeSuccess] = useState(null);
+
+  const handleResolveName = async () => {
+    const raw = companyQuery.trim();
+    if (!raw) {
+      setErrorMessage('Enter a company name or brand first.');
+      return;
+    }
+    setErrorMessage('');
+    setIsResolving(true);
+    try {
+      const res = await fetch('/api/intake/resolve-company', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: raw }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setResolutionInfo(data);
+        if (data.official_name && data.official_name.toLowerCase() !== raw.toLowerCase()) {
+          setCompanyQuery(data.official_name);
+        }
+      }
+    } catch (err) {
+      console.warn('AI entity resolution error:', err);
+    } finally {
+      setIsResolving(false);
+    }
+  };
 
   const handleSearch = async () => {
     if (!companyQuery.trim()) {
@@ -77,6 +108,15 @@ export default function Sidebar({
         throw new Error(err.detail || 'Search request failed.');
       }
       const data = await res.json();
+      
+      // Auto-update to LLM-resolved corporate name if corrected
+      if (data.company && data.company.toLowerCase() !== companyQuery.trim().toLowerCase()) {
+        setCompanyQuery(data.company);
+      }
+      if (data.resolved) {
+        setResolutionInfo(data.resolved);
+      }
+
       setSearchResults(data.searchResults || []);
       setSelectedResultIdx(0);
       if (!data.searchResults || data.searchResults.length === 0) {
@@ -207,10 +247,34 @@ export default function Sidebar({
         </div>
 
         {/* 1. Input field to get the company */}
-        <div>
-          <label style={{ fontSize: '0.72rem', color: '#334155', fontWeight: 700, display: 'block', marginBottom: '0.25rem' }}>
-            Company name
-          </label>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <label style={{ fontSize: '0.72rem', color: '#334155', fontWeight: 700 }}>
+              Company name
+            </label>
+            <button
+              type="button"
+              onClick={handleResolveName}
+              disabled={isResolving || !companyQuery.trim()}
+              title="Use LLM to correct spelling or brand name to official listed entity"
+              style={{
+                background: '#f8fafc',
+                border: '1px solid #cbd5e1',
+                borderRadius: '4px',
+                color: '#4f46e5',
+                fontSize: '0.67rem',
+                fontWeight: 700,
+                cursor: isResolving || !companyQuery.trim() ? 'not-allowed' : 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                padding: '2px 6px',
+              }}
+            >
+              {isResolving ? <Loader2 size={11} className="spin" /> : <Sparkles size={11} color="#4f46e5" />}
+              <span>{isResolving ? 'Resolving...' : 'AI Fix Typo'}</span>
+            </button>
+          </div>
           <input
             id="live-company-input"
             type="text"
@@ -218,9 +282,10 @@ export default function Sidebar({
             onChange={(e) => {
               setCompanyQuery(e.target.value);
               if (errorMessage) setErrorMessage('');
+              if (resolutionInfo) setResolutionInfo(null);
             }}
             onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-            placeholder="e.g. ITC Limited"
+            placeholder="e.g. mrs becters, hul, nestle..."
             style={{
               width: '100%',
               padding: '0.55rem 0.75rem',
@@ -233,6 +298,53 @@ export default function Sidebar({
               color: '#0f172a',
             }}
           />
+
+          {/* AI Resolution Result Badge */}
+          {resolutionInfo && resolutionInfo.is_corrected && (
+            <div
+              style={{
+                background: '#f0fdf4',
+                border: '1px solid #bbf7d0',
+                borderRadius: '6px',
+                padding: '0.45rem 0.65rem',
+                fontSize: '0.71rem',
+                color: '#166534',
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: '6px',
+                lineHeight: 1.35,
+              }}
+            >
+              <Sparkles size={13} color="#16a34a" style={{ flexShrink: 0, marginTop: '2px' }} />
+              <div style={{ flex: 1 }}>
+                <div>
+                  <strong>AI Resolved:</strong> "{resolutionInfo.original_query}" ➔{' '}
+                  <strong>{resolutionInfo.official_name}</strong>
+                  {resolutionInfo.ticker && (
+                    <span
+                      style={{
+                        marginLeft: '5px',
+                        padding: '1px 5px',
+                        background: '#dcfce7',
+                        border: '1px solid #86efac',
+                        borderRadius: '3px',
+                        fontWeight: 800,
+                        fontSize: '0.64rem',
+                        color: '#15803d',
+                      }}
+                    >
+                      {resolutionInfo.ticker}
+                    </span>
+                  )}
+                </div>
+                {resolutionInfo.explanation && (
+                  <div style={{ fontSize: '0.66rem', color: '#15803d', marginTop: '2px' }}>
+                    {resolutionInfo.explanation}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {errorMessage && (
