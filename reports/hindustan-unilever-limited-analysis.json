@@ -1161,7 +1161,7 @@
           ],
           "metadata": {},
           "research": {
-            "status": "offline_no_llm",
+            "status": "completed_no_retrieved_sources",
             "queries": [
               {
                 "query": "receivable_days company filings explanation seasonality accounting acquisition",
@@ -1179,6 +1179,14 @@
                 "query": "receivable_days management commentary changes one-off pricing lag",
                 "tag": "supporting"
               }
+            ],
+            "hypotheses": [
+              "The gap may reflect a deliberate customer-mix shift toward buyers who negotiate longer payment terms rather than a collection problem.",
+              "It may point to operational collection friction, such as invoicing delays or unresolved disputes, that slows cash receipts.",
+              "It could be a billing-timing artifact, where revenue is recognized before invoices are issued or before collections are recorded.",
+              "It may indicate looser credit control or approval practices that allow overdue balances to persist.",
+              "It could reflect customer financial strain causing slower payments, independent of company policy.",
+              "It may stem from changed contract terms, discounts, or rebate structures that affect when customer balances are settled."
             ]
           },
           "red_team_tests": [
@@ -1395,7 +1403,14 @@
             "persistence": 1.0,
             "peer_gap_count": 3.0
           },
-          "hypotheses": [],
+          "hypotheses": [
+            "The gap may reflect a deliberate customer-mix shift toward buyers who negotiate longer payment terms rather than a collection problem.",
+            "It may point to operational collection friction, such as invoicing delays or unresolved disputes, that slows cash receipts.",
+            "It could be a billing-timing artifact, where revenue is recognized before invoices are issued or before collections are recorded.",
+            "It may indicate looser credit control or approval practices that allow overdue balances to persist.",
+            "It could reflect customer financial strain causing slower payments, independent of company policy.",
+            "It may stem from changed contract terms, discounts, or rebate structures that affect when customer balances are settled."
+          ],
           "red_team_log": [],
           "gate": {
             "checks": {

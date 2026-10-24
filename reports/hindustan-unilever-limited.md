@@ -135,7 +135,12 @@ Weak (score 54.28)
 - standalone, company_total_operations, pre_demerger_standalone_FY2020_FY2025 — margin_vs_input_cost: Matched gross-margin and input-cost-index disclosures are required.
 
 ## Hypotheses (unverified)
-- None; optional research model is not configured or no source excerpts were available.
+- The gap may reflect a deliberate customer-mix shift toward buyers who negotiate longer payment terms rather than a collection problem.
+- It may point to operational collection friction, such as invoicing delays or unresolved disputes, that slows cash receipts.
+- It could be a billing-timing artifact, where revenue is recognized before invoices are issued or before collections are recorded.
+- It may indicate looser credit control or approval practices that allow overdue balances to persist.
+- It could reflect customer financial strain causing slower payments, independent of company policy.
+- It may stem from changed contract terms, discounts, or rebate structures that affect when customer balances are settled.
 
 ## Red-team review
 - seasonality: not_tested — No reviewed source with a valid cached hash, locator, and exact snippet was supplied.

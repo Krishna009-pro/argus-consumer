@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldAlert, HelpCircle, CheckCircle, AlertTriangle } from 'lucide-react';
+import { ShieldAlert, HelpCircle, CheckCircle, AlertTriangle, Sparkles } from 'lucide-react';
 
 export default function FalsificationView({ dossier }) {
   const falsificationCondition = dossier?.falsification_condition || 'The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.';
@@ -95,6 +95,70 @@ export default function FalsificationView({ dossier }) {
           ))}
         </div>
       </div>
+
+      {/* AI Qualitative Hypotheses Section (Rule R3) */}
+      {dossier?.hypotheses && dossier.hypotheses.length > 0 && (
+        <div style={{
+          background: '#ffffff',
+          border: '1.5px solid #818cf8',
+          borderRadius: '12px',
+          padding: '1.25rem 1.4rem',
+          marginBottom: '1.75rem',
+          boxShadow: '0 4px 15px rgba(99, 102, 241, 0.06)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.65rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div style={{ background: '#eef2ff', padding: '6px', borderRadius: '8px', display: 'flex' }}>
+                <Sparkles size={16} color="#4f46e5" />
+              </div>
+              <h4 style={{ fontSize: '0.96rem', fontWeight: 750, color: '#0f172a', margin: 0 }}>
+                AI Qualitative Hypotheses (Rule R3: Zero Hallucinations, Non-Numerical Explanations)
+              </h4>
+            </div>
+            <span style={{ fontSize: '0.68rem', fontWeight: 750, background: '#f5f3ff', color: '#7c3aed', padding: '3px 8px', borderRadius: '6px', border: '1px solid #ddd6fe' }}>
+              OPENROUTER / GROQ SCOUTING
+            </span>
+          </div>
+
+          <p style={{ fontSize: '0.78rem', color: '#64748b', marginBottom: '0.85rem', lineHeight: 1.45 }}>
+            To guarantee zero numerical hallucinations, ARGUS strictly forbids language models from generating numbers or calculations (Rule R3). Models are deployed solely as qualitative search aids to propose competing business hypotheses for human audit review.
+          </p>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            {dossier.hypotheses.map((h, i) => (
+              <div
+                key={i}
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '0.6rem',
+                  background: '#f8fafc',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '8px',
+                  padding: '0.65rem 0.85rem',
+                  fontSize: '0.8rem',
+                  color: '#1e293b',
+                  lineHeight: 1.45
+                }}
+              >
+                <span style={{
+                  color: '#4f46e5',
+                  fontWeight: 800,
+                  fontSize: '0.74rem',
+                  background: '#e0e7ff',
+                  borderRadius: '4px',
+                  padding: '1px 5px',
+                  flexShrink: 0,
+                  marginTop: '1px'
+                }}>
+                  H{i + 1}
+                </span>
+                <span>{h}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 }

@@ -1,5 +1,6 @@
 """Deterministic panel analysis, candidate gates, and provenance-preserving dossier payloads."""
 from __future__ import annotations
+import os
 from collections import defaultdict
 from .metrics import longest_recent_run, peer_adjusted_deviation
 from .panels import build_company_panels, derive_angle_series
@@ -100,11 +101,11 @@ def run_engine(entries: list[LedgerEntry], company: str) -> dict:
                   gap_start_period=periods[-persistence], summary_numbers={"gap_magnitude": gap, "spread": spread,
                     "persistence": float(persistence), "peer_gap_count": float(len(peer_gaps))}, gate=gate,
                   state="no_reliable_finding" if peer_status != "tested" or not gate["passed"] else "unexplained")
+                is_offline = os.getenv("ARGUS_OFFLINE", "0") == "1" or not (os.getenv("OPENROUTER_API_KEY") or os.getenv("GROQ_API_KEY") or os.getenv("ARGUS_LLM_API_KEY"))
+                research_result = research(cand.model_dump(mode="json"), offline=is_offline)
+                cand.hypotheses = research_result.get("hypotheses", [])
                 candidates.append(cand.model_dump(mode="json"))
-                # No external retrieval is configured. Record transparent query intent, but never
-                # represent a planned query as a completed research or red-team test.
-                research_result = research(cand.model_dump(mode="json"), offline=True)
-                angle["research"] = {"status": research_result["status"], "queries": research_result["queries"]}
+                angle["research"] = {"status": research_result["status"], "queries": research_result["queries"], "hypotheses": research_result.get("hypotheses", [])}
                 # Without reviewed source evidence every alternative remains
                 # not_tested; the red-team validator will not trust LLM claims.
                 angle["red_team_tests"] = challenge_red_team(cand.model_dump(mode="json"))
@@ -194,6 +195,13 @@ def make_dossier(analysis: dict, entries: list[LedgerEntry]) -> Dossier:
         not_tested.append("Peer-adjusted comparison: no eligible peer panels were available.")
     not_tested.extend([f"{x['candidate_id']}: {x['reason']}" for x in analysis["rejected"]])
     not_tested = list(dict.fromkeys(not_tested))
+    dossier_hypotheses = []
+    for c in strong:
+        dossier_hypotheses.extend(c.get("hypotheses", []))
+    if not dossier_hypotheses:
+        for c in candidates:
+            dossier_hypotheses.extend(c.get("hypotheses", []))
+    dossier_hypotheses = list(dict.fromkeys(dossier_hypotheses))
     return Dossier(company=company, discovery=discovery,
       why_it_matters=["Reported values are compared with the company’s own historical range.",
         "The workflow separates calculated deviations from explanations and abstains when independent evidence is missing."],
@@ -201,6 +209,7 @@ def make_dossier(analysis: dict, entries: list[LedgerEntry]) -> Dossier:
       counterargument="Seasonality, base effects, one-off events, accounting changes, acquisitions, pricing lags and sector movement remain alternatives unless independently tested.",
       falsification_condition="The signal should be withdrawn if subsequent comparable periods return within the historical range or verified peer/source evidence explains the deviation.",
       evidence_score=score.score if score else 0, evidence_label=score.label if score else "Weak", not_tested=not_tested,
+      hypotheses=dossier_hypotheses,
       red_team_log=[test for result in rows for angle in result["angles"].values()
                     for test in angle.get("red_team_tests", [])],
       score_components=score.components if score else {},
